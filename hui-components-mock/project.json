@@ -1,0 +1,41 @@
+{
+    "path": {
+        "scripts": "lib",
+        "templates": "lib/templates",
+        "config": "config",
+        "tasks": "tasks",
+        "tasksConfig": "config/tasks",
+        "temp": ".tmp",
+        "dist": "dist"
+    },
+    "test_module": {
+        "name": ".",
+        "bower": false,
+        "node": false,
+        "path": {
+            "helpers": "lib/test/helpers",
+            "tests": "lib/{,*/}{,*/}spec/*_test.js",
+            "vendor": "node_modules/hui-components-vendor/lib"
+        }
+    },
+    "test": {
+        "path": {
+            "e2e": "client/scripts/test",
+            "unit": "lib/{,*/}{,*/}spec/*_test.js"
+        },
+        "threshold": {
+            "global": {
+                "statements": 91,
+                "branches": 84,
+                "functions": 88,
+                "lines": 91
+            },
+            "each": {
+                "branches": -3,
+                "statements": -1,
+                "functions": 100,
+                "excludes": []
+            }
+        }
+    }
+}

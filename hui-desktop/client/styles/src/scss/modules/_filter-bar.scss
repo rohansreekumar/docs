@@ -1,0 +1,472 @@
+.listings--results-search-filter {
+    opacity: 1;
+    @include clearfix;
+    .filter-bar--layout {
+        height: auto;
+        padding-bottom: rhythm-px(0.9);
+        float: left;
+        margin: rhythm-px() 0;
+        max-height: rhythm-px(12.75);
+        background-color: $lightGrey;
+        width: 100%;
+        line-height: 0;
+        padding-top: rhythm-px(0.15);
+        @include border-radius($global-radius + 1);
+
+        .row {
+            position: relative;
+            display: inline-flex;
+            top: 0;
+        }
+        .columns {
+            padding: 0;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .open {
+            .dropdown-menu {
+                @include box-shadow(0 2px 4px 0 rgba(0,0,0,0.15));
+                background-color: $lightestGrey;
+                width: 100%;
+                border-radius: $global-radius;
+                padding: rhythm-px(0.5) grid-space();
+                display: flex;
+                position: absolute;
+                z-index: 100;
+                flex-wrap: wrap;
+
+                &:after {
+                    bottom: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-bottom-color: $lightestGrey;
+                    border-width: rhythm-px(0.6) grid-space(1.8);
+                    margin-left: grid-space(-1.8);
+                }
+
+                .form-select {
+                    height: 100%;
+                    width: 100%;
+                    margin-top: initial;
+                    display: inline-table;
+                }
+
+                .input-select {
+                    & + label {
+                        @media only screen and (max-width: 1024px) {
+                            font-size: $font-size-small + 2;
+                        }
+                        color: $blue;
+                        font-size: $font-size-small + 2;
+                        padding: rhythm-px(0.7) grid-space(2);
+                        border-radius: $global-radius;
+                        border-color: transparent;
+                        margin-right: grid-space(0.5);
+                        margin-bottom: rhythm-px(0.25);
+                        float:left;
+                        display: inline-table;
+                        text-align: center;
+                        letter-spacing: 0;
+                    }
+                    &:checked + label {
+                        color: $white;
+                        background: $mediumBlue;
+                        font-family: 'Open Sans';
+                    }
+                }
+                .input-checkbox {
+                    & + label {
+                        padding-right: grid-space(2.8);
+
+                        &::before, &::after {
+                            width: grid-space(1.4);
+                            height: rhythm-px(0.7);
+                            right: grid-space(0.8);
+                            left: auto;
+                            @include transform(translateY(-42%));
+                        }
+                    }
+                    &:checked + label {
+                        &::before, &::after {
+                            background: $mediumBlue;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+        .price-range--block,
+        .property-type--block,
+        .bedrooms--block,
+        .bathrooms--block,
+        .listing-type--block,
+        .size--block,
+        .lot-size--block,
+        .year-built--block {
+            position: relative;
+        }
+        .price-range--block {
+            @include form-field-wrap();
+            display: inline-flex;
+            width: grid-space(30.7);
+            margin-left: grid-space(2);
+            margin-right: grid-space();
+            padding: rhythm-px(0.25) 0;
+            border-color: $mediumBlue;
+            padding-left: 0;
+
+            @media only screen and (max-width: 1024px) {
+                width: grid-space(28);
+            }
+
+            .price-range--connection {
+                text-align: center;
+                position: relative;
+                top: rhythm-px(1.75);
+                opacity: 0.5;
+            }
+            .price-range--input {
+                .label {
+                    text-align: center;
+                    display: block;
+                    color: $mediumBlue;
+                    @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-medium);
+                }
+                input {
+                    color: $darkGrey;
+                    text-align: center;
+                    font-weight: 300;
+                    line-height: rhythm($lines: 1.5, $font-size: $font-size-medium);
+                }
+                ::-moz-placeholder {
+                    color: $darkGrey;
+                }
+                ::-webkit-input-placeholder {
+                    color: $darkGrey;
+                }
+            }
+        }
+        .property-type--block {
+            width: grid-space(30.6);
+            @media only screen and (max-width: 1024px) {
+                width: grid-space(17.5);
+            }
+            &.open {
+                .dropdown-menu {
+                    width: 205%;
+                    @media only screen and (max-width: 1024px) {
+                        width: 330%;
+                    }
+                    .input-select {
+                        & + label {
+                            @media only screen and (max-width: 1024px) {
+                                padding-left: grid-space(0.8);
+                            }
+                        }
+                    }
+                    .form-select {
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                    }
+                    .form-select-list {
+                        display: inherit;
+                        @media only screen and (max-width: 1024px) {
+                            font-size: $font-size-small;
+                        }
+
+                        .ellipsis {
+                            display: inherit;
+                        }
+                    }
+                    &:after {
+                        @media only screen and (max-width: 1024px) {
+                            left: 27%;
+                        }
+                        left: 45%;
+                    }
+                }
+            }
+        }
+        .price-range--block > span.open {
+            .dropdown-menu {
+                top: rhythm-px(3.5);
+                width: grid-space(46.5);
+                &:after {
+                    left: 13%;
+                    @media only screen and (max-width: 1024px) {
+                        left: 15%;
+                    }
+                }
+                .form-select {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                }
+                .form-select-list {
+                    flex-basis: 20%;
+                    display: inherit;
+
+                    .ellipsis {
+                        display: inherit;
+                    }
+                }
+            }
+        }
+        .bedrooms--block {
+            width: grid-space(20.2);
+            @media only screen and (max-width: 1024px) {
+                width: grid-space(14.4);
+            }
+            &.open {
+                .dropdown-menu {
+                    width: 206%;
+                    @media only screen and (max-width: 1024px) {
+                        width: 290%;
+                    }
+                    &:after {
+                        left: 44%;
+                        @media only screen and (max-width: 1024px) {
+                            left: 29%;
+                        }
+                    }
+                    .form-select {
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                    }
+                    .form-select-list {
+                        display: inherit;
+
+                        .ellipsis {
+                            display: inherit;
+                        }
+                    }
+                }
+            }
+        }
+        .bathrooms--block {
+            width: grid-space(20.2);
+            @media only screen and (max-width: 1024px) {
+                width: grid-space(14.4);
+            }
+            &.open {
+                .dropdown-menu {
+                    width: 206%;
+                    @media only screen and (max-width: 1024px) {
+                        width: 289%;
+                        left: grid-space(-5);
+                    }
+                    &:after {
+                        left: 44%;
+                    }
+                }
+            }
+        }
+        .property-type--block,
+        .bedrooms--block,
+        .bathrooms--block,
+        .size--block,
+        .lot-size--block,
+        .year-built--block {
+            margin-right: grid-space();
+        }
+        .listing-type--block {
+            margin-left: grid-space(2);
+            margin-right: grid-space();
+        }
+        .listing-type--block {
+            &.open {
+                .dropdown-menu {
+                    width: 182%;
+                    @media only screen and (max-width: 1024px) {
+                        width: 254%;
+                    }
+                    &:after {
+                        @media only screen and (max-width: 1024px) {
+                            left: 34.5%;
+                        }
+                        left: 50%;
+                    }
+                    .form-select {
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                    }
+                    .form-select-list {
+                        display: inherit;
+
+                        .ellipsis {
+                            display: inherit;
+                        }
+                    }
+                }
+            }
+        }
+
+        .size--block {
+            &.open {
+                .dropdown-menu {
+                    width: 298%;
+                    @media only screen and (max-width: 1024px) {
+                        width: 418%;
+                    }
+                    &:after {
+                        @media only screen and (max-width: 1024px) {
+                            left: 20.5%;
+                        }
+                        left: 30.5%;
+                    }
+                }
+            }
+        }
+        .lot-size--block {
+            &.open {
+                .dropdown-menu {
+                    width: 233%;
+                    @media only screen and (max-width: 1024px) {
+                        width: 328%;
+                    }
+                    &:after {
+                        @media only screen and (max-width: 1024px) {
+                            left: 26.5%;
+                        }
+                        left: 39%;
+                    }
+                }
+            }
+        }
+        .year-built--block {
+            &.open {
+                .dropdown-menu {
+                    width: 299%;
+                    @media only screen and (max-width: 1024px) {
+                        width: 418%;
+                        left: grid-space(-17.5);
+                    }
+                    @media only screen and (min-width: 1180px) {
+                        left: grid-space(-12);
+                    }
+                    &:after {
+                        @media only screen and (max-width: 1024px) {
+                            left: 49%;
+                        }
+                        left: 49.5%;
+                    }
+                }
+            }
+        }
+        .property-type--input,
+        .bedrooms--input,
+        .bathrooms--input,
+        .size--input,
+        .lot-size--input,
+        .year-built--input,
+        .listing-type--input {
+            &::after {
+                @include icon-hui('arrow-down');
+                position: absolute;
+                top: 50%;
+                right: grid-space();
+                @include transform(scaleY(0.5));
+            }
+        }
+        .bathrooms--input,
+        .listing-type--input,
+        .size--input,
+        .lot-size--input,
+        .year-built--input {
+            @media only screen and (max-width: 1024px) {
+                width: grid-space(15);
+            }
+        }
+        .property-type--input,
+        .bedrooms--input,
+        .bathrooms--input,
+        .listing-type--input,
+        .size--input,
+        .lot-size--input,
+        .year-built--input {
+            border-color: $mediumBlue;
+            padding: rhythm-px(0.25) grid-space(2);
+            @include form-field-wrap();
+            .label {
+                display: block;
+                text-align: left;
+                color: $mediumBlue;
+                @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-medium);
+            }
+            input {
+                color: $darkGrey;
+                text-align: left;
+                font-weight: 300;
+                line-height: rhythm($lines: 1.5, $font-size: $font-size-medium);
+            }
+            ::-moz-placeholder {
+                color: $darkGrey;
+            }
+            ::-webkit-input-placeholder {
+                color: $darkGrey;
+            }
+        }
+        .more-button--block {
+            margin-top: rhythm-px(2);
+            margin-left: grid-space();
+            width: 15%;
+            text-align: right;
+            padding-right: grid-space(2);
+            cursor: pointer;
+            @media only screen and (max-width: 1024px) {
+                width: 8%;
+                margin-left: 11%;
+            }
+
+            .show-more-filter {
+                &:before {
+                    @include icon-hui('chevron-down');
+                }
+            }
+            .show-less-filter {
+                &:before {
+                    @include icon-hui('chevron-up');
+                }
+            }
+        }
+        .link-button--block {
+            width: 100%;
+            float: right;
+            @include clearfix;
+            margin-top: rhythm-px();
+
+            .search-nearby-link {
+                float: left;
+                margin-left: grid-space(2);
+                margin-top: rhythm-px(1.75);
+                font-size: $font-size-normal +1;
+                line-height: 13.75px;
+                text-align: center;
+                color: $blue;
+                letter-spacing: 0;
+                cursor: pointer;
+            }
+            .reset-update-button {
+                float: right;
+                margin-top: rhythm-px(-1.1);
+                cursor: pointer;
+                .filter-bar-reset-button {
+                    color: $mediumBlue;
+                    text-align: left;
+                    font-size: $font-size-medium;
+                    letter-spacing: 0;
+                    line-height: 19.2px;
+                }
+                .filter-bar-update-button {
+                    margin: rhythm-px() grid-space(2);
+                }
+            }
+        }
+    }
+}

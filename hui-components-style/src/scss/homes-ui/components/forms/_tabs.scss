@@ -1,0 +1,70 @@
+// @huidocs component
+// @name Form Tabs
+// @module forms
+//
+// @description
+// Tabs that change the context of a form.
+//
+// @markup
+//    <nav class="form-tabs">
+//        <ul>
+//            <li>
+//                <input type="radio"  id="searchType1" name="searchType" value="For Sale"/>
+//                <label class="label a" for="searchType1">For Sale</label>
+//            </li>
+//            <li>
+//                <input type="radio"  id="searchType2" name="searchType" value="For Rent"/>
+//                <label class="label a" for="searchType2">For Rent</label>
+//            </li>
+//            <li>
+//                <input type="radio"  id="searchType3" name="searchType" value="Home Value"/>
+//                <label class="label a" for="searchType3">Home Vaue</label>
+//            </li>
+//        </ul>
+//    </nav>
+//
+// @state .form-tabs--flex  Fill container with flex-box
+//
+// @styleguide 3.3
+
+.form-tabs {
+    @include tabs;
+    @include tabs-style($style: 'form');
+    &.form-tabs--flex {
+
+        & > ul {
+            @include display-flex;
+            @include flex-direction(row);
+            @include flex-wrap(nowrap);
+            @include justify-content(space-between);
+            @include align-items(center);
+            text-align: inherit;
+            width: 100%;
+            &::after {
+                content: none;
+            }
+            & > li {
+                @include flex(1);
+                padding: 0;
+                &:first-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    text-align: right;
+                }
+                &.is-target {
+                    text-align: center;
+                }
+                & > .label {
+                    min-width: 0;
+                    max-width: none;
+                    padding: 0 grid-space(.5);
+                }
+
+                & input[type="radio"]:checked + .label::before {
+                    padding: 0 rhythm-px(.25);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "path": {
+        "bower": "bower_components",
+        "dist": "dist",
+        "temp": ".tmp",
+        "tasks": "tasks",
+        "config": "config",
+        "tasksConfig": "config/tasks",
+        "log": "log",
+        "client": "/",
+        "assets": "assets",
+        "fonts": "assets/fonts",
+        "icons": "assets/fonts/homes-icons",
+        "scripts": "scripts/src",
+        "public": "public",
+        "styles": "src",
+        "main": "src/scss/"
+    },
+    "fonts": [
+        {
+            "name": "open-sans",
+            "path": "fonts/open-sans",
+            "css": "open-sans.css"
+        }
+    ]
+}

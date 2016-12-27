@@ -1,0 +1,114 @@
+{
+    "responseHeader": {
+        "status": 0,
+        "QTime": 2,
+        "params": {
+            "q": "propid:2099276",
+            "wt": "json"
+        }
+    },
+    "response": {
+        "numFound": 1,
+        "start": 0,
+        "docs": [
+            {
+                "square_footage": 1683,
+                "listing_status": "FOR SALE",
+                "supplier_id_name": "PSW Real Estate",
+                "total_baths": 3.0,
+                "listing_type": "NEW HOME",
+                "state": "TX",
+                "supplier_id": 809,
+                "address": "5616 S. 1st Street",
+                "property_type": "RESIDENTIAL",
+                "lng": -97.7817725,
+                "main_image": "http://cdn.homes.com/cgi-bin/readimage/3773912914",
+                "half_baths": 1,
+                "listing_date": "2014-11-06T10:48:56Z",
+                "zip": "78745",
+                "num_stories": 2.0,
+                "nhc_community_number": "CREEK",
+                "price": 312000,
+                "county": "TRAVIS",
+                "mls_number": "97183",
+                "last_update": "2015-03-02T09:16:13Z",
+                "lat": 30.2080525,
+                "nhc_property": "Y",
+                "virtual_tour": "N",
+                "nhc_property_type": "SPEC",
+                "city": "AUSTIN",
+                "nhc_community_id": 226760,
+                "cbsa": "12420",
+                "premier_flag": "N",
+                "full_baths": 2,
+                "nhc_builder_id": 9805256,
+                "propid": "2099276",
+                "latlng_combo": "30.2080525,-97.7817725",
+                "beds": 3,
+                "city_preferred": "AUSTIN",
+                "image_count": 4,
+                "image_count_acctmod": 4,
+                "image_floor_plan_count_acctmod": 1,
+                "image_floor_plan_count": 1,
+                "images": [
+                    "1;http://cdn.homes.com/cgi-bin/readimage/3773912914",
+                    "2;http://cdn.homes.com/cgi-bin/readimage/3773913128",
+                    "3;http://cdn.homes.com/cgi-bin/readimage/3773913257",
+                    "4;http://cdn.homes.com/cgi-bin/readimage/3773913351"
+                ],
+                "images_floor_plan": [
+                    "1;http://cdn.homes.com/cgi-bin/readimage/3773913024"
+                ],
+                "image_community_count": 12,
+                "image_community_count_acctmod": 12,
+                "images_community": [
+                    "1;http://cdn.homes.com/cgi-bin/readimage/3773911323",
+                    "2;http://cdn.homes.com/cgi-bin/readimage/3773911433",
+                    "3;http://cdn.homes.com/cgi-bin/readimage/3773911565",
+                    "4;http://cdn.homes.com/cgi-bin/readimage/3773911740",
+                    "5;http://cdn.homes.com/cgi-bin/readimage/3773911838",
+                    "6;http://cdn.homes.com/cgi-bin/readimage/3773911941",
+                    "7;http://cdn.homes.com/cgi-bin/readimage/3773912093",
+                    "8;http://cdn.homes.com/cgi-bin/readimage/3837106553",
+                    "9;http://cdn.homes.com/cgi-bin/readimage/3837106554",
+                    "10;http://cdn.homes.com/cgi-bin/readimage/3837106555",
+                    "11;http://cdn.homes.com/cgi-bin/readimage/3837106556",
+                    "12;http://cdn.homes.com/cgi-bin/readimage/3837106557"
+                ],
+                "detail_attributes": [
+                    "ld_builder_name;PSW Real Estate",
+                    "ld_builder_website_link;http://api.newhomefeed.com/tracking/click?id=883&src=78&type=4&token=84deaf96fcf485ff026642ac0beb4426",
+                    "ld_community_name;Creekside",
+                    "ld_community_phone;5122012700",
+                    "ld_community_website_link;http://api.newhomefeed.com/tracking/click?id=14569&src=78&type=1&token=467ae955b7f71b20d0641b2e576dccde",
+                    "ld_model_name;Creekside Floorplan A",
+                    "ld_sales_office_address;2003 S. 1st Street",
+                    "ld_sales_office_city;AUSTIN",
+                    "ld_sales_office_state;TX",
+                    "ld_sales_office_zip;78704"
+                ],
+                "homescom_url": "www.homes.com/property/creekside-floorplan-a-austin-tx-78745/id-2099276/",
+                "latlng_combo_rpt": [
+                    "30.2080525,-97.7817725"
+                ],
+                "latlng_combo_str_11": "9v67ygjqxt1",
+                "latlng_combo_str_10": "9v67ygjqxt",
+                "latlng_combo_str_9": "9v67ygjqx",
+                "latlng_combo_str_8": "9v67ygjq",
+                "latlng_combo_str_7": "9v67ygj",
+                "latlng_combo_str_6": "9v67yg",
+                "latlng_combo_str_5": "9v67y",
+                "latlng_combo_str_4": "9v67",
+                "latlng_combo_str_3": "9v6",
+                "latlng_combo_str_2": "9v",
+                "latlng_combo_str_1": "9",
+                "sort_score": 11875000,
+                "local_connect_yn": "N",
+                "technical": [
+                    "nhcloader;v0.1;solr_refresh;0.5"
+                ],
+                "timestamp": "2015-03-02T14:16:18.191Z"
+            }
+        ]
+    }
+}

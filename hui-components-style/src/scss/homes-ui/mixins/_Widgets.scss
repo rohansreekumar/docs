@@ -1,0 +1,41 @@
+// Well Widget
+// 
+// Ad well (Right Column) Widgets
+//
+// Markup:
+// <div class="widget">
+// 	<h3>Widget Title</h3>
+// 	<div>Widget Content</div>
+// </div> 
+//
+// Styleguide 4.3
+
+@mixin widget($extend: true) {
+    @if $extend {
+        @extend %widget;
+    } @else {
+        @include clearfix;
+        padding: rhythm-px() $grid-space;
+        border: 1px solid $mediumGrey;
+
+        h3, .h3 {
+            clear: both;
+
+            font-size: 24px;
+            line-height: 30px;
+            @include font-weight(300);
+            color: $blue;
+            margin: 0 0 .7em;
+        }
+        input[type=submit] {
+            min-width: 76px;
+        }
+
+    }
+}
+
+@if import-once('Widgets.scss') {
+    %widget {
+        @include widget($extend: false);
+    }
+}

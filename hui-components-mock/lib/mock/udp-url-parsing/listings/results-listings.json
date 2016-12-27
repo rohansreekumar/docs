@@ -1,0 +1,1593 @@
+{
+    "pagination":{
+        "total_found":1713,
+        "total_pages":115,
+        "size":15,
+        "current_page":1,
+        "next_uri":"/v1/search/listing/list?listing_status=FOR SALE&amp;limit=15&amp;order_by[0]=price&amp;location[0][locality]=CHESAPEAKE&amp;location[0][region]=VA&amp;location[1][zip]=23510&amp;results=true&amp;app=hdc_portal&amp;app_platform=desktop&amp;api_key=0000000000000000000000000000000000&amp;page=2",
+        "last_uri":"/v1/search/listing/list?listing_status=FOR SALE&amp;limit=15&amp;order_by[0]=price&amp;location[0][locality]=CHESAPEAKE&amp;location[0][region]=VA&amp;location[1][zip]=23510&amp;results=true&amp;app=hdc_portal&amp;app_platform=desktop&amp;api_key=0000000000000000000000000000000000&amp;page=115",
+        "link_template":"/v1/search/listing/list?listing_status=FOR SALE&amp;limit=15&amp;order_by[0]=price&amp;location[0][locality]=CHESAPEAKE&amp;location[0][region]=VA&amp;location[1][zip]=23510&amp;results=true&amp;app=hdc_portal&amp;app_platform=desktop&amp;api_key=0000000000000000000000000000000000&amp;page={{page}}"
+    },
+    "listing_results":[
+        {
+            "address":{
+                "street_address":{
+                    "label":"1344 Shillelagh Road"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23322",
+                    "value":"23322"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.68724,
+                "lng":-76.30029
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc.",
+            "main_uri":"/property/1344-shillelagh-rd-chesapeake-va-23323/id-171922738/",
+            "listing_id":"171922738",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":11825000
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":null,
+            "primary_image":{
+                "src":"http://cdn-1.eneighborhoods.com/x2/@v=1547191068@/2611/2/258/1038258/1038258_2.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":9365400
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 1344 Shillelagh Road."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "locality":{
+                    "county":"NORFOLK CITY",
+                    "label":"Norfolk",
+                    "value":"NORFOLK"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23510",
+                    "value":"23510"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.853,
+                "lng":-76.28356
+            },
+            "listing_type":"FORECLOSURE",
+            "listing_source":"RealtyStore.com",
+            "main_uri":"/property/norfolk-va-23510/id-232362686/",
+            "listing_id":"232362686",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":4539000
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":{
+                "type":"single",
+                "value":38888
+            },
+            "primary_image":{
+                "src":"http://imgloader.dev.homes.com/loader-cgi/TL/Image/readimage/4276971195"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":52707.6
+            },
+            "property_type":{
+                "value":"RESIDENTIAL",
+                "label":"Single Family"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23323",
+                    "value":"23323"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.7691,
+                "lng":-76.37164
+            },
+            "listing_type":"FORECLOSURE",
+            "listing_source":"RealtyStore.com",
+            "main_uri":"/property/chesapeake-va-23323/id-232346760/",
+            "listing_id":"232346760",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":4237400
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":{
+                "type":"single",
+                "value":25133
+            },
+            "primary_image":{
+                "src":"http://cdn1.static-homes.com/media/portalimgcache/missing.gif"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":653400
+            },
+            "property_type":{
+                "value":"RESIDENTIAL",
+                "label":"Single Family"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"1821 S Battlefield Blvd &amp; 1817"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23322",
+                    "value":"23322"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.65935,
+                "lng":-76.22038
+            },
+            "listing_type":"RESALE",
+            "listing_source":"ListHub",
+            "main_uri":"/property/1821-s-battlefield-blvd-chesapeake-va-23322/id-228243938/",
+            "listing_id":"228243938",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":2900000
+            },
+            "baths":{
+                "type":"single",
+                "value":0
+            },
+            "beds":{
+                "type":"single",
+                "value":0
+            },
+            "square_footage":{
+                "type":"single",
+                "value":0
+            },
+            "primary_image":{
+                "src":"http://imgloader.dev.homes.com/loader-cgi/TL/Image/readimage/3110cc889852e670887da9b8256f9a0c/1821-s-battlefield-blvd-chesapeake-va-23322-0.jpg"
+            },
+            "lot_size":null,
+            "property_type":{
+                "value":"FARM",
+                "label":"Farm"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 1821 S Battlefield Blvd &amp; 1817."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"3824 Bruce Rd"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23321",
+                    "value":"23321"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.83425,
+                "lng":-76.39027
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc (via Listhub)",
+            "main_uri":"/property/3824-bruce-rd-chesapeake-va-23321/id-234382138/",
+            "listing_id":"234382138",
+            "property_id":"400031761822",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":2750000
+            },
+            "baths":{
+                "type":"single",
+                "value":7,
+                "full_bath":6,
+                "half_bath":1
+            },
+            "beds":{
+                "type":"single",
+                "value":7
+            },
+            "square_footage":{
+                "type":"single",
+                "value":9713
+            },
+            "primary_image":{
+                "src":"http://cdn.homes.com/cgi-bin/readimage/54fa629d1def10ce949e5f83de7ca265"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":130680
+            },
+            "property_type":{
+                "value":"RESIDENTIAL",
+                "label":"Single Family"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 3824 Bruce Rd."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"135+ A W St Brides Rd"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23322",
+                    "value":"23322"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.60331,
+                "lng":-76.21255
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc.",
+            "main_uri":"/property/135-st-brides-rd-w-chesapeake-va-23322/id-230736862/",
+            "listing_id":"230736862",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":2200000,
+                "history":[
+                    {
+                        "date":"2015-06-27T01:09:47Z",
+                        "value":2200000,
+                        "delta":1584200,
+                        "delta_percentage":41.864
+                    },
+                    {
+                        "date":"2015-05-08T17:11:10Z",
+                        "value":3784200
+                    }
+                ]
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":null,
+            "primary_image":{
+                "src":"http://cdn-1.eneighborhoods.com/x2/@v=-329861860@/2611/3/363/1521363/1521363_1.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":5887134
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 135+ A W St Brides Rd."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"2100 Ansell Road"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23322",
+                    "value":"23322"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.57321,
+                "lng":-76.1379
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc (via Listhub)",
+            "main_uri":"/property/2100-ansell-rd-chesapeake-va-23322/id-227411158/",
+            "listing_id":"227411158",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":1800000
+            },
+            "baths":{
+                "type":"single",
+                "value":0
+            },
+            "beds":{
+                "type":"single",
+                "value":0
+            },
+            "square_footage":{
+                "type":"single",
+                "value":0
+            },
+            "primary_image":{
+                "src":"http://imgloader.dev.homes.com/loader-cgi/TL/Image/readimage/815e16910d52671773cb3c7435b2a473/2100-ansell-rd-chesapeake-va-23322-0.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":6675570
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 2100 Ansell Road."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"21 Ac Shillelagh Road"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23322",
+                    "value":"23322"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                }
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc (via Listhub)",
+            "main_uri":"/property/21-ac-shillelagh-road-chesapeake-va-23322/id-172172017/",
+            "listing_id":"172172017",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":1704000
+            },
+            "baths":{
+                "type":"single",
+                "value":0
+            },
+            "beds":{
+                "type":"single",
+                "value":0
+            },
+            "square_footage":{
+                "type":"single",
+                "value":0
+            },
+            "primary_image":{
+                "src":"http://imgloader.dev.homes.com/loader-cgi/TL/Image/readimage/10c047322da821534b30bf61beb5cc03/21-ac-shillelagh-road-chesapeake-va-23322-0.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":927828
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 21 Ac Shillelagh Road."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"21 Ac  Shillelagh Road"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23322",
+                    "value":"23322"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.6227,
+                "lng":-76.2654
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc.",
+            "main_uri":"/property/21-ac-shillelagh-road-chesapeake-va-23322/id-171927516/",
+            "listing_id":"171927516",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":1704000
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":null,
+            "primary_image":{
+                "src":"http://cdn-1.eneighborhoods.com/x2/@v=-331857124@/2611/2/253/1038253/1038253_2.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":927828
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 21 Ac  Shillelagh Road."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"47.808 S Battlefield Blvd"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23322",
+                    "value":"23322"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.629154,
+                "lng":-76.265823
+            },
+            "listing_type":"RESALE",
+            "listing_source":"ListHub",
+            "main_uri":"/property/47808-s-battlefield-blvd-chesapeake-va-23322/id-215369104/",
+            "listing_id":"215369104",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":1600000
+            },
+            "baths":{
+                "type":"single",
+                "value":0
+            },
+            "beds":{
+                "type":"single",
+                "value":0
+            },
+            "square_footage":{
+                "type":"single",
+                "value":0
+            },
+            "primary_image":{
+                "src":"http://imgloader.dev.homes.com/loader-cgi/TL/Image/readimage/2da6cb5dd724a7528741a6891f83e6f2/s-battlefield-blvd-chesapeake-va-23322-0.jpg"
+            },
+            "lot_size":null,
+            "property_type":{
+                "value":"FARM",
+                "label":"Farm"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 47.808 S Battlefield Blvd."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"421 N. N Battlefield Blvd"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23320",
+                    "value":"23320"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.73049,
+                "lng":-76.24052
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc.",
+            "main_uri":"/property/421-battlefield-blvd-n-chesapeake-va-23320/id-222240215/",
+            "listing_id":"222240215",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":1200000
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":null,
+            "primary_image":{
+                "src":"http://cdn-1.eneighborhoods.com/x2/@v=-334994629@/2611/0/023/1449023/1449023_1.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":94089.6
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 421 N. N Battlefield Blvd."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23323",
+                    "value":"23323"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.78696,
+                "lng":-76.36268
+            },
+            "listing_type":"FORECLOSURE",
+            "listing_source":"RealtyStore.com",
+            "main_uri":"/property/chesapeake-va-23323/id-232346501/",
+            "listing_id":"232346501",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":1177500
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":{
+                "type":"single",
+                "value":16350
+            },
+            "primary_image":{
+                "src":"http://cdn1.static-homes.com/media/portalimgcache/missing.gif"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":134600.4
+            },
+            "property_type":{
+                "value":"RESIDENTIAL",
+                "label":"Single Family"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23320",
+                    "value":"23320"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.76519,
+                "lng":-76.23663
+            },
+            "listing_type":"FORECLOSURE",
+            "listing_source":"RealtyStore.com",
+            "main_uri":"/property/chesapeake-va-23320/id-234494275/",
+            "listing_id":"234494275",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":1008342
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":{
+                "type":"single",
+                "value":12152
+            },
+            "primary_image":{
+                "src":"http://imgloader.dev.homes.com/loader-cgi/TL/Image/readimage/4160747177"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":45302.4
+            },
+            "property_type":{
+                "value":"RESIDENTIAL",
+                "label":"Single Family"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"844 Shillelagh Road"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23323",
+                    "value":"23323"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.71263,
+                "lng":-76.31244
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc.",
+            "main_uri":"/property/844-shillelagh-rd-chesapeake-va-23323/id-158855389/",
+            "listing_id":"158855389",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":995000
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":null,
+            "primary_image":{
+                "src":"http://cdn-1.eneighborhoods.com/x2/@v=-1945619616@/2611/5/595/1202595/1202595_1.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":448668.00000000006
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 844 Shillelagh Road."
+            },
+            "hide_home_values":false
+        },
+        {
+            "address":{
+                "street_address":{
+                    "label":"20acr Shillelagh Road"
+                },
+                "locality":{
+                    "county":"CHESAPEAKE CITY",
+                    "label":"Chesapeake",
+                    "value":"CHESAPEAKE"
+                },
+                "region":{
+                    "code":"VA",
+                    "label":"VA",
+                    "value":"VA"
+                },
+                "postal_code":{
+                    "label":"23323",
+                    "value":"23323"
+                },
+                "country_name":{
+                    "code":"US",
+                    "label":"United States of America",
+                    "value":"US"
+                },
+                "lat":36.7105,
+                "lng":-76.3893
+            },
+            "listing_type":"RESALE",
+            "listing_source":"Real Estate Information Network, Inc.",
+            "main_uri":"/property/20acr-shillelagh-road-chesapeake-va-23323/id-208443851/",
+            "listing_id":"208443851",
+            "listing_status":"for_sale",
+            "price":{
+                "currency":"USD",
+                "type":"single",
+                "value":850000
+            },
+            "baths":null,
+            "beds":null,
+            "square_footage":null,
+            "primary_image":{
+                "src":"http://cdn-1.eneighborhoods.com/x2/@v=-1945623687@/2611/4/405/1411405/1411405_1.jpg"
+            },
+            "lot_size":{
+                "type":"single",
+                "value":871200
+            },
+            "property_type":{
+                "value":"LOTS/LAND",
+                "label":"Lots &amp; Land"
+            },
+            "lead":{
+                "comments":"I'd like more information about the listing that I found at Homes.com at 20acr Shillelagh Road."
+            },
+            "hide_home_values":false
+        },
+  {
+    "address": {
+      "street_address": {
+        "label": "134 Dutchess Way"
+      },
+      "locality": {
+        "county": "SUFFOLK",
+        "label": "Suffolk",
+        "value": "SUFFOLK"
+      },
+      "region": {
+        "code": "VA",
+        "label": "VA",
+        "value": "VA"
+      },
+      "postal_code": {
+        "label": "23435",
+        "value": "23435"
+      },
+      "country_name": {
+        "code": "US",
+        "label": "United States of America",
+        "value": "US"
+      },
+      "lat": 36.82497787475586,
+      "lng": -76.46839141845703
+    },
+    "main_uri": "/property/134-dutchess-way-suffolk-va-23435/id-400028801900/",
+    "property_id": "400028801900",
+    "listing_status": "off_market",
+    "price": {
+      "type": "estimate",
+      "value": 240400,
+      "currency": "USD"
+    },
+    "last_sold_date": "2009-04-01T00:00:01Z",
+    "baths": {
+      "type": "single",
+      "value": 2
+    },
+    "beds": {
+      "type": "single",
+      "value": 4
+    },
+    "square_footage": {
+      "type": "single",
+      "value": 1861
+    },
+    "primary_image": {
+      "src": "http://cdn1.static-homes.com/media/portalimgcache/missing.gif"
+    },
+    "lot_size": {
+      "type": "single",
+      "value": 20038
+    },
+    "property_type": {},
+    "lead": {
+      "comments": "I'd like a free home estimate for 134 Dutchess Way found on Homes.com."
+    },
+    "hide_home_values": false,
+    "alternative_listing": null,
+    "title": "Off Market",
+    "mls_show_badge": false,
+    "days_listed": null,
+    "year_built": {
+      "type": "single",
+      "value": 2003
+    },
+    "view_source": null,
+    "property_record": [
+      {
+        "value": 208316,
+        "label": "Last Sold Price",
+        "unit": "USD"
+      },
+      {
+        "value": "2009-04-01T00:00:01Z",
+        "label": "Last Sold Date",
+        "unit": "date"
+      },
+      {
+        "value": 1316,
+        "label": "Tax Amount",
+        "unit": "USD"
+      },
+      {
+        "value": "2003",
+        "label": "Year Built",
+        "unit": "other"
+      },
+      {
+        "value": 1861,
+        "label": "Square Feet",
+        "unit": "sqft"
+      },
+      {
+        "value": 4,
+        "label": "Bedrooms",
+        "unit": "other"
+      },
+      {
+        "value": 2,
+        "label": "Bathrooms",
+        "unit": "other"
+      },
+      {
+        "value": 918.17,
+        "unit": "USD",
+        "user": true,
+        "label": "Monthly Est. Mortgage"
+      },
+      {
+        "value": 105,
+        "label": "Monthly Est. Insurance",
+        "unit": "USD",
+        "user": true
+      },
+      {
+        "value": 129.18,
+        "unit": "USD",
+        "label": "Price per SqFt",
+        "user": true
+      },
+      {
+        "value": 109.67,
+        "unit": "USD",
+        "label": "Monthly Property Tax",
+        "user": true
+      },
+      {
+        "label": "Lot Size",
+        "unit": "acre",
+        "value": 0.46
+      }
+    ],
+    "local_connect": false,
+    "schools": null,
+    "uri": "/property/134-dutchess-way-suffolk-va-23435/id-400028801900/"
+  },
+  {
+    "address": {
+      "street_address": {
+        "label": "284 Greenwoods Rd W"
+      },
+      "locality": {
+        "county": "LITCHFIELD",
+        "label": "Norfolk",
+        "value": "NORFOLK"
+      },
+      "region": {
+        "code": "CT",
+        "label": "CT",
+        "value": "CT"
+      },
+      "postal_code": {
+        "label": "06058",
+        "value": "06058"
+      },
+      "country_name": {
+        "code": "US",
+        "label": "United States of America",
+        "value": "US"
+      },
+      "lat": 42.00139236450195,
+      "lng": -73.21866607666016
+    },
+    "main_uri": "/property/284-greenwoods-rd-w-norfolk-ct-06058/id-500013917630/",
+    "property_id": "500013917630",
+    "listing_status": "off_market",
+    "price": {
+      "type": "estimate",
+      "value": 98600,
+      "currency": "USD",
+      "delta": 50000
+    },
+    "last_sold_date": "2014-08-14T00:00:01Z",
+    "baths": {
+      "type": "single",
+      "value": 1
+    },
+    "beds": {
+      "type": "single",
+      "value": 2
+    },
+    "square_footage": {
+      "type": "single",
+      "value": 712
+    },
+    "primary_image": {
+      "src": "http://cdn1.static-homes.com/media/portalimgcache/missing.gif"
+    },
+    "lot_size": {
+      "type": "single",
+      "value": 21780
+    },
+    "property_type": {},
+    "lead": {
+      "comments": "I'd like a free home estimate for 284 Greenwoods Rd W found on Homes.com."
+    },
+    "hide_home_values": false,
+    "alternative_listing": null,
+    "title": "Off Market",
+    "mls_show_badge": false,
+    "days_listed": null,
+    "year_built": {
+      "type": "single",
+      "value": 1820
+    },
+    "view_source": null,
+    "property_record": [
+      {
+        "value": 69375,
+        "label": "Last Sold Price",
+        "unit": "USD"
+      },
+      {
+        "value": "2014-08-14T00:00:01Z",
+        "label": "Last Sold Date",
+        "unit": "date"
+      },
+      {
+        "value": 1189,
+        "label": "Tax Amount",
+        "unit": "USD"
+      },
+      {
+        "value": "1820",
+        "label": "Year Built",
+        "unit": "other"
+      },
+      {
+        "value": 712,
+        "label": "Square Feet",
+        "unit": "sqft"
+      },
+      {
+        "value": 2,
+        "label": "Bedrooms",
+        "unit": "other"
+      },
+      {
+        "value": 1,
+        "label": "Bathrooms",
+        "unit": "other"
+      },
+      {
+        "value": 376.59,
+        "unit": "USD",
+        "user": true,
+        "label": "Monthly Est. Mortgage"
+      },
+      {
+        "value": 35,
+        "label": "Monthly Est. Insurance",
+        "unit": "USD",
+        "user": true
+      },
+      {
+        "value": 138.48,
+        "unit": "USD",
+        "label": "Price per SqFt",
+        "user": true
+      },
+      {
+        "value": 99.08,
+        "unit": "USD",
+        "label": "Monthly Property Tax",
+        "user": true
+      },
+      {
+        "label": "Lot Size",
+        "unit": "acre",
+        "value": 0.5
+      }
+    ],
+    "local_connect": false,
+    "schools": null,
+    "uri": "/property/284-greenwoods-rd-w-norfolk-ct-06058/id-500013917630/"
+  },
+  {
+    "address": {
+      "street_address": {
+        "label": "2107 Companero Ave"
+      },
+      "locality": {
+        "county": "ORANGE",
+        "label": "Orlando",
+        "value": "ORLANDO"
+      },
+      "region": {
+        "code": "FL",
+        "label": "FL",
+        "value": "FL"
+      },
+      "postal_code": {
+        "label": "32804",
+        "value": "32804"
+      },
+      "country_name": {
+        "code": "US",
+        "label": "United States of America",
+        "value": "US"
+      },
+      "lat": 28.558155059814453,
+      "lng": -81.40853881835938
+    },
+    "main_uri": "/property/2107-companero-ave-orlando-fl-32804/id-200006468058/",
+    "property_id": "200006468058",
+    "listing_status": "off_market",
+    "price": {
+      "type": "estimate",
+      "value": 440800,
+      "currency": "USD",
+      "delta": -15000
+    },
+    "last_sold_date": "2002-09-05T00:00:01Z",
+    "baths": {
+      "type": "single",
+      "value": 3.5
+    },
+    "beds": {
+      "type": "single",
+      "value": 4
+    },
+    "square_footage": {
+      "type": "single",
+      "value": 2816
+    },
+    "primary_image": {
+      "src": "http://cdn1.static-homes.com/media/portalimgcache/missing.gif"
+    },
+    "lot_size": {
+      "type": "single",
+      "value": 0
+    },
+    "property_type": {},
+    "lead": {
+      "comments": "I'd like a free home estimate for 2107 Companero Ave found on Homes.com."
+    },
+    "hide_home_values": false,
+    "alternative_listing": null,
+    "title": "Off Market",
+    "mls_show_badge": false,
+    "days_listed": null,
+    "year_built": {
+      "type": "single",
+      "value": 1959
+    },
+    "view_source": null,
+    "property_record": [
+      {
+        "value": 259000,
+        "label": "Last Sold Price",
+        "unit": "USD"
+      },
+      {
+        "value": "2002-09-05T00:00:01Z",
+        "label": "Last Sold Date",
+        "unit": "date"
+      },
+      {
+        "value": 6342,
+        "label": "Tax Amount",
+        "unit": "USD"
+      },
+      {
+        "value": "1959",
+        "label": "Year Built",
+        "unit": "other"
+      },
+      {
+        "value": 2816,
+        "label": "Square Feet",
+        "unit": "sqft"
+      },
+      {
+        "value": 4,
+        "label": "Bedrooms",
+        "unit": "other"
+      },
+      {
+        "value": 3.5,
+        "label": "Bathrooms",
+        "unit": "other"
+      },
+      {
+        "value": 1683.56,
+        "unit": "USD",
+        "user": true,
+        "label": "Monthly Est. Mortgage"
+      },
+      {
+        "value": 175,
+        "label": "Monthly Est. Insurance",
+        "unit": "USD",
+        "user": true
+      },
+      {
+        "value": 156.53,
+        "unit": "USD",
+        "label": "Price per SqFt",
+        "user": true
+      },
+      {
+        "value": 528.5,
+        "unit": "USD",
+        "label": "Monthly Property Tax",
+        "user": true
+      }
+    ],
+    "local_connect": false,
+    "schools": null,
+    "uri": "/property/2107-companero-ave-orlando-fl-32804/id-200006468058/"
+  },
+  {
+    "address": {
+      "street_address": {
+        "label": "4708 Robin Hood Rd"
+      },
+      "locality": {
+        "county": "NORFOLK",
+        "label": "Norfolk",
+        "value": "NORFOLK"
+      },
+      "region": {
+        "code": "VA",
+        "label": "VA",
+        "value": "VA"
+      },
+      "postal_code": {
+        "label": "23513",
+        "value": "23513"
+      },
+      "country_name": {
+        "code": "US",
+        "label": "United States of America",
+        "value": "US"
+      },
+      "lat": 36.877811431884766,
+      "lng": -76.2351303100586
+    },
+    "main_uri": "/property/4708-robin-hood-rd-norfolk-va-23513/id-400028643733/",
+    "property_id": "400028643733",
+    "listing_status": "off_market",
+    "price": {
+      "type": "estimate",
+      "value": 115100,
+      "currency": "USD"
+    },
+    "last_sold_date": "2013-12-23T00:00:01Z",
+    "baths": {
+      "type": "single",
+      "value": 2
+    },
+    "beds": {
+      "type": "single",
+      "value": 2
+    },
+    "square_footage": {
+      "type": "single",
+      "value": 1456
+    },
+    "primary_image": {
+      "src": "http://cdn1.static-homes.com/media/portalimgcache/missing.gif"
+    },
+    "lot_size": {
+      "type": "single",
+      "value": 8070
+    },
+    "property_type": {},
+    "lead": {
+      "comments": "I'd like a free home estimate for 4708 Robin Hood Rd found on Homes.com."
+    },
+    "hide_home_values": false,
+    "alternative_listing": null,
+    "title": "Off Market",
+    "mls_show_badge": false,
+    "days_listed": null,
+    "year_built": {
+      "type": "single",
+      "value": 1942
+    },
+    "view_source": null,
+    "property_record": [
+      {
+        "value": 149900,
+        "label": "Last Sold Price",
+        "unit": "USD"
+      },
+      {
+        "value": "2013-12-23T00:00:01Z",
+        "label": "Last Sold Date",
+        "unit": "date"
+      },
+      {
+        "value": 1847,
+        "label": "Tax Amount",
+        "unit": "USD"
+      },
+      {
+        "value": "1942",
+        "label": "Year Built",
+        "unit": "other"
+      },
+      {
+        "value": 1456,
+        "label": "Square Feet",
+        "unit": "sqft"
+      },
+      {
+        "value": 2,
+        "label": "Bedrooms",
+        "unit": "other"
+      },
+      {
+        "value": 2,
+        "label": "Bathrooms",
+        "unit": "other"
+      },
+      {
+        "value": 439.6,
+        "unit": "USD",
+        "user": true,
+        "label": "Monthly Est. Mortgage"
+      },
+      {
+        "value": 70,
+        "label": "Monthly Est. Insurance",
+        "unit": "USD",
+        "user": true
+      },
+      {
+        "value": 79.05,
+        "unit": "USD",
+        "label": "Price per SqFt",
+        "user": true
+      },
+      {
+        "value": 153.92,
+        "unit": "USD",
+        "label": "Monthly Property Tax",
+        "user": true
+      },
+      {
+        "label": "Lot Size",
+        "unit": "acre",
+        "value": 0.19
+      }
+    ],
+    "local_connect": false,
+    "schools": null,
+    "uri": "/property/4708-robin-hood-rd-norfolk-va-23513/id-400028643733/"
+  },
+  {
+    "address": {
+      "street_address": {
+        "label": "701 Ingalls Dr"
+      },
+      "locality": {
+        "county": "WRIGHT",
+        "label": "Buffalo",
+        "value": "BUFFALO"
+      },
+      "region": {
+        "code": "MN",
+        "label": "MN",
+        "value": "MN"
+      },
+      "postal_code": {
+        "label": "55313",
+        "value": "55313"
+      },
+      "country_name": {
+        "code": "US",
+        "label": "United States of America",
+        "value": "US"
+      },
+      "lat": 45.1640510559082,
+      "lng": -93.86408996582031
+    },
+    "main_uri": "/property/ingalls-dr-buffalo-mn-55313/id-600022953765/",
+    "property_id": "600022953765",
+    "listing_status": "off_market",
+    "price": {
+      "type": "estimate",
+      "value": 300400,
+      "currency": "USD"
+    },
+    "last_sold_date": "2008-02-19T00:00:01Z",
+    "baths": {
+      "type": "single",
+      "value": 3.5
+    },
+    "beds": {
+      "type": "single",
+      "value": 4
+    },
+    "square_footage": {
+      "type": "single",
+      "value": 1712
+    },
+    "primary_image": {
+      "src": "http://cdn1.static-homes.com/media/portalimgcache/missing.gif"
+    },
+    "lot_size": {
+      "type": "single",
+      "value": 0
+    },
+    "property_type": {},
+    "lead": {
+      "comments": "I'd like a free home estimate for 701 Ingalls Dr found on Homes.com."
+    },
+    "hide_home_values": false,
+    "alternative_listing": null,
+    "title": "Off Market",
+    "mls_show_badge": false,
+    "days_listed": null,
+    "year_built": {
+      "type": "single",
+      "value": 2007
+    },
+    "view_source": null,
+    "property_record": [
+      {
+        "value": 0,
+        "label": "Last Sold Price",
+        "unit": "USD"
+      },
+      {
+        "value": "2008-02-19T00:00:01Z",
+        "label": "Last Sold Date",
+        "unit": "date"
+      },
+      {
+        "value": 3746,
+        "label": "Tax Amount",
+        "unit": "USD"
+      },
+      {
+        "value": "2007",
+        "label": "Year Built",
+        "unit": "other"
+      },
+      {
+        "value": 1712,
+        "label": "Square Feet",
+        "unit": "sqft"
+      },
+      {
+        "value": 4,
+        "label": "Bedrooms",
+        "unit": "other"
+      },
+      {
+        "value": 3.5,
+        "label": "Bathrooms",
+        "unit": "other"
+      },
+      {
+        "value": 1147.32,
+        "unit": "USD",
+        "user": true,
+        "label": "Monthly Est. Mortgage"
+      },
+      {
+        "value": 140,
+        "label": "Monthly Est. Insurance",
+        "unit": "USD",
+        "user": true
+      },
+      {
+        "value": 175.47,
+        "unit": "USD",
+        "label": "Price per SqFt",
+        "user": true
+      },
+      {
+        "value": 312.17,
+        "unit": "USD",
+        "label": "Monthly Property Tax",
+        "user": true
+      }
+    ],
+    "local_connect": false,
+    "schools": null,
+    "uri": "/property/ingalls-dr-buffalo-mn-55313/id-600022953765/"
+  }
+
+    ]
+}

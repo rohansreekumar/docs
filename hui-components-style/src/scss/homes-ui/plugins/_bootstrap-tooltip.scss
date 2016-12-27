@@ -1,0 +1,73 @@
+.tooltip {
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+}
+
+.tooltip {
+    position: absolute;
+
+    .tooltip-arrow {
+        @include TooltipArrow-arrow();
+
+        &:after {
+            background: $darkGrey;
+        }
+    }
+
+    // right = tooltip is on right, arrow is on left
+    // left = tooltip is on left, arrow is on right
+    // bottom = tooltip is on bottom, arrow is on top
+    // top = tooltip is on top, arrow is on bottom
+    &.left {
+        .tooltip-arrow {
+            @include TooltipArrow-position('right');
+            margin-left: -8px;
+        }
+    }
+    &.right {
+        .tooltip-arrow {
+            @include TooltipArrow-position('left');
+            margin-right: -8px;
+        }
+    }
+    &.left {
+        .tooltip-arrow {
+            left: 100%;
+            &::after {
+                left: auto;
+                right: 100%;
+            }
+        }
+    }
+    &.top {
+        .tooltip-arrow {
+            @include TooltipArrow-position('bottom');
+            margin-top: -8px;
+        }
+    }
+    &.bottom {
+        .tooltip-arrow {
+            @include TooltipArrow-position('top');
+            margin-bottom: -8px;
+        }
+    }
+    &.top {
+        .tooltip-arrow {
+            top: 100%;
+            &::after {
+                top: auto;
+                bottom: 100%;
+            }
+        }
+    }
+    .tooltip-inner {
+        max-width: 330px;
+        background: $darkGrey;
+        color: $white;
+        @include adjust-font-size-to($to-size: 14px);
+        padding: rhythm(.25, 14px) rhythm(.5, 14px);
+        @include border-radius($global-radius);
+        border: 0;
+    }
+}

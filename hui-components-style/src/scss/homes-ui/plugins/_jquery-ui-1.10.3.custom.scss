@@ -1,0 +1,367 @@
+/*! jQuery UI - v1.10.3 - 2013-06-19
+* http://jqueryui.com
+* Includes: 
+jquery.ui.core.css 
+jquery.ui.resizable.css
+jquery.ui.selectable.css
+jquery.ui.accordion.css
+jquery.ui.autocomplete.css 
+jquery.ui.button.css 
+jquery.ui.datepicker.css 
+jquery.ui.dialog.css
+jquery.ui.menu.css
+jquery.ui.progressbar.css
+jquery.ui.slider.css 
+jquery.ui.spinner.css
+jquery.ui.tabs.css
+jquery.ui.tooltip.css
+* Copyright 2013 jQuery Foundation and other contributors Licensed MIT */
+
+// /* UI Core ==========================================================*/
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden {
+    display: none;
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+}
+
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+    content: "";
+    display: table;
+    border-collapse: collapse;
+}
+
+.ui-helper-clearfix:after {
+    clear: both;
+}
+
+.ui-helper-clearfix {
+    min-height: 0; /* support: IE7 */
+}
+
+.ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    filter: Alpha(Opacity=0);
+}
+
+.ui-front {
+    z-index: 100;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+    cursor: default !important;
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+    display: block;
+    @include squish-text;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+// .ui-icon {
+// 	display: block;
+// 	text-indent: -99999px;
+// 	overflow: hidden;
+// 	background-repeat: no-repeat;
+// }
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// /* Interactions =====================================================*/
+
+@import 'jquery-ui-interactions';
+
+// /* Widgets ==========================================================*/
+
+@import 'jquery-ui-accordion';
+
+@import 'jquery-ui-autocomplete';
+// Uses menu styles
+
+@import 'jquery-ui-button';
+
+@import 'jquery-ui-datepicker';
+
+@import 'jquery-ui-dialog';
+
+@import 'jquery-ui-menu';
+
+@import 'jquery-ui-progressbar';
+
+@import 'jquery-ui-slider';
+
+@import 'jquery-ui-spinner';
+
+@import 'jquery-ui-tabs';
+
+@import 'jquery-ui-tooltip';
+
+// /* Effects ==========================================================*/
+
+// No Styles
+
+// /* UI Core ==========================================================*/
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+    // font-family: $font-family;
+    // font-size: $font-size;
+    .ui-widget {
+        // font-size: 1em;
+    }
+    input,
+    select,
+    textarea,
+    button {
+        // font-family: $font-family;
+        // font-size: 1em;
+    }
+}
+
+.ui-widget-content {
+    border: 1px solid $mediumGrey;
+    background: $white;
+    color: $darkGrey;
+}
+
+.ui-widget-header {
+    border: 1px solid $lightGrey;
+    border-width: 0 0 1px;
+    background: $white;
+    color: $blue;
+    @include font-weight(700);
+
+    padding: .2em 10px;
+    &.ui-corner-all {
+        @include border-radius(0);
+    }
+    a {
+        color: inherit;
+    }
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+    border: 1px solid $orange;
+    background: $orange;
+    color: $white;
+}
+
+.ui-widget-header .ui-state-default {
+    border: 1px solid $white;
+    background: $white;
+    color: $blue;
+}
+
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+    color: $white;
+    text-decoration: none;
+    .ui-widget-header & {
+        color: $blue;
+    }
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    border: 1px solid $blue;
+    background: $blue;
+    color: $white;
+}
+
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited {
+    color: $white;
+    text-decoration: none;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border: 1px solid $lightGrey;
+    background: $lightGrey;
+    color: $blue;
+}
+
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+    color: $blue;
+    text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    border: 1px solid $orange;
+    background: $white;
+    color: $blue;
+}
+
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+    color: $blue;
+}
+
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+    border: 1px solid $red;
+    // background: lighten($red, 40%);
+    // color: $red;
+}
+
+// .ui-state-error a,
+// .ui-widget-content .ui-state-error a,
+// .ui-widget-header .ui-state-error a {
+// 	color: $red;
+// }
+// .ui-state-error-text,
+// .ui-widget-content .ui-state-error-text,
+// .ui-widget-header .ui-state-error-text {
+// 	color: $red;
+// }
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+    @include font-weight(700);
+}
+
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+    opacity: .7;
+    filter: Alpha(Opacity=70);
+    @include font-weight(400);
+}
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+    opacity: .35;
+    filter: Alpha(Opacity=35);
+    background-image: none;
+}
+
+.ui-state-disabled .ui-icon {
+    filter: Alpha(Opacity=35); /* For IE8 - See #6059 */
+}
+
+/* Icons
+----------------------------------*/
+@import 'jquery-ui-core-icons';
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all {
+    @include border-radius($border-radius);
+}
+
+.ui-corner-top {
+    @include border-top-radius($border-radius);
+}
+
+.ui-corner-right {
+    @include border-right-radius($border-radius);
+}
+
+.ui-corner-bottom {
+    @include border-left-radius($border-radius);
+}
+
+.ui-corner-left {
+    @include border-left-radius($border-radius);
+}
+
+.ui-corner-tl {
+    @include border-corner-radius(top, left, $border-radius);
+}
+
+.ui-corner-tr {
+    @include border-corner-radius(top, right, $border-radius);
+}
+
+.ui-corner-bl {
+    @include border-corner-radius(bottom, left, $border-radius);
+}
+
+.ui-corner-br {
+    @include border-corner-radius(bottom, right, $border-radius);
+}
+
+/* Overlays */
+.ui-widget-overlay {
+    background: #000;
+    opacity: .6;
+    filter: Alpha(Opacity=60);
+}
+
+.ui-widget-shadow {
+    margin: -5px 0 0 -5px;
+    padding: 5px;
+    background: #000;
+    opacity: .5;
+    filter: Alpha(Opacity=50);
+    border-radius: $border-radius*pi()*.4;
+    // border-radius: 0;
+}

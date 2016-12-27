@@ -1,0 +1,118 @@
+.range-slider {
+    float: left;
+    .slider-box {
+        width: grid-space(28);
+        height: rhythm-px(4);
+        margin: 0 rhythm-px(.5);
+    }
+
+    .range-display {
+        font-size: $font-size-normal;
+        width: inherit;
+        margin-top: rhythm-px(.5);
+
+        .range-display-label {
+            font-weight: 500;
+            color: $darkBlue;
+            margin-right: grid-space();
+            float: left;
+            max-width: grid-space(17);
+            @include ellipsis();
+        }
+
+        .range-display-tooltip {
+            display: inline;
+            position: relative;
+        }
+
+        .range-display-tooltip-icon {
+            background: transparent;
+        }
+
+        .range-label-box {
+            float: right;
+            color: $mediumBlue;
+            font-size: $font-size-medium;
+
+            .range-label {
+                text-align: right;
+            }
+
+            .range-label-line-bottom {
+                height: rhythm-px(.25);
+            }
+        }
+    }
+
+    .range-label-bottom {
+        color: $mediumGrey;
+        font-size: $font-size-small;
+        width: inherit;
+        opacity: 0;
+        .range-label-min {
+            float: left;
+        }
+
+        .range-label-max {
+            float: right;
+            padding-right: grid-space();
+        }
+    }
+    .slider-control:hover .range-label-bottom,
+    .slider-control:focus .range-label-bottom {
+        opacity: 1;
+    }
+    .slider-control:hover .slider-pointer,
+    .slider-control:focus .slider-pointer {
+        border-color: $orange;
+    }
+    .slider-wrapper {
+        padding: rhythm-px(.25) 0;
+    }
+    .slider-container {
+        position: relative;
+    }
+    .slider {
+        width: calc(100% - 10px);
+        height: rhythm-px(.5);
+        background: $lightGrey;
+        box-shadow: none;
+        border-radius: $border-radius;
+        margin: rhythm-px(.5) 0;
+        padding: 0;
+
+        .slider-selected {
+            background-color: $orange;
+            float: left;
+            height: 100%;
+            border-radius: $border-radius;
+        }
+        .slider-pointer {
+            float: right;
+            background: $white;
+            width: grid-space(2.7);
+            height: rhythm-px(1.35);
+            margin-top: rhythm-px(-0.45);
+            margin-right: grid-space(-1.5);
+            border-radius: 50%;
+            border: 2px solid $mediumGrey;
+            &:focus {
+                outline: 0;
+            }
+            &:hover {
+                border-color: $orange;
+            }
+            &:after {
+                content: '';
+                display: block;
+                height: rhythm-px(1.25);
+                width: grid-space(2.5);
+                position: relative;
+                top: rhythm-px(0.6);
+                left: grid-space(1.2);
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,44 @@
+// 
+// @name Result Link Menu
+// @description Set of Result Actions
+// 
+// @param elements {list} One or more selectors that make the actions
+
+// @example
+// .result-linkShell{
+// 	@include result-links('a', '.a', 'button');
+// }
+//
+// @markup
+// <div class="result-linkShell">
+// 	<a href="/details">View Details</a>
+// 	<span class="a _request-info">Request info</span>
+// 	<button class="button-blue _request-info">Save</button>
+// </div>
+
+@mixin result-links($elements...) {
+    $selectors: null;
+
+    @each $i in $elements {
+        $i: '&>'+ $i;
+        $selectors: append($selectors, unquote($i), comma);
+    }
+
+    #{$selectors} {
+        display: inline-block;
+        margin-right: .75em;
+
+        @include font-weight(700);
+
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        @include pseudo-icon() {
+            margin-right: .4em;
+            margin-bottom: -1px;
+        }
+        @content;
+    }
+}

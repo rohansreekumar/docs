@@ -1,0 +1,9 @@
+{
+    "statusCode": 400,
+    "error": "Bad Request",
+    "message": "child \"ipAddress\" fails because [ipAddress is required]",
+    "validation": {
+        "source":"query",
+        "keys":["ipAddress"]
+    }
+}

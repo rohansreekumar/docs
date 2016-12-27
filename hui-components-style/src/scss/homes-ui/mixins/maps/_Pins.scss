@@ -1,0 +1,222 @@
+// Pin - orange Grey (Blue active & hover state) - round
+// Saved Pin - heart
+// Cluster Pin (Blue hover state) - round
+// Home Value Pin - rectangle
+// Home Value Cluster Pin -rectangle
+
+$pin-color: $orange !default;
+$pin-color-hv: $darkGrey !default;
+$pin-color-visited: #b15602 !default;
+$pin-color-hover: $blue !default;
+$pin-color-text: $white !default;
+
+$pin-height: 12px !default;
+$pin-text-width: 42px !default;
+$pin-border-width: 1px !default;
+
+$pin-box-shadow: $map-box-shadow-offset-x $map-box-shadow-offset-y ($map-box-shadow-blur / 2) floor($map-box-shadow-spread / 2) $map-box-shadow-color;
+$pin-box-background: $white !default;
+$pin-box-border-color: $mediumLightGrey !default;
+$pin-box-background-visited: $lightestGrey !default;
+
+$font-size-pin: $base-font-size !default;
+$font-size-pin-cluster: $font-size-large !default;
+
+@mixin PinColor($base-color: $pin-color, $darken: false) {
+    border-color: darken($base-color, 15%);
+    background-color: $base-color;
+}
+
+@mixin ClusterPinColor($base-color: $pin-color) {
+    background: rgba($base-color, .4);
+    &::after {
+        background-color: $base-color;
+    }
+}
+
+@mixin ClusterPinSize($size: $base-font-size * 2, $offset: .25em, $length: 2em) {
+    font-size: $size;
+    width: $length !important;
+    height: $length !important;
+    &::after {
+        @include stretch($offset, $offset, $offset, $offset);
+    }
+}
+
+/**********/
+/** Pins **/
+/**********/
+
+@mixin map-pin($extend: true) {
+    @if $extend {
+        @extend %map-pin;
+    } @else {
+        // @include box-sizing('border-box');
+        cursor: pointer !important;
+        z-index: 1;
+        & > div {
+            // @include box-sizing('border-box');
+            font-family: $font-family !important;
+            // text-align: center !important;
+        }
+        &:hover {
+            z-index: 10;
+        }
+    }
+}
+
+@mixin map-pin-property($extend: true) {
+    @if $extend {
+        @extend %map-pin-property;
+    } @else {
+        @include map-pin;
+        width: $pin-height !important;
+        height: $pin-height !important;
+        @include border-radius(100%);
+        border: {
+            width: $pin-border-width;
+            style: solid;
+        }
+        @include PinColor;
+
+        overflow: visible !important;
+        & > div {
+            top: $pin-height - $pin-border-width !important;
+            left: 50% !important;
+            width: $pin-text-width !important;
+            margin-left: $pin-text-width / -2;
+
+            background: $pin-box-background;
+            // border: 1px solid $pin-box-border-color;
+            @include box-shadow(0 0 5px rgba($black, 0.5));
+            border-radius: ceil($map-radius / 2);
+
+            font-size: $font-size-pin !important;
+            color: $body-color !important;
+            line-height: 1.3em !important;
+        }
+        &:before {
+            // so that the shadow will overlap the value box
+            content: '';
+            @include stretch((-$pin-border-width), (-$pin-border-width), (-$pin-border-width), (-$pin-border-width));
+            @include border-radius(100%);
+            @include box-shadow($pin-box-shadow);
+            z-index: 2;
+        }
+        &.is-visited {
+            @include PinColor($pin-color-visited);
+            & > div {
+                background: $pin-box-background-visited;
+            }
+        }
+        &:hover,
+        &.is-hover,
+        &.is-active,
+        &.is-target {
+            @include PinColor($pin-color-hover);
+            & > div {
+                font-size: $font-size-pin + 4 !important; // 14px
+                color: $pin-color-hover !important;
+                @include transition(all .1s);
+            }
+        }
+        // &.is-saved {
+        // 	background-color: transparent;
+        // 	border: 0;
+        // 	@include generate-sprite(pin_heart, $important:true);
+        // 	&>div {
+        // 		top: image-height(sprite-file($generate-sprites, pin_heart)) - 2 !important;
+        // 	}
+        // 	&:before {
+        // 		display: none;
+        // 	}
+        // }
+        .is-electric & {
+            & > div {
+                display: none;
+            }
+            &:hover,
+            &.is-price {
+                & > div {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@mixin map-pin-homeValue($extend: true) {
+    @if $extend {
+        @extend %map-pin-homeValue;
+    } @else {
+        @include map-pin-property;
+        @include PinColor($pin-color-hv);
+    }
+}
+
+@mixin map-pin-cluster($extend: true) {
+    @if $extend {
+        @extend %map-pin-cluster;
+    } @else {
+        @include map-pin;
+        @include ClusterPinSize($font-size-pin-cluster);
+        @include border-radius(100%);
+        @include ClusterPinColor;
+        @include vertical-center('div');
+
+        // Value
+        & > div {
+            z-index: 2;
+            position: relative !important;
+            font-size: $font-size-pin-cluster !important;
+        }
+
+        // Background
+        &::after {
+            content: '';
+            z-index: 1;
+            border-radius: 100%;
+        }
+        &:hover,
+        &.is-hover,
+        &.is-active {
+            @include ClusterPinColor($pin-color-hover);
+        }
+        &.s_large {
+            @include ClusterPinSize(35px);
+        }
+        &.s_medium {
+            @include ClusterPinSize(28px);
+        }
+        &.s_small {
+            @include ClusterPinSize(18px);
+        }
+        &.s_xSmall {
+            // @include ClusterPinSize(14px);
+            @include ClusterPinSize(18px);
+        }
+    }
+}
+
+// .pin-boundary {
+// 	pointer-events: none !important;
+// }
+
+@if import-once('mapsPins.scss') {
+
+    %map-pin {
+        @include map-pin($extend: false);
+    }
+
+    %map-pin-property {
+        @include map-pin-property($extend: false);
+    }
+
+    %map-pin-homeValue {
+        @include map-pin-homeValue($extend: false);
+    }
+
+    %map-pin-cluster {
+        @include map-pin-cluster($extend: false);
+    }
+}

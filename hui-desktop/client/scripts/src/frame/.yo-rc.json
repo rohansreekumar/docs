@@ -1,0 +1,6 @@
+{
+  "generator-hui": {
+    "moduleName": "huiFrame",
+    "huiMockModule": false
+  }
+}

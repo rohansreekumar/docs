@@ -1,0 +1,84 @@
+.rent-additional-properties {
+    width: grid-space(56);
+    font-size: $font-size-normal;
+    .rent-additional-properties--title {
+        font-weight: 600;
+        line-height: rhythm-px(1.5);
+        border-bottom: 1px solid $lightGrey;
+        padding: 0 grid-space();
+        margin: 0;
+    }
+    .rent-additional-properties--property {
+        padding: rhythm-px() grid-space() 0;
+        .rent-nearby--card {
+            display: inline-table;
+            width: grid-space(15);
+            margin: 0 grid-space(0.5) rhythm-px(0.5);
+            background-color: $lightestGrey;
+            padding: rhythm-px(0.5) grid-space();
+            .rent-nearby--anchor {
+                white-space: normal;
+            }
+            .rent-display--image {
+                height: rhythm-px(5);
+                width: grid-space(15);
+                .rent-additional-properties--image {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .rent-display--info {
+                height: rhythm-px(5);
+                overflow: hidden;
+                .rent-display--name {
+                    color: $blue;
+                    font-weight: 600;
+                }
+                .rent-display--name,
+                .rent-display--address {
+                    margin: 0;
+                }
+                .rent-display--address {
+                    font-size: $font-size-small;
+                    color: $mediumGrey;
+                }
+            }
+            .rent-check--availability {
+                .input-checkbox + label {
+                    font-size: $font-size-small;
+                    padding-left: grid-space(2);
+                    line-height: rhythm-px(0.6);
+                    &:before {
+                        width: grid-space(1.2);
+                        height: rhythm-px(0.6);
+                    }
+                    &:after {
+                        font-size: $font-size-small;
+                    }
+                }
+                .input-checkbox:checked + label {
+                    &:after {
+                        background: $blue;
+                        left: grid-space(0.7);
+                        @include border-radius($border-radius - 3);
+                    }
+                }
+            }
+        }
+    }
+    .rent-additional-properties--button {
+        text-align: center;
+        padding-bottom: rhythm-px();
+        .button {
+            height: rhythm-px(1.5);
+            line-height: rhythm-px(1.25);
+            display: inline-block;
+            padding: 0 grid-space(1.5);
+            margin-right: grid-space(.5);
+            border: 0;
+            &:hover {
+                background: $orange;
+            }
+        }
+    }
+}

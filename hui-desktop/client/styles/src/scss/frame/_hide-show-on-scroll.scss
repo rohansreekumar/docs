@@ -1,0 +1,11 @@
+$global-nav-height: rhythm-px(2.5) !default !global;
+
+.scrolling-down {
+    @include transition-duration(0.4s);
+    @include transform(translateY(-$global-nav-height));
+}
+
+.scrolling-up {
+    @include transition-duration(0.4s);
+    @include transform(translateY(0));
+}

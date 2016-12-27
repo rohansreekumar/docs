@@ -1,0 +1,29 @@
+// @huidocs sass
+// @module default
+// @name Sprite Icons
+//
+// @description
+// Icons that aren't in the Homes-icon-font
+//
+// @markup
+// <div class="{$ state.escaped $}"></div>
+//
+// @state .icon-eho - Equal Housing Opportunity icon for copyright footer.
+// @state .icon-eho - Equal Housing Opportunity icon for copyright footer.
+//
+//
+// @styleguide 0.0.0
+
+$icon-eho: 'default/equal_housing_opportunity.gif';
+$icon-eho-size: min($font-size-small * 1.25, image-height($icon-eho)/4, image-width($icon-eho)/4);
+
+.icon-eho {
+    background: {
+        image: image-url($icon-eho);
+        size: 100%;
+    }
+    display: inline-block;
+    margin-top: -0.2 * $icon-eho-size;
+    height: $icon-eho-size;
+    width: $icon-eho-size;
+}

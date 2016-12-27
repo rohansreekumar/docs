@@ -1,0 +1,144 @@
+@import "../../mixins/Forms";
+
+//@huidoc sass
+//@module forms
+//@name Search Form
+//
+//@description
+//Search Form
+//
+//@markup
+//<div class="search-form {$ state.escaped $}">
+//    <div class="search-form--button">
+//        <button class="button button--icon icon-hui icon-hui--search"><span>Search</span></button>
+//    </div>
+//    <div class="search-form--field">
+//       <label class="float-label">
+//        <span class="form-label">Search Homes for Sale</span>
+//        <input type="text"/>
+// </label>
+//    </div>
+//</div>
+//
+// @state search-form--mobile
+// @state search-form--subheader
+//
+//@styleguide
+
+$float-label-class: '.float-label' !global !default;
+// because float-label isn't done
+
+// Positioning / frame. -- IE10 will need 2012 fallback styles. Does not work in IE9.
+.search-form {
+    @include display-flex;
+    @include flex-direction(row);
+    @include align-items(stretch);
+
+    .search-form--button {
+        @include display-flex;
+        @include align-items(stretch);
+        padding-left: grid-space(1.5);
+    }
+    .search-form--field {
+        @include flex-grow(1);
+    }
+}
+
+.search-form--field {
+
+    &:hover {
+        border-color: $form-field-hover-border-color;
+    }
+
+        color: $form-field-hover-border-color;
+    #{$float-label-class} {
+        margin: 0;
+        padding-right: nth($form-field-padding, 2);
+        &.form-field--complete {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
+
+.search-form--button {
+    & > .button {
+        padding: 0 grid-space(1.5);
+        font-size: inherit;
+        height: auto;
+        @include flex-grow(1);
+        line-height: inherit;
+    }
+}
+
+// Autosuggest
+@import "search-form--autosuggest";
+
+//Secondary
+@import "search-form--secondary";
+
+// Search Form types
+.search-form--mobile {
+    font-size: $font-size-large;
+
+    @media all and (max-width: 350px) {
+        font-size: $font-size-normal;
+    }
+
+    .search-form--button {
+        display: none;
+    }
+
+    &.is-focus {
+        .search-form--button {
+            @include display-flex;
+            height: $form-field-single-height-focused;
+        }
+    }
+    .autosuggest--item {
+        @include adjust-font-size-to($to-size: $font-size-medium, $from-size: $font-size-large, $lines: 1.5);
+    }
+}
+.search-form--subheader {
+    @include border-radius($global-radius);
+    line-height: $base-line-height;
+    font-size: $font-size-normal;
+    .search-form--field {
+        display: none;
+        #{$float-label-class} {
+            @include border-left-radius($global-radius);
+        }
+    }
+    .search-form--button {
+        padding-left: 0;
+        height: $form-field-single-height;
+    }
+    &.is-focus {
+        .search-form--field {
+            @include display-flex;
+            #{$float-label-class} {
+                height: $form-field-single-height;
+            }
+        }
+        .search-form--button {
+            .button {
+                @include border-left-radius(0);
+            }
+        }
+    }
+    .autosuggest--item {
+        @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal, $lines: 1.5);
+    }
+}
+.search-form--landing {
+    min-height: rhythm-px(2.5);
+    font-size: $font-size-xlarge;
+
+    #{$float-label-class} {
+        min-height: rhythm-px(2.5);
+    }
+    .autosuggest--item {
+        @include adjust-font-size-to($to-size: $font-size-large, $from-size: $font-size-xlarge, $lines: 1.5);
+    }
+}

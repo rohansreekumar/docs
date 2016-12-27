@@ -1,0 +1,34 @@
+.tabs-container {
+	.tab {
+        border: none;
+        border-left: 1px solid $mediumLightGrey;
+        background: $lightestGrey;
+        cursor: pointer;
+        color: $blue;
+        display: table-cell;
+        font-weight: 600;
+	    padding: rhythm-px(0.7) grid-space(1.4);
+	    text-align: center;
+        text-transform: capitalize;
+        width: 5%;
+	    height: rhythm-px(2.5);
+	    margin-bottom: rhythm-px();
+
+        &:first-child {
+            border-left: none;
+        }
+        &:hover {
+            color: $darkBlue;
+        }
+	}
+
+	.tab.active {
+        color: $mediumDarkGrey;
+	    background: $white;
+	    border-top: rhythm-px(0.1) solid $orange;
+        &:hover {
+            cursor: initial;
+            color: $mediumDarkGrey;
+        }
+	}
+}

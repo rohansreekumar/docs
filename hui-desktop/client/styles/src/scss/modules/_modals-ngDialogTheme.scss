@@ -1,0 +1,100 @@
+// ngDialog theme
+// ngDialog theme
+// modified from ng-dialog-theme-plain.css
+//
+// only modify ngdialog classes here!
+
+.ngdialog.ngdialog-theme-hui--desktop {
+
+    .ngdialog-content {
+        background: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-width: 100%;
+        max-height: rhythm-px(37.5); // Todo: temporary until we create a better solution to keeping all modals on the user's screen
+        @include wrap-lightbox();
+    }
+
+    .ngdialog-message {
+    }
+
+    .ngdialog-input {
+    }
+
+    .ngdialog-buttons {
+        @include clearfix;
+    }
+
+    .ngdialog-button {
+        @include button();
+    }
+
+    .ngdialog-button.ngdialog-button-primary {
+        @include button-color('primary');
+    }
+
+    .ngdialog-button.ngdialog-button-secondary {
+        @include button-color('secondary');
+    }
+
+    .ngdialog-close {
+        @extend .close-button; // hui-components-style
+    }
+
+    &.ngdialog-myhomes {
+        .ngdialog-content {
+            max-height: rhythm-px(39);
+        }
+
+        .ngdialog-close {
+            background-color: transparent;
+            border: 0;
+            top: 0;
+            right: 0;
+            box-shadow: none;
+            color: $mediumBlue;
+
+            &:before {
+                font-size: $font-size-medium - 1;
+            }
+        }
+    }
+
+    &.ngdialog-rounded {
+        .ngdialog-content {
+            @include border-radius($border-radius * 4);
+
+            .ngdialog-close {
+                top: rhythm-px(1.5);
+                right: grid-space(3);
+                box-shadow: none;
+                color: $mediumGrey;
+                background-color: transparent;
+
+                &:before {
+                    font-size: $font-size-xlarge;
+                }
+            }
+        }
+    }
+
+    &.talk-now-modal {
+        .ngdialog-content {
+            @include border-radius($border-radius);
+
+            .ngdialog-close {
+                top: rhythm-px(0.5);
+                right: grid-space();
+                box-shadow: none;
+                color: $mediumGrey;
+                background-color: transparent;
+
+                &:before {
+                    font-size: $font-size-xlarge;
+                }
+            }
+        }
+    }
+}

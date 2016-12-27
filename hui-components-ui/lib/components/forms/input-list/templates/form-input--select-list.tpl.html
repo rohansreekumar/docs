@@ -1,0 +1,25 @@
+<div class="form-input--select-list" uib-dropdown>
+    <div class="select--button" uib-dropdown-toggle>
+        <span class="select--button-text">{{listCtrl.setSelectButton(listCtrl.formInputModel)}}</span>
+    </div>
+    <ul class="dropdown-menu" uib-dropdown-menu role="menu">
+        <li class="dropdown-item"
+            data-ng-click="listCtrl"
+            ng-repeat="item in listCtrl.formInputData.filteredValues">
+            <input
+                class="dropdown-item-input"
+                data-ng-click="listCtrl.toggleShowDropdown($index)"
+                type="radio"
+                name="{{listCtrl.formInputName}}"
+                id="{{$index + listCtrl.id}}"
+                ng-model="listCtrl.formInputModel"
+                ng-value="item.value"
+                data-tl-object="{{listCtrl.formInputTracking || item.value}}"/>
+            <label data-ng-click="listCtrl.setSelectButton(item.label)"
+                   class="dropdown-item-label"
+                   for="{{$index + listCtrl.id}}">
+                {{item.label}}
+            </label>
+        </li>
+    </ul>
+</div>

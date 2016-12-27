@@ -1,0 +1,73 @@
+// Backgrounds
+//
+// Common backgrounds
+//
+// .background-greyWhite - Grey to White.
+// .background-whiteGrey - White to Grey.
+// .background-stripedLightGrad - Grey gradient with diagonal stripes.
+// .background-spinner - Loading spinner.
+// 
+// Markup:
+// <div class="{$modifiers} bd" style="{height: 50px; width: 50px; float: left; margin: 5px;}">
+// 	Maecenas a porta nibh, sed tincidunt diam. Sed non egestas neque. Quisque sagittis tellus ac massa commodo mattis. Ut nec blandit lacus. Aliquam vestibulum dui eget magna bibendum placerat. Mauris tempor tempor facilisis. Mauris adipiscing elit sit amet erat adipiscing, sit amet convallis nibh placerat. Aenean convallis nulla at dui interdum fermentum.
+// </div>
+//
+// Styleguide 4.1
+
+// Backgrounds (mixin)
+//
+// Mixins for creating common backgrounds
+//
+// > * `$extend` - true {boolean} Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component. 
+//
+// ```scss
+// @include background-whiteGrey;
+// @include background-greyWhite;
+// @include background-stripedLightGrad;
+// @include background-spinner;
+// ```
+//
+// Styleguide 4.1.1
+
+@mixin background-whiteGrey($extend: true) {
+    @if $extend {
+        @extend %background-whiteGrey;
+    } @else {
+        background: #fff url(/media/portalimgcache/default/background/whiteGrey_s150.png) repeat-x 0 100%;
+        background-image: linear-gradient(to bottom, $white, $lightestGrey);
+    }
+}
+
+@mixin background-greyWhite($extend: true) {
+    @if $extend {
+        @extend %background-greyWhite;
+    } @else {
+        background: #fff url(/media/portalimgcache/default/background/greyWhite_s80.png) repeat-x 0 0;
+        background-image: linear-gradient(to top, $white, $lightestGrey);
+    }
+}
+
+@mixin background-stripedLightGrad($extend: true) {
+    @if $extend {
+        @extend %background-stripedLightGrad;
+    } @else {
+        background-color: #f7f8f9;
+        background-image: url(/media/portalimgcache/default/background/stripedLightGrad_s690.jpg);
+        background-repeat: repeat-x;
+        @include background-image(url(/media/portalimgcache/default/background/bkg_stripe.gif), linear-gradient(top, #f5f5f7, #f9f9fb));
+        background-repeat: repeat, repeat-x;
+        background-position: left top, left top;
+    }
+}
+
+@if import-once("Backgrounds.scss") {
+    %background-whiteGrey {
+        @include background-whiteGrey($extend: false);
+    }
+    %background-greyWhite {
+        @include background-greyWhite($extend: false);
+    }
+    %background-stripedLightGrad {
+        @include background-stripedLightGrad($extend: false);
+    }
+}

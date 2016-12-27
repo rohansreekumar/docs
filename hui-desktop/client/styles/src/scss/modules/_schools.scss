@@ -1,0 +1,122 @@
+
+//@huidoc sass
+//@name school-grade
+//@module school
+//@description
+// styles school grades
+//
+// @example
+//<div class="school-ranking school-ranking--aplus"><span class="school-ranking-legend">A+</span></div>
+//
+.local-schools {
+    @include module-spacing-vertical();
+    
+    .local-schools--table {
+        border-spacing: 0;
+        border-collapse: separate;
+        width: 100%;
+        .local-schools--table-header {
+            font-size: $font-size-medium;
+            color: $darkGrey;
+            text-align: left;
+            padding: rhythm-px(.5) grid-space(2);
+        }
+        .local-schools--table-body {
+            @include border-radius($border-radius);
+            background-color: $lightGrey;
+            font-size: $font-size-medium;
+
+            .local-schools--table-row:last-child
+            .local-schools--information:first-child {
+                @include border-bottom-left-radius($border-radius);
+            }
+
+            .local-schools--table-row:last-child
+            .local-schools--information:last-child {
+                @include border-bottom-right-radius($border-radius);
+            }
+
+            .local-schools--table-row:first-child
+            .local-schools--information:first-child {
+                @include border-top-left-radius($border-radius);
+            }
+
+            .local-schools--table-row:first-child
+            .local-schools--information:last-child {
+                @include border-top-right-radius($border-radius);
+            }
+            .local-schools--information {
+                padding: rhythm-px(.5) grid-space(2);
+                &.local-schools--name {
+                    width: 50%;
+                    .local-schools--link {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+    }
+    .schools-view--more {
+        font-size: $font-size-medium;
+        padding: rhythm-px(.5) grid-space(2);
+        font-weight: 700;
+    }
+
+    .tooltip {
+        .tooltip-inner {
+            max-width: grid-space(40);
+            width: grid-space(40);
+        }
+        .school-tooltip {
+            .school-tooltip-bold {
+                font-weight: 700;
+            }
+            padding: rhythm-px() 0;
+            text-align: center;
+            font-size: $font-size-normal;
+            font-weight: 500;
+
+            .school-legend {
+                padding: rhythm-px() 0;
+                .school-ranking {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .school-ranking {
+        width: grid-space(3);
+        height: rhythm-px(1.5);
+        font-size: $font-size-medium;
+        border-radius: 100%;
+        position: relative;
+        color: $white;
+        display: block;
+
+        .school-ranking-legend {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .school-ranking--aplus,
+    .school-ranking--a,
+    .school-ranking--aminus {
+            background-color:$green;
+
+    }
+    .school-ranking--bplus,
+    .school-ranking--b,
+    .school-ranking--bminus,
+    .school-ranking--cplus {
+            background-color:$orange;
+
+    }
+    .school-ranking--c,
+    .school-ranking--cminus,
+    .school-ranking--d{
+            background-color:$red;
+    }
+}

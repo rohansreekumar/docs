@@ -1,0 +1,10 @@
+{
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": "search is not allowed to be empty",
+  "match": false,
+  "validation": {
+    "source": "query",
+    "keys": ["search"]
+  }
+}

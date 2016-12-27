@@ -1,0 +1,31 @@
+.modal--small .ngdialog-content {
+    .short-message {
+        width: auto;
+        margin-bottom: rhythm-px(2);
+        padding: rhythm-px(.5) grid-space(6);
+
+        .title {
+            margin-top: rhythm-px(1.5);
+            .title--content {
+                color: $orange;
+                font-size: $font-size-xlarge;
+                text-align:center;
+            }
+        }
+
+        .message {
+            margin-top: rhythm-px(1);
+            background-color: white;
+            border: 1px solid $mediumLightGrey;
+            border-radius: $global-radius;
+            .message--content {
+                color: $mediumDarkGrey;
+                font-size: $font-size-medium;
+                text-align: center;
+                padding: rhythm-px() grid-space(2);
+                max-height: rhythm-px(10);
+                overflow: scroll;
+            }
+        }
+    }
+}

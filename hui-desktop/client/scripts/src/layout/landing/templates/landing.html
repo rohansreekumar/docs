@@ -1,0 +1,76 @@
+<article class="page-landing">
+    <div class="landing--home-search">
+
+        <div class="landing--hero"></div>
+        <section class="home-search--content">
+            <div data-search-form>
+                <listing-search-form-large
+                    data-h1="$root.pageMeta.$current.h1"
+                    data-hide-listing-status="true"
+                    search-ctrl="$parent.$parent.searchCtrl">
+                </listing-search-form-large>
+            </div>
+
+        </section>
+    </div>
+
+    <waypoint data-ref="pageCtrl.adjustStickyHeader"></waypoint>
+
+    <div class="national-state-text-a"
+        data-ng-if="$root.pageMeta.$current.text_a"
+        data-ng-bind-html="$root.pageMeta.$current.text_a">
+    </div>
+
+    <div class="landing--tag-block tag-block--blue"
+        data-ng-if="pageCtrl.directory_results.city">
+        <h2 class="tag--block-title"
+            data-ng-bind-html="$root.pageMeta.$current.h2"
+            data-ng-if="$root.pageMeta.$current.h2"></h2>
+        <h2 class="tag--block-title"
+            data-ng-if="!$root.pageMeta.$current.h2">Most Popular Cities</h2>
+        <ul ng-repeat="listCity in pageCtrl.splitListCity" class="city-county-lozenges">
+            <li ng-repeat="city in listCity"
+                class="lozenge">
+                <a ng-href="{{city.uri}}">
+                    {{city.label}}
+                </a>
+            </li>
+        </ul>
+        <span view-all-open
+              data-ng-if="pageCtrl.allCities"
+              data-view-all-title="$root.pageMeta.$current.h2 || 'Most Popular Cities'"
+              data-view-all-list="pageCtrl.allCities"
+              class="a view-all-city-county">
+              View All Cities
+        </span>
+    </div>
+
+    <div class="national-state-text-b"
+        data-ng-if="$root.pageMeta.$current.text_b"
+        data-ng-bind-html="$root.pageMeta.$current.text_b">
+    </div>
+
+    <div class="landing--tag-block tag-block--orange"
+        data-ng-if="pageCtrl.directory_results.county">
+        <h2 class="tag--block-title"
+            data-ng-bind-html="$root.pageMeta.$current.h3"
+            data-ng-if="$root.pageMeta.$current.h3"></h2>
+        <h2 class="tag--block-title"
+            data-ng-if="!$root.pageMeta.$current.h3">Most Popular Counties</h2>
+        <ul ng-repeat="listCounty in pageCtrl.splitListCounty" class="city-county-lozenges">
+            <li ng-repeat="county in listCounty"
+                class="lozenge">
+                <a ng-href="{{county.uri}}">
+                    {{county.label}}
+                </a>
+            </li>
+        </ul>
+        <span view-all-open
+              data-ng-if="pageCtrl.allCounties"
+              data-view-all-title="$root.pageMeta.$current.h3 || 'Most Popular Counties'"
+              data-view-all-list="pageCtrl.allCounties"
+              class="a view-all-city-county">
+              View All Counties
+        </span>
+    </div>
+</article>

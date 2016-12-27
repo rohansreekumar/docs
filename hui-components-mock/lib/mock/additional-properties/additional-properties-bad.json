@@ -1,0 +1,9 @@
+{
+    "success": false,
+    "retry": false,
+    "error_message": {
+        "label": "Bad Request Error",
+        "value": "Invalid location",
+        "status_code": 400
+    }
+}

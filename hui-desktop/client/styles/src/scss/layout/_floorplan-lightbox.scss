@@ -1,0 +1,42 @@
+// Floor plan Lightbox
+.floorplan-lightbox {
+    min-width: grid-space(50);
+
+    .module-title {
+        white-space: nowrap;
+    }
+
+    .floorplan-lightbox--price-availability {
+        @include clearfix();
+        @include module-spacing-vertical();
+
+        .floorplan-lightbox--price {
+            float: left;
+            @include adjust-font-size-to($from-size: $font-size-normal, $to-size: $font-size-xlarge+6);
+            line-height: 1;
+        }
+
+        .floorplan-lightbox--check-availability {
+            float: right;
+        }
+    }
+
+    .floorplans-lightbox--details {
+        @include adjust-font-size-to($from-size: $font-size-normal, $to-size: $font-size-large);
+        @include module-spacing-vertical();
+        line-height: 1.5;
+        font-weight: 300;
+    }
+
+    .floorplan-lightbox--primary-image {
+        text-align: center;
+        margin-top: rhythm-px(.75);
+        max-width: grid-space(60);
+        max-height: rhythm-px(25);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

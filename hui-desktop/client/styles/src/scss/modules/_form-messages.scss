@@ -1,0 +1,46 @@
+.form-message {
+    position: relative;
+    @include border-radius;
+    background: $lightOrange;
+    color: $orange;
+    padding: rhythm-px(.5) grid-space();
+    margin: rhythm-px(.5);
+    text-align: center;
+    &:before {
+        content: '';
+        background: $lightOrange;
+        color: $orange;
+        @include dim-square(grid-space(1.5));
+        @include transform(rotate(45deg) translate(-50%, -25%));
+        position: absolute;
+        left: 50%;
+        top: 0;
+
+    }
+
+    &.ng-enter, &.ng-leave {
+        @include animation-duration(.5s);
+    }
+
+    &.ng-enter.ng-enter-active {
+        @include animation--duration-timing-backface($duration: $default-animation-duration);
+        @include animation-name('fade-in-up-add');
+    }
+    &.ng-leave {
+        position: absolute;
+        width: 95%; // to correct positioning/width issue during exit animation
+
+    }
+    &.ng-leave.ng-leave-active {
+        @include animation--duration-timing-backface($duration: $default-animation-duration);
+        @include animation-name('fade-out-up-add');
+    }
+}
+
+.form-message-top {
+    @extend .form-message;
+
+    &:before {
+        content: none;
+    }
+}

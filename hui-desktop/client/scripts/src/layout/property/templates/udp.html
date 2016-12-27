@@ -1,0 +1,248 @@
+<article class="page-property-details">
+        <!-- Property Header -->
+        <div class="sticky-header">
+            <property-header
+                data-ng-if="!detailsCtrl.hasTalkNow || detailsCtrl.isProduction"
+                data-property="::viewCtrl.pageProps.property_detail"
+                data-local-connect="::viewCtrl.pageProps.local_connect">
+            </property-header>
+
+            <talk-now-sticky-header
+                data-ng-if="detailsCtrl.hasTalkNow && detailsCtrl.property.local_connect && !detailsCtrl.isProduction"
+                data-property="::viewCtrl.pageProps.property_detail">
+            </talk-now-sticky-header>
+
+            <i class="close"
+                data-tl-object="Det-Close-Sticky"
+                data-ng-click="detailsCtrl.closeStickyHeader()">
+            </i>
+        </div>
+        <!-- /Property Header -->
+        <div class="listing-details-page--content">
+        <!-- Action Module -->
+        <div class="action-module">
+            <breadcrumbs-details-display
+                    data-property="::viewCtrl.pageProps.property_detail">
+            </breadcrumbs-details-display>
+            <div class="l">
+                <!-- foreclosure links (offered by) !-->
+                <foreclosure-links
+                    data-property="::viewCtrl.pageProps.property_detail"
+                    ng-if="viewCtrl.pageProps.property_detail.listing_type === 'FORECLOSURE'">
+                </foreclosure-links>
+                <!-- /foreclosure links (offered by) !-->
+
+                <!-- CTA area foreclosure !-->
+                <cta-foreclosure-lead
+                    data-property="::viewCtrl.pageProps.property_detail"
+                    ng-if="viewCtrl.pageProps.property_detail.listing_type === 'FORECLOSURE'">
+                </cta-foreclosure-lead>
+                <!-- /CTA area foreclosure !-->
+
+                <!-- Property Lead Form !-->
+                <property-lead-form-action
+                    data-property="::viewCtrl.pageProps.property_detail"
+                    data-local-connect="::viewCtrl.pageProps.local_connect"
+                    ng-if="viewCtrl.pageProps.property_detail.listing_type !== 'FORECLOSURE'">
+                </property-lead-form-action>
+                <!-- /Property Lead Form !-->
+            </div>
+            <div class="twin">
+                <div class="m">
+                    <!-- media gallery !-->
+                    <media-gallery
+                        data-property="::viewCtrl.pageProps.property_detail">
+                    </media-gallery>
+                    <!-- /media gallery !-->
+                    <!-- Property Overview -->
+                    <property-overview-action
+                        data-property="::viewCtrl.pageProps.property_detail"
+                        data-waypoint
+                        data-ref="detailsCtrl.toggleHeader"
+                        data-oas="detailsCtrl.oas">
+                    </property-overview-action>
+                    <!-- Property Overview -->
+                </div>
+            </div>
+        </div>
+        <!-- Action Module -->
+
+        <div class="main-content">
+            <div class="twin">
+                <div class="m">
+                    <!-- Floor plan module !-->
+                    <floorplans-table
+                        ng-if="viewCtrl.pageProps.property_detail.floor_plans"
+                        data-property="::viewCtrl.pageProps.property_detail"
+                        id="floor-plans">
+                    </floorplans-table>
+
+                    <!-- Features and Amenities -->
+                    <features-amenities
+                        data-property="::viewCtrl.pageProps.property_detail"
+                        ng-if="viewCtrl.pageProps.property_detail.listing_status !== 'off_market'">
+                    </features-amenities>
+
+                    <get-great-deals data-oas="::detailsCtrl.oas"></get-great-deals>
+
+                    <!-- Assigned Schools NearBy -->
+                    <assigned-nearby-schools
+                        data-property="::viewCtrl.pageProps.property_detail"
+                        data-ng-if="viewCtrl.pageProps.property_detail.schools">
+                    </assigned-nearby-schools>
+
+                    <property-records
+                        data-property="::viewCtrl.pageProps.property_detail"
+                        ng-if="viewCtrl.pageProps.property_detail.property_record && !detailsCtrl.hidePropertyRecords">
+                    </property-records>
+
+                    <price-history
+                        ng-if="viewCtrl.pageProps.property_detail.price.history"
+                        data-property="::viewCtrl.pageProps.property_detail">
+                    </price-history>
+
+                    <explore-neighbourhood
+                        ng-if="viewCtrl.pageProps.property_detail.listing_type === 'FORECLOSURE'">
+                    </explore-neighbourhood>
+
+                    <estimated-values
+                        data-property="viewCtrl.pageProps.property_detail"
+                        data-estimated-values="::viewCtrl.pageProps.estimated_values"
+                        data-ng-if="viewCtrl.pageProps.estimated_values.result">
+                    </estimated-values>
+
+                    <!-- Mortgage Rates Display !-->
+                    <mortgage-rates-display
+                        data-property="::viewCtrl.pageProps"
+                        data-ng-if="viewCtrl.pageProps.property_detail.listing_status !== 'for_rent'"
+                        id="mortgage-calc">
+                    </mortgage-rates-display>
+
+
+                    <monthly-mortgage-calculator
+                        data-property="::viewCtrl.pageProps"
+                        data-oas="::detailsCtrl.oas"
+                        data-ng-if="viewCtrl.pageProps.property_detail.listing_status === 'for_sale'">
+                    </monthly-mortgage-calculator>
+
+                    <mortgage-refinance-calculator
+                        data-property="::viewCtrl.pageProps"
+                        data-ng-if="viewCtrl.pageProps.property_detail.listing_status === 'off_market'">
+                    </mortgage-refinance-calculator>
+
+                    <!-- properties near by -->
+                    <properties-near-by
+                        data-property="::viewCtrl.pageProps"
+                        data-ng-if="viewCtrl.pageProps.recommended.result.length">
+                    </properties-near-by>
+
+                    <!-- Property Lead Form !-->
+                    <property-lead-form
+                        data-property="::viewCtrl.pageProps.property_detail"
+                        data-local-connect="::viewCtrl.pageProps.local_connect"
+                        data-ng-if="viewCtrl.pageProps.property_detail.listing_type !== 'FORECLOSURE'"
+                        class="request-information">
+                    </property-lead-form>
+                    <!-- /Property Lead Form !-->
+
+                    <home-value-disclaimer
+                        data-ng-if="viewCtrl.pageProps.property_detail.listing_status === 'off_market'">
+                    </home-value-disclaimer>
+
+                    <div class="listing-info-and-source">
+                        <listing-information
+                            data-property="::viewCtrl.pageProps.property_detail"
+                            data-ng-if="viewCtrl.pageProps.property_detail.listing_status !== 'off_market'">
+                        </listing-information>
+
+                        <listing-source-disclaimer>
+                        </listing-source-disclaimer>
+                    </div>
+                </div>
+                <oas-cta ng-if="detailsCtrl.oas" data-pos="x25" data-size="[730,90]"></oas-cta>
+                <dfp-cta-link
+                    data-ng-if="(detailsCtrl.dfpListingType || detailsCtrl.dfpListingStatus) && !detailsCtrl.oas"
+                    data-dfp-listing-type="{{detailsCtrl.dfpListingType ? 'foreclosure' : detailsCtrl.dfpListingStatus}}"
+                    data-unit="Homes_Desktop/DT"
+                    data-size="[[300,600],[300,250]]"
+                    data-position="righttext">
+                </dfp-cta-link>
+            </div>
+            <!-- Ads -->
+            <div class="r">
+                <div ng-if="detailsCtrl.oas">
+                    <oas-cta data-pos="middle3" data-size="[300,27]"></oas-cta>
+                    <oas-cta data-pos="x21" data-size="[300,250]"></oas-cta>
+                </div>
+
+                <div ng-if="detailsCtrl.oas" class="local-resources">
+                    <h2 class="estimated-values--header module-title">Home Buying Resources</h2>
+                    <div class="local-resources-ads">
+                        <oas-cta data-pos="x01" data-size="[280,70]"></oas-cta>
+                        <oas-cta data-pos="x02" data-size="[280,70]"></oas-cta>
+                        <oas-cta data-pos="x03" data-size="[280,70]"></oas-cta>
+                        <oas-cta data-pos="x04" data-size="[280,70]"></oas-cta>
+                    </div>
+                </div>
+                <div ng-if="!detailsCtrl.oas" class="local-resources">
+                    <h2 class="estimated-values--header module-title">Local Resources</h2>
+                    <div>
+                        <dfp-cta-link
+                            data-cta-id="div-gpt-ad-741234810415188770-6"
+                            data-unit="mortbutton"
+                            data-size="[260,40]"
+                            data-position="hbr1">
+                        </dfp-cta-link>
+                        <dfp-cta-link
+                            data-cta-id="div-gpt-ad-741234810415188770-7"
+                            data-unit="mortbutton"
+                            data-size="[260,40]"
+                            data-position="hbr2">
+                        </dfp-cta-link>
+                        <dfp-cta-link
+                            data-cta-id="div-gpt-ad-741234810415188770-8"
+                            data-unit="mortbutton"
+                            data-size="[260,40]"
+                            data-position="hbr3">
+                        </dfp-cta-link>
+                        <dfp-cta-link
+                            data-cta-id="div-gpt-ad-741234810415188770-9"
+                            data-unit="mortbutton"
+                            data-size="[260,40]"
+                            data-position="hbr4">
+                        </dfp-cta-link>
+                    </div>
+                    <dfp-cta-link
+                        ng-if="!detailsCtrl.oas"
+                        data-cta-id="div-gpt-ad-741234810415188770-10"
+                        data-unit="mortbutton"
+                        data-size="[398,60]"
+                        data-position="right2">
+                    </dfp-cta-link>
+                </div>
+                <oas-cta ng-if="detailsCtrl.oas" data-pos="bottom1" data-size="[300,250]"></oas-cta>
+            </div>
+            <dfp-cta-link
+                data-ng-if="(detailsCtrl.dfpListingType || detailsCtrl.dfpListingStatus) && !detailsCtrl.oas"
+                data-dfp-listing-type="{{detailsCtrl.dfpListingType ? 'foreclosure' : detailsCtrl.dfpListingStatus}}"
+                data-unit="Homes_Desktop/DT"
+                data-size="[300,27]"
+                data-position="text4">
+            </dfp-cta-link>
+            <dfp-cta-link
+                data-ng-if="(detailsCtrl.dfpListingType || detailsCtrl.dfpListingStatus) && !detailsCtrl.oas"
+                data-dfp-listing-type="{{detailsCtrl.dfpListingType ? 'foreclosure' : detailsCtrl.dfpListingStatus}}"
+                data-unit="Homes_Desktop/DT"
+                data-size="[[300,600],[300,250]]"
+                data-position="right1">
+            </dfp-cta-link>
+            <dfp-cta-link
+                data-ng-if="(detailsCtrl.dfpListingType || detailsCtrl.dfpListingStatus) && !detailsCtrl.oas"
+                data-dfp-listing-type="{{detailsCtrl.dfpListingType ? 'foreclosure' : detailsCtrl.dfpListingStatus}}"
+                data-unit="Homes_Desktop/DT"
+                data-size="[398,60]"
+                data-position="right2">
+            </dfp-cta-link>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,13 @@
+<ul class="items-list nav-site _dynamicNav">
+    <li class="item nav-item" data-ng-repeat="menuItem in responseMenu">
+        <a href="#" ng-if="!menuItem.obfuscated">{{menuItem.label}}</a>
+        <span class="a" data-deob="{{menuItem.uri | deob}}" ng-if="menuItem.obfuscated">{{menuItem.label}}</span>
+
+        <ul class="sub-items-list nav-drop nav-menu" data-ng-if="menuItem.children">
+            <li class="sub-item nav-item" data-ng-repeat="subMenuItem in menuItem.children">
+                <a href="#" ng-if="!subMenuItem.obfuscated">{{subMenuItem.label}}</a>
+                <span class="a" data-deob="{{subMenuItem.uri | deob}}" ng-if="subMenuItem.obfuscated">{{subMenuItem.label}}</span>
+            </li>
+        </ul>
+    </li>
+</ul>

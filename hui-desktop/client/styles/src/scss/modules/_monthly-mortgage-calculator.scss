@@ -1,0 +1,51 @@
+.monthly-mortgage-calculator {
+    padding-bottom: rhythm-px();
+    .tooltip-small {
+        width: grid-space(25);
+    }
+    .tooltip-big {
+        width: grid-space(30);
+    }
+    .tooltip-label {
+        font-weight: 700;
+    }
+    .monthly-refinance-dynamic-text {
+        font-weight: 600;
+    }
+    .monthly-mortgage-calculator-description {
+        margin-left: grid-space(1.5);
+    }
+    .monthly-slider-control-container {
+        width: 100%;
+        margin-left: grid-space(1.5);
+        @include clearfix();
+        .monthly-slider-control-container-column {
+            float : left;
+            width : 49%;
+            .monthly-slider-control-column {
+                .range-slider {
+                    float : none;
+                    .slider-box {
+                        margin: 0;
+                    }
+                }
+            }
+            .donut-chart-data {
+                padding-top: rhythm-px(4.5);
+            }
+            .monthly-get-prequalified-cta-button {
+                padding-top: rhythm-px(7.6);
+            }
+        }
+    }
+    .monthly-mortgage-pmi-container {
+        margin-left: grid-space(1.5);
+        .monthly-mortgage-pmi-container-column {
+            width : 49%;
+            display:  inline-block;
+        }
+        .monthly-mortgage-pmi-container-column:last-child {
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "generator-hui": {
+    "moduleName": "huiModals",
+    "huiMockModule": false
+  }
+}

@@ -1,0 +1,171 @@
+
+$grid-space: 10px !global !default;
+$relative-font-sizing: true !global !default;
+$base-font-size: 14px !global !default;
+@import "compass/typography/vertical_rhythm";
+
+// @huidoc module
+// @area style
+// @module grid
+// @name Grid
+//
+// @description
+// Helper functions for maintaining [vertical rhythm](http://compass-style.org/reference/compass/typography/vertical_rhythm/).
+//
+// **USE `$grid-space * n` for horizontal rhythm / spacing **
+// @styleguide 2.1
+//
+
+// @huidoc function
+// @name rhythm
+// @module grid
+//
+// @description
+// [Compass rhythm function](http://compass-style.org/reference/compass/typography/vertical_rhythm/#function-rhythm).
+// On HDC returns rhythm units in em for margins, padding, etc.
+//
+// @param {float=1} $lines Number of lines
+// @param {length=$base-font-size} $font-size Context font-size
+// @param {length=0} $offset Offset (for borders)
+//
+// @returns {length} Measurement in ems
+//
+// @example
+// ```scss
+// p {
+// 	margin: rhythm() 0;
+// }
+// ```
+//
+// @styleguide 2.1.1
+
+// @huidoc function
+// @name rhythm-px
+// @module grid
+//
+// @description
+// returns rhythm in pixels, use for margins or padding on non-text based mixins
+//
+// **USE `$grid-space * n` for horizontal measurements**
+//
+// @param {float=1} $lines Number of lines
+// @param {length=0} $offset Offset (for borders)
+//
+// @returns {length} Measurement in ems
+//
+// @example
+// ```scss
+// .sidebar {
+// 	padding: rhythm-px() grid-space(3);
+// }
+//
+// ```
+//
+// @styleguide 2.1.2
+@function rhythm-px($lines: 1, $offset: 0) {
+    @return ceil(rhythm($lines:$lines, $offset:$offset) / if($relative-font-sizing, 1em, $base-font-size) * $base-font-size) - $offset;
+}
+
+// > * `rhythm-for-height($height)` - _Deprecated_ - alias for Compass' lines-for-font-size()
+@function rhythm-for-height($height) {
+    @return lines-for-font-size($height);
+}
+
+// > * `rhythm-height($height)` - _Deprecated_ -convnience helper for passing lines-for-font-size() directly to rhythm
+@function rhythm-height($height) {
+    @return rhythm(rhythm-for-height($height));
+}
+
+
+// @huidoc function
+// @module grid
+// @name grid-space
+//
+// @description
+// Horizontal spacing
+//
+// @param {float=1} $space Number of units in $grid-space
+// @param {length=0} $offset Offset (for borders)
+//
+// @returns {length} Measurement in ems
+//
+// @example
+// ```scss
+// .sidebar {
+// 	padding: rhythm-px() grid-space(3);
+// }
+//
+@function grid-space ($spaces: 1) {
+    @return $spaces * $grid-space;
+}
+
+// Returns comma delimited list
+@function join-multi($items...) {
+    $list: false;
+    @each $item in $items {
+        @if ($list) {
+            $list: compact($list, $item);
+        } @else {
+            $list: $item;
+        }
+    }
+    $list: comma-list($list);
+    @return $list;
+}
+
+// Prepends selector, like compass append-selector
+@function prepend-selector($selectors, $fragment) {
+
+    $new-selectors: false;
+    @each $i in $selectors {
+        $i: $fragment + $i;
+        @if ($new-selectors) {
+            $new-selectors: append($new-selectors, unquote($i), comma);
+        } @else {
+            $new-selectors: unquote($i);
+        }
+    }
+    @return $new-selectors;
+}
+
+//
+// Import Once
+//
+// Used in Utility Files to prevent duplication of placeholder classes in imports.
+//
+// The import duplication was an unexpected behavior in Compass (and SASS) prior to Compass 1.0.0.alpha.19, which has since been addressed in Compass. However, this function and the current Utility pattern have not been deprecated yet.
+//
+// > `$name` - {string} - "name" of file
+//
+// ```scss
+// @if import-once("Type.scss") {
+// 	// Placeholder Clases
+// }
+// ```
+//
+// Styleguide 1.2.1
+@function import-once($name) {
+    @if index($imported-once-files, $name) {
+        @return false;
+    }
+    $imported-once-files: append($imported-once-files, $name) !global;
+    @return true;
+}
+
+// Get Unit for operations
+@function get-unit($number) {
+    @if (unitless($number)) {
+        @return $number;
+    }
+    @return ($number * 0 + 1);
+}
+
+// Get Unitles number for operations
+@function get-unitless($number) {
+    @if (unitless($number)) {
+        @return $number;
+    } @else {
+
+        @return ($number / get-unit($number));
+    }
+}

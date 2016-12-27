@@ -1,0 +1,74 @@
+// homes-icon-font vars
+@import 'homes-icons/Icons-map';
+
+// @huidoc mixin
+// @name icon-hui
+// @module default
+//
+// @description
+// Style an icon from Homes Icons font.
+//
+// @param {string|boolean=false} $icon-name The name of the icon to show. False shows no icon. Useful for setting a base icon class.
+// @param {boolean=false} $extend Offset (for borders)
+//
+//
+// @example
+// ```scss
+// .icon-hui {
+//    &::before {
+//        @include icon-hui();
+//    }
+// }
+// ```
+//
+// @styleguide 2.1.1
+@mixin icon-hui($icon-name: false, $extend: true) {
+    @if ($extend) {
+        @extend %icon-hui;
+    } @else {
+        font-family: 'Homes Icons';
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+    }
+    @if ($icon-name) {
+        content: map-get($hui-icons, $icon-name);
+    }
+}
+
+// @huidoc mixin
+// @name icon-inline
+// @module default
+//
+// @description
+// Style a pseudo-element icon that appears inline with text.
+//
+//
+// @example
+// ```scss
+// .action {
+//    &::before {
+//          @include icon-inline;
+//    }
+// }
+// ```
+//
+// @styleguide 2.1.1
+
+@mixin icon-inline($side:'left', $extend:false) {
+    $direction: if($side == 'right','left','right');
+
+    font-size: 125%;
+    margin-top: -0.2em;
+    vertical-align: middle;
+    line-height: 0;
+    display: inline-block;
+    padding-#{$direction}: .4em;
+}
+
+@if import-once('Icons.scss') {
+    %icon-hui {
+        @include icon-hui($extend: false);
+    }
+}

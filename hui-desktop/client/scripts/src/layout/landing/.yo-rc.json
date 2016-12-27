@@ -1,0 +1,6 @@
+{
+  "generator-hui": {
+    "moduleName": "layout.landing",
+    "huiMockModule": false
+  }
+}

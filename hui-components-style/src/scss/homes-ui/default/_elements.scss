@@ -1,0 +1,67 @@
+/*/ Elements - Default **/
+@import '../mixins/Lists';
+
+$spinner-image: '/images/default/loading.gif' !default !global;
+
+// @huidoc sass
+// @name Spinner
+// @module feedback
+//
+// @description
+// Tells the user to wait.
+//
+// @markup
+// <div class="spinner {$ state.escaped $}"><span>Spinner Message</span></div>
+//
+// @state .spinner--message - Spinner with a message attached
+//
+// @styleguide 0.0.0
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin: -25px 0 0 -25px;
+
+    border: 1px solid $border-color;
+    color: $body-color;
+    background: white image-url($spinner-image) center center no-repeat;
+    @include border-radius;
+    z-index: 500;
+    cursor: default;
+
+    @include transition(width .1s, margin .1s);
+
+    & > span {
+        display: none;
+    }
+    &.spinner--message {
+        background-image: none;
+        width: 25em;
+        margin-left: -12.5em;
+        text-align: center;
+        overflow: hidden;
+        & > span,
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &:before {
+            content: '';
+            height: 100%;
+            background: white url(/media/portalimgcache/loading.gif) center center no-repeat;
+        }
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+// lists
+ul {
+    @include list-noBullets;
+    margin: 0;
+}

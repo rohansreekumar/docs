@@ -1,0 +1,15 @@
+.mortgage-calculator-customize-rates {
+    &::after {
+        @include icon-hui('arrow-right');
+		position: relative;
+        top: rhythm-px(.15);
+		display: inline-block;
+		font-size: 100%;
+		color: $blue;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        color: $blue;
+    }
+}

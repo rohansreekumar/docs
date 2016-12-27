@@ -1,0 +1,1955 @@
+[
+  {
+    "FT_TEACHERS": 23,
+    "STUDENTS": 208,
+    "COUNTY": "Salem County",
+    "ADDRESS": "237 Shell Road",
+    "G7_STUDENTS": -2,
+    "ZIP4": 1369,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Lafayette Pershing",
+    "DISTINCT_NAME": "Penns Grove-carneys Point",
+    "G12_STUDENTS": -2,
+    "GRADE": "Other",
+    "K_STUDENTS": 187,
+    "STUDENT_TEACHER_RATIO": 9,
+    "G6_STUDENTS": -2,
+    "LAT": 39.714527,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 34033,
+    "ZIP": 8069,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": "PK",
+    "SID": 341284005056,
+    "CITY": "Carneys Point",
+    "NAME": "Lafayette Pershing",
+    "G9_STUDENTS": -2,
+    "PHONE": "856-299-3230",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "LAFAYETTE  PERSHING",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 187
+      }
+    ],
+    "LINK": "/school/341284005056/lafayette-pershing/",
+    "SCHEMATYPE": "School",
+    "LON": -75.470755,
+    "DID": 3412840,
+    "HIGHEST_GRADE": "KG",
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2,
+    "STATE": "NJ"
+  },
+  {
+    "FT_TEACHERS": "",
+    "ADDRESS": "502 n Pine St",
+    "STUDENTS": 58,
+    "COUNTY": "New Castle",
+    "G4_STUDENTS": 0,
+    "G7_STUDENTS": 0,
+    "ZIP4": 4433,
+    "G2_STUDENTS": 7,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Elementary Workshop Montessori School",
+    "G12_STUDENTS": 0,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 13,
+    "G6_STUDENTS": 0,
+    "LAT": 39.738694,
+    "G1_STUDENTS": 11,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19801,
+    "G5_STUDENTS": 1,
+    "LOWEST_GRADE": "PK",
+    "SID": 249872,
+    "CITY": "Wilmington",
+    "NAME": "Elementary Workshop Montessori School",
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "ELEMENTARY WORKSHOP MONTESSORI SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 13
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 11
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 7
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 4
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 1
+      }
+    ],
+    "LINK": "/school/249872/elementary-workshop-montessori-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.544532,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": 0,
+    "G3_STUDENTS": 4,
+    "STATE": "DE"
+  },
+  {
+    "FT_TEACHERS": "",
+    "ADDRESS": "700 n Walnut St",
+    "STUDENTS": 68,
+    "COUNTY": "New Castle",
+    "G4_STUDENTS": 0,
+    "G7_STUDENTS": 0,
+    "ZIP4": 3514,
+    "G2_STUDENTS": 0,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Saint Michael's School and Nursery",
+    "G12_STUDENTS": 0,
+    "GRADE": "Other",
+    "K_STUDENTS": 20,
+    "G6_STUDENTS": 0,
+    "LAT": 39.742316,
+    "G1_STUDENTS": 0,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19801,
+    "G5_STUDENTS": 0,
+    "LOWEST_GRADE": "PK",
+    "SID": "K9301182",
+    "CITY": "Wilmington",
+    "NAME": "Saint Michael's School and Nursery",
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "SAINT MICHAEL'S SCHOOL AND NURSERY",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 20
+      }
+    ],
+    "LINK": "/school/k9301182/saint-michael-s-school-and-nursery/",
+    "SCHEMATYPE": "School",
+    "LON": -75.546502,
+    "HIGHEST_GRADE": "KG",
+    "G8_STUDENTS": 0,
+    "G3_STUDENTS": 0,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": 16,
+    "STUDENTS": "--",
+    "COUNTY": "New Castle County",
+    "ADDRESS": "600 North Lombard Street",
+    "G7_STUDENTS": 0,
+    "ZIP4": 4120,
+    "G2_STUDENTS": 0,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Reach/cbip",
+    "DISTINCT_NAME": "Christina School District",
+    "G12_STUDENTS": 0,
+    "GRADE": "Other",
+    "K_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": 0,
+    "G6_STUDENTS": 0,
+    "LAT": 39.739826,
+    "G1_STUDENTS": 0,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": 0,
+    "LOWEST_GRADE": "PK",
+    "SID": 100020000268,
+    "CITY": "Wilmington",
+    "NAME": "Reach/cbip",
+    "G9_STUDENTS": 0,
+    "PHONE": "302-552-2624",
+    "SCHOOL_LEVEL": "Other",
+    "G4_STUDENTS": 0,
+    "SEO_NAME": "REACH/CBIP",
+    "ENROLLMENT": [],
+    "LINK": "/school/100020000268/reach-cbip/",
+    "SCHEMATYPE": "School",
+    "LON": -75.545111,
+    "DID": 1000200,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": 0,
+    "G3_STUDENTS": 0
+  },
+  {
+    "FT_TEACHERS": 8,
+    "STUDENTS": 2,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "501 North Lombard Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": 4499,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Pyle (sarah) Academy",
+    "DISTINCT_NAME": "Christina School District",
+    "G12_STUDENTS": 0,
+    "GRADE": "Other",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 0,
+    "G6_STUDENTS": -2,
+    "LAT": 39.7396,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": 9,
+    "SID": 100020000227,
+    "CITY": "Wilmington",
+    "NAME": "Pyle (sarah) Academy",
+    "G9_STUDENTS": 2,
+    "PHONE": "302-429-4158",
+    "SCHOOL_LEVEL": "High School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "PYLE (SARAH) ACADEMY",
+    "ENROLLMENT": [
+      {
+        "GRADE": 9,
+        "COUNT": 2
+      }
+    ],
+    "LINK": "/school/100020000227/pyle-sarah-academy/",
+    "SCHEMATYPE": "School",
+    "LON": -75.5462,
+    "DID": 1000200,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2,
+    "STATE": "DE"
+  },
+  {
+    "FT_TEACHERS": "--",
+    "ADDRESS": "Attn: Margaret Lopez Waite C/o",
+    "STUDENTS": "--",
+    "COUNTY": "New Castle County",
+    "G4_STUDENTS": -2,
+    "G7_STUDENTS": -2,
+    "ZIP4": 2208,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Las Americas Aspira Academy",
+    "DISTINCT_NAME": "Las Americas Aspira Academy",
+    "G12_STUDENTS": -2,
+    "GRADE": "Other",
+    "K_STUDENTS": -2,
+    "G6_STUDENTS": -2,
+    "LAT": 39.745927,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19803,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": "--",
+    "SID": 100005000342,
+    "CITY": "Wilmington",
+    "NAME": "Las Americas Aspira Academy",
+    "G9_STUDENTS": -2,
+    "PHONE": "302-562-7283",
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "LAS AMERICAS ASPIRA ACADEMY",
+    "ENROLLMENT": [],
+    "LINK": "/school/100005000342/las-americas-aspira-academy/",
+    "SCHEMATYPE": "School",
+    "LON": -75.5487,
+    "DID": 1000050,
+    "HIGHEST_GRADE": "--",
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": "--",
+    "STUDENTS": "--",
+    "COUNTY": "New Castle County",
+    "ADDRESS": "Po Box 805",
+    "G7_STUDENTS": -2,
+    "ZIP4": "",
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Delaware Academy of Public Safety and Security",
+    "DISTINCT_NAME": "Delaware Academy of Public Safety and Security",
+    "G12_STUDENTS": -2,
+    "GRADE": "Other",
+    "K_STUDENTS": -2,
+    "G6_STUDENTS": -2,
+    "G4_STUDENTS": -2,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": "--",
+    "SID": 100004900341,
+    "CITY": "Wilmington",
+    "NAME": "Delaware Academy of Public Safety and Security",
+    "G9_STUDENTS": -2,
+    "PHONE": "302-656-4737",
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "DELAWARE ACADEMY OF PUBLIC SAFETY AND SECURITY",
+    "ENROLLMENT": [],
+    "LINK": "/school/100004900341/delaware-academy-of-public-safety-and-security/",
+    "SCHEMATYPE": "School",
+    "LON": -75.5487,
+    "DID": 1000049,
+    "HIGHEST_GRADE": "--",
+    "G8_STUDENTS": -2,
+    "LAT": 39.745927,
+    "G3_STUDENTS": -2
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": "",
+    "STUDENTS": 87,
+    "COUNTY": "New Castle",
+    "ADDRESS": "900 n Washington St",
+    "G7_STUDENTS": 0,
+    "ZIP4": 1512,
+    "G2_STUDENTS": 0,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Grace Church Preschool",
+    "G12_STUDENTS": 0,
+    "GRADE": "Other",
+    "K_STUDENTS": 6,
+    "G6_STUDENTS": 0,
+    "G4_STUDENTS": 0,
+    "G1_STUDENTS": 0,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19801,
+    "G5_STUDENTS": 0,
+    "LOWEST_GRADE": "PK",
+    "SID": "K9301180",
+    "CITY": "Wilmington",
+    "NAME": "Grace Church Preschool",
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "GRACE CHURCH PRESCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 6
+      }
+    ],
+    "LINK": "/school/k9301180/grace-church-preschool/",
+    "SCHEMATYPE": "School",
+    "LON": -75.552276,
+    "HIGHEST_GRADE": "KG",
+    "G8_STUDENTS": 0,
+    "LAT": 39.746248,
+    "G3_STUDENTS": 0
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": "",
+    "STUDENTS": 208,
+    "COUNTY": "New Castle",
+    "ADDRESS": "310 w 6th St",
+    "G7_STUDENTS": 19,
+    "ZIP4": "",
+    "G2_STUDENTS": 24,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Saint Peter Cathedral School",
+    "G12_STUDENTS": 0,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 22,
+    "G6_STUDENTS": 21,
+    "G4_STUDENTS": 21,
+    "G1_STUDENTS": 19,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19801,
+    "G5_STUDENTS": 27,
+    "LOWEST_GRADE": "PK",
+    "SID": 249613,
+    "CITY": "Wilmington",
+    "NAME": "Saint Peter Cathedral School",
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "SAINT PETER CATHEDRAL SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 22
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 19
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 24
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 22
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 21
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 27
+      },
+      {
+        "GRADE": 6,
+        "COUNT": 21
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 19
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 17
+      }
+    ],
+    "LINK": "/school/249613/saint-peter-cathedral-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.553344,
+    "HIGHEST_GRADE": 8,
+    "G8_STUDENTS": 17,
+    "LAT": 39.743133,
+    "G3_STUDENTS": 22
+  },
+  {
+    "FT_TEACHERS": 22,
+    "NAME": "Kuumba Academy Charter School",
+    "STUDENTS": 253,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "519 North Market Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": "",
+    "G2_STUDENTS": 53,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Kuumba Academy Charter School",
+    "DISTINCT_NAME": "Kuumba Academy Charter School",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 46,
+    "STUDENT_TEACHER_RATIO": 12,
+    "G6_STUDENTS": 0,
+    "LAT": 39.731069,
+    "G1_STUDENTS": 33,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": 36,
+    "LOWEST_GRADE": "KG",
+    "SID": 100001400106,
+    "CITY": "Wilmington",
+    "G10_STUDENTS": -2,
+    "G9_STUDENTS": -2,
+    "PHONE": "302-472-6450",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": 46,
+    "SEO_NAME": "KUUMBA ACADEMY CHARTER SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 46
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 33
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 53
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 39
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 46
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 36
+      }
+    ],
+    "LINK": "/school/100001400106/kuumba-academy-charter-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.556207,
+    "DID": 1000014,
+    "HIGHEST_GRADE": 6,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 39,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": "--",
+    "STUDENTS": "--",
+    "COUNTY": "New Castle County",
+    "ADDRESS": "1301 E. 12th St.",
+    "G7_STUDENTS": -2,
+    "ZIP4": "",
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Multi-purpose Criminal Justice Facility - Gander h",
+    "DISTINCT_NAME": "Corrections - Doe",
+    "G12_STUDENTS": 0,
+    "GRADE": "Other",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": "--",
+    "G6_STUDENTS": -2,
+    "LAT": 39.7411,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": 9,
+    "SID": 100002100185,
+    "CITY": "Wilmington",
+    "NAME": "Multi-purpose Criminal Justice Facility - Gander h",
+    "G9_STUDENTS": 0,
+    "PHONE": "302-429-7700",
+    "SCHOOL_LEVEL": "High School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "MULTI-PURPOSE CRIMINAL JUSTICE FACILITY - GANDER H",
+    "ENROLLMENT": [],
+    "LINK": "/school/100002100185/multi-purpose-criminal-justice-facility-gander-h/",
+    "SCHEMATYPE": "School",
+    "LON": -75.5292,
+    "DID": 1000021,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2
+  },
+  {
+    "FT_TEACHERS": 18,
+    "STUDENTS": 243,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "1121 Thatcher Street",
+    "G7_STUDENTS": 65,
+    "ZIP4": "",
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Prestige Academy",
+    "DISTINCT_NAME": "Prestige Academy",
+    "G12_STUDENTS": -2,
+    "GRADE": "Middle",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 14,
+    "G6_STUDENTS": 100,
+    "LAT": 39.742634,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19802,
+    "G5_STUDENTS": 78,
+    "LOWEST_GRADE": 5,
+    "SID": 100004800338,
+    "CITY": "Wilmington",
+    "NAME": "Prestige Academy",
+    "G9_STUDENTS": -2,
+    "PHONE": "302-762-3240",
+    "SCHOOL_LEVEL": "Middle School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "PRESTIGE ACADEMY",
+    "ENROLLMENT": [
+      {
+        "GRADE": 5,
+        "COUNT": 78
+      },
+      {
+        "GRADE": 6,
+        "COUNT": 100
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 65
+      }
+    ],
+    "LINK": "/school/100004800338/prestige-academy/",
+    "SCHEMATYPE": "MiddleSchool",
+    "LON": -75.535633,
+    "DID": 1000048,
+    "HIGHEST_GRADE": 7,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": "--",
+    "STUDENTS": "--",
+    "COUNTY": "New Castle County",
+    "ADDRESS": "1121 Thatcher Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": "",
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Marion T. Academy Charter School",
+    "DISTINCT_NAME": "Marion T. Academy Charter School",
+    "G12_STUDENTS": -2,
+    "GRADE": "Other",
+    "K_STUDENTS": -2,
+    "G6_STUDENTS": -2,
+    "G4_STUDENTS": -2,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19802,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": "--",
+    "SID": 100001200102,
+    "CITY": "Wilmington",
+    "NAME": "Marion T. Academy Charter School",
+    "G9_STUDENTS": -2,
+    "PHONE": "302-575-1190",
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "MARION T. ACADEMY CHARTER SCHOOL",
+    "ENROLLMENT": [],
+    "LINK": "/school/100001200102/marion-t-academy-charter-school/",
+    "SCHEMATYPE": "School",
+    "LON": -75.5363,
+    "DID": 1000012,
+    "HIGHEST_GRADE": "--",
+    "G8_STUDENTS": -2,
+    "LAT": 39.7429,
+    "G3_STUDENTS": -2
+  },
+  {
+    "FT_TEACHERS": 24,
+    "NAME": "Stubbs (frederick Douglass) Elementary School",
+    "STUDENTS": 307,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "1100 North Pine Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": 4099,
+    "G2_STUDENTS": 67,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Stubbs (frederick Douglass) Elementary School",
+    "DISTINCT_NAME": "Christina School District",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 48,
+    "STUDENT_TEACHER_RATIO": 13,
+    "G6_STUDENTS": -2,
+    "LAT": 39.744414,
+    "G1_STUDENTS": 57,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": 38,
+    "LOWEST_GRADE": "KG",
+    "SID": 100020000217,
+    "CITY": "Wilmington",
+    "G10_STUDENTS": -2,
+    "G9_STUDENTS": -2,
+    "PHONE": "302-429-4175",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": 41,
+    "SEO_NAME": "STUBBS (FREDERICK DOUGLASS) ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 48
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 57
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 67
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 49
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 41
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 38
+      }
+    ],
+    "LINK": "/school/100020000217/stubbs-frederick-douglass-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.540566,
+    "DID": 1000200,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 49,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": 23,
+    "NAME": "Elbert-palmer Elementary School",
+    "STUDENTS": 325,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "1210 Lobdell Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": 5404,
+    "G2_STUDENTS": 61,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Elbert-palmer Elementary School",
+    "DISTINCT_NAME": "Christina School District",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 48,
+    "STUDENT_TEACHER_RATIO": 14,
+    "G6_STUDENTS": -2,
+    "LAT": 39.730933,
+    "G1_STUDENTS": 56,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": 54,
+    "LOWEST_GRADE": "PK",
+    "SID": 100020000325,
+    "CITY": "Wilmington",
+    "G10_STUDENTS": -2,
+    "G9_STUDENTS": -2,
+    "PHONE": "302-429-4188",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": 49,
+    "SEO_NAME": "ELBERT-PALMER ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 48
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 56
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 61
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 44
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 49
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 54
+      }
+    ],
+    "LINK": "/school/100020000325/elbert-palmer-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.541751,
+    "DID": 1000200,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 44
+  },
+  {
+    "FT_TEACHERS": "--",
+    "STUDENTS": "--",
+    "COUNTY": "New Castle County",
+    "ADDRESS": "10 Central Avenue",
+    "G7_STUDENTS": 0,
+    "ZIP4": 1190,
+    "G2_STUDENTS": 0,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Terry Childrens Psychiatric Center",
+    "DISTINCT_NAME": "Dept. of Svs. For Children Youth & Their Families",
+    "G12_STUDENTS": 0,
+    "GRADE": "Other",
+    "K_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "G6_STUDENTS": 0,
+    "LAT": 39.7155,
+    "G1_STUDENTS": 0,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19720,
+    "G5_STUDENTS": 0,
+    "LOWEST_GRADE": "PK",
+    "SID": 100002200213,
+    "CITY": "New Castle",
+    "NAME": "Terry Childrens Psychiatric Center",
+    "G9_STUDENTS": 0,
+    "PHONE": "302-577-4270",
+    "SCHOOL_LEVEL": "Other",
+    "G4_STUDENTS": 0,
+    "SEO_NAME": "TERRY CHILDRENS PSYCHIATRIC CENTER",
+    "ENROLLMENT": [],
+    "LINK": "/school/100002200213/terry-childrens-psychiatric-center/",
+    "SCHEMATYPE": "School",
+    "LON": -75.5456,
+    "DID": 1000022,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": 0,
+    "G3_STUDENTS": 0,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": 59,
+    "NAME": "Pencader Business and Finance Charter High School",
+    "STUDENTS": 616,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "170 Lukens Drive",
+    "G7_STUDENTS": -2,
+    "ZIP4": "",
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Pencader Business and Finance Charter High School",
+    "DISTINCT_NAME": "Pencader Business and Finance Charter High School",
+    "G12_STUDENTS": 135,
+    "GRADE": "High",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 10,
+    "G6_STUDENTS": -2,
+    "LAT": 39.685472,
+    "G1_STUDENTS": -2,
+    "G11_STUDENTS": 145,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19720,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": 9,
+    "SID": 100002500257,
+    "CITY": "New Castle",
+    "G10_STUDENTS": 161,
+    "G9_STUDENTS": 175,
+    "PHONE": "302-472-0794",
+    "SCHOOL_LEVEL": "High School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "PENCADER BUSINESS AND FINANCE CHARTER HIGH SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": 9,
+        "COUNT": 175
+      },
+      {
+        "GRADE": 10,
+        "COUNT": 161
+      },
+      {
+        "GRADE": 11,
+        "COUNT": 145
+      },
+      {
+        "GRADE": 12,
+        "COUNT": 135
+      }
+    ],
+    "LINK": "/school/100002500257/pencader-business-and-finance-charter-high-school/",
+    "SCHEMATYPE": "HighSchool",
+    "LON": -75.546076,
+    "DID": 1000025,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": 45,
+    "NAME": "Mccullough (calvin R. ) Middle School",
+    "STUDENTS": 751,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "20 Chase Avenue",
+    "G7_STUDENTS": 242,
+    "ZIP4": 1299,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Mccullough (calvin R. ) Middle School",
+    "DISTINCT_NAME": "Colonial School District",
+    "G12_STUDENTS": -2,
+    "GRADE": "Middle",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 17,
+    "G6_STUDENTS": 249,
+    "LAT": 39.697735,
+    "G1_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19720,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": 6,
+    "SID": 100023000271,
+    "CITY": "New Castle",
+    "G10_STUDENTS": -2,
+    "G9_STUDENTS": -2,
+    "PHONE": "302-429-4000",
+    "SCHOOL_LEVEL": "Middle School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "MCCULLOUGH (CALVIN R. ) MIDDLE SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": 6,
+        "COUNT": 249
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 242
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 260
+      }
+    ],
+    "LINK": "/school/100023000271/mccullough-calvin-r-middle-school/",
+    "SCHEMATYPE": "MiddleSchool",
+    "LON": -75.557311,
+    "DID": 1000230,
+    "HIGHEST_GRADE": 8,
+    "G8_STUDENTS": 260,
+    "G3_STUDENTS": -2
+  },
+  {
+    "FT_TEACHERS": 17,
+    "STUDENTS": 102,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "10 Landers Lane",
+    "G7_STUDENTS": 5,
+    "ZIP4": 2094,
+    "G2_STUDENTS": 3,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Leach (john G.) School",
+    "DISTINCT_NAME": "Colonial School District",
+    "G12_STUDENTS": 5,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 9,
+    "STUDENT_TEACHER_RATIO": 6,
+    "G6_STUDENTS": 6,
+    "LAT": 39.688184,
+    "G1_STUDENTS": 5,
+    "G10_STUDENTS": 5,
+    "G11_STUDENTS": 15,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19720,
+    "G5_STUDENTS": 5,
+    "LOWEST_GRADE": "PK",
+    "SID": 100023000196,
+    "CITY": "New Castle",
+    "NAME": "Leach (john G.) School",
+    "G9_STUDENTS": 2,
+    "PHONE": "302-429-4055",
+    "SCHOOL_LEVEL": "Other",
+    "G4_STUDENTS": 3,
+    "SEO_NAME": "LEACH (JOHN G.) SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 9
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 5
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 3
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 2
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 3
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 5
+      },
+      {
+        "GRADE": 6,
+        "COUNT": 6
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 5
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 3
+      },
+      {
+        "GRADE": 9,
+        "COUNT": 2
+      },
+      {
+        "GRADE": 10,
+        "COUNT": 5
+      },
+      {
+        "GRADE": 11,
+        "COUNT": 15
+      },
+      {
+        "GRADE": 12,
+        "COUNT": 5
+      }
+    ],
+    "LINK": "/school/100023000196/leach-john-g-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.557806,
+    "DID": 1000230,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": 3,
+    "G3_STUDENTS": 2,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": 26,
+    "STUDENTS": 341,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "12 Landers Lane",
+    "G7_STUDENTS": -2,
+    "ZIP4": 2095,
+    "G2_STUDENTS": 68,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Colwyck Elementary School",
+    "DISTINCT_NAME": "Colonial School District",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 56,
+    "STUDENT_TEACHER_RATIO": 13,
+    "G6_STUDENTS": -2,
+    "LAT": 39.688174,
+    "G1_STUDENTS": 54,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19720,
+    "G5_STUDENTS": 50,
+    "LOWEST_GRADE": "KG",
+    "SID": 100023000203,
+    "CITY": "New Castle",
+    "NAME": "Colwyck Elementary School",
+    "G9_STUDENTS": -2,
+    "PHONE": "302-429-4085",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": 57,
+    "SEO_NAME": "COLWYCK ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 56
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 54
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 68
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 56
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 57
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 50
+      }
+    ],
+    "LINK": "/school/100023000203/colwyck-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.557787,
+    "DID": 1000230,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 56
+  },
+  {
+    "FT_TEACHERS": 42,
+    "STUDENTS": 531,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "27 Landers Lane",
+    "G7_STUDENTS": -2,
+    "ZIP4": 2093,
+    "G2_STUDENTS": 92,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Eisenberg (harry O.) Elementary School",
+    "DISTINCT_NAME": "Colonial School District",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 85,
+    "STUDENT_TEACHER_RATIO": 13,
+    "G6_STUDENTS": -2,
+    "LAT": 39.688852,
+    "G1_STUDENTS": 108,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19720,
+    "G5_STUDENTS": 70,
+    "LOWEST_GRADE": "KG",
+    "SID": 100023000200,
+    "CITY": "New Castle",
+    "NAME": "Eisenberg (harry O.) Elementary School",
+    "G9_STUDENTS": -2,
+    "PHONE": "302-429-4074",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": 82,
+    "SEO_NAME": "EISENBERG (HARRY O.) ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 85
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 108
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 92
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 94
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 82
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 70
+      }
+    ],
+    "LINK": "/school/100023000200/eisenberg-harry-o-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.559075,
+    "DID": 1000230,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 94,
+    "STATE": "DE"
+  },
+  {
+    "FT_TEACHERS": 52.9,
+    "STUDENTS": 577,
+    "COUNTY": "Salem County",
+    "ADDRESS": "334 Harding Highway",
+    "G7_STUDENTS": -2,
+    "ZIP4": 1369,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Penns Grove High",
+    "DISTINCT_NAME": "Penns Grove-carneys Point",
+    "G12_STUDENTS": 143,
+    "GRADE": "High",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 11,
+    "G6_STUDENTS": -2,
+    "LAT": 39.717903,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": 154,
+    "G11_STUDENTS": 116,
+    "COUNTY_FIPS": 34033,
+    "ZIP": 8069,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": 9,
+    "SID": 341284005048,
+    "CITY": "Carneys Point",
+    "NAME": "Penns Grove High",
+    "G9_STUDENTS": 164,
+    "PHONE": "856-299-6300",
+    "SCHOOL_LEVEL": "High School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "PENNS GROVE HIGH",
+    "ENROLLMENT": [
+      {
+        "GRADE": 9,
+        "COUNT": 164
+      },
+      {
+        "GRADE": 10,
+        "COUNT": 154
+      },
+      {
+        "GRADE": 11,
+        "COUNT": 116
+      },
+      {
+        "GRADE": 12,
+        "COUNT": 143
+      }
+    ],
+    "LINK": "/school/341284005048/penns-grove-high/",
+    "SCHEMATYPE": "HighSchool",
+    "LON": -75.455952,
+    "DID": 3412840,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2,
+    "STATE": "NJ"
+  },
+  {
+    "STATE": "NJ",
+    "FT_TEACHERS": "",
+    "STUDENTS": 232,
+    "COUNTY": "Salem",
+    "ADDRESS": "350 Georgetown Rd",
+    "G7_STUDENTS": 29,
+    "ZIP4": 2599,
+    "G2_STUDENTS": 20,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Bishop Guilfoyle Regional Catholic School",
+    "G12_STUDENTS": 0,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 28,
+    "G6_STUDENTS": 31,
+    "G4_STUDENTS": 16,
+    "G1_STUDENTS": 17,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 33,
+    "ZIP": 8069,
+    "G5_STUDENTS": 10,
+    "LOWEST_GRADE": "PK",
+    "SID": "A0502268",
+    "CITY": "Carneys Point",
+    "NAME": "Bishop Guilfoyle Regional Catholic School",
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "BISHOP GUILFOYLE REGIONAL CATHOLIC SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 28
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 17
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 20
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 29
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 16
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 10
+      },
+      {
+        "GRADE": 6,
+        "COUNT": 31
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 29
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 26
+      }
+    ],
+    "LINK": "/school/a0502268/bishop-guilfoyle-regional-catholic-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.464727,
+    "HIGHEST_GRADE": 8,
+    "G8_STUDENTS": 26,
+    "LAT": 39.711217,
+    "G3_STUDENTS": 29
+  },
+  {
+    "FT_TEACHERS": 36,
+    "STUDENTS": 529,
+    "COUNTY": "Salem County",
+    "ADDRESS": "351 Maple Avenue",
+    "G7_STUDENTS": 192,
+    "ZIP4": 1369,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Penns Grove Middle School",
+    "DISTINCT_NAME": "Penns Grove-carneys Point",
+    "G12_STUDENTS": -2,
+    "GRADE": "Middle",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 15,
+    "G6_STUDENTS": 185,
+    "LAT": 39.718925,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 34033,
+    "ZIP": 8069,
+    "G5_STUDENTS": 0,
+    "LOWEST_GRADE": 5,
+    "SID": 341284005058,
+    "CITY": "Penns Grove",
+    "NAME": "Penns Grove Middle School",
+    "G9_STUDENTS": -2,
+    "PHONE": "856-299-0576",
+    "SCHOOL_LEVEL": "Middle School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "PENNS GROVE MIDDLE SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": 6,
+        "COUNT": 185
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 192
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 152
+      }
+    ],
+    "LINK": "/school/341284005058/penns-grove-middle-school/",
+    "SCHEMATYPE": "MiddleSchool",
+    "LON": -75.471706,
+    "DID": 3412840,
+    "HIGHEST_GRADE": 8,
+    "G8_STUDENTS": 152,
+    "G3_STUDENTS": -2,
+    "STATE": "NJ"
+  },
+  {
+    "STATE": "NJ",
+    "FT_TEACHERS": 19,
+    "STUDENTS": 334,
+    "COUNTY": "Salem County",
+    "ADDRESS": "251 Maple Avenue",
+    "G7_STUDENTS": -2,
+    "ZIP4": 1369,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Paul w Carleton",
+    "DISTINCT_NAME": "Penns Grove-carneys Point",
+    "G12_STUDENTS": -2,
+    "GRADE": "Other",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 18,
+    "G6_STUDENTS": -2,
+    "LAT": 39.719823,
+    "G1_STUDENTS": -2,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 34033,
+    "ZIP": 8069,
+    "G5_STUDENTS": 169,
+    "LOWEST_GRADE": 4,
+    "SID": 341284005052,
+    "CITY": "Penns Grove",
+    "NAME": "Paul w Carleton",
+    "G9_STUDENTS": -2,
+    "PHONE": "856-299-1706",
+    "SCHOOL_LEVEL": "Middle School",
+    "G4_STUDENTS": 165,
+    "SEO_NAME": "PAUL W CARLETON",
+    "ENROLLMENT": [
+      {
+        "GRADE": 4,
+        "COUNT": 165
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 169
+      }
+    ],
+    "LINK": "/school/341284005052/paul-w-carleton/",
+    "SCHEMATYPE": "School",
+    "LON": -75.472708,
+    "DID": 3412840,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": -2
+  },
+  {
+    "STATE": "NJ",
+    "FT_TEACHERS": 35,
+    "NAME": "Field Saint",
+    "STUDENTS": 559,
+    "COUNTY": "Salem County",
+    "ADDRESS": "144 Field Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": 1369,
+    "G2_STUDENTS": 182,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Field Saint",
+    "DISTINCT_NAME": "Penns Grove-carneys Point",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 16,
+    "G6_STUDENTS": -2,
+    "LAT": 39.730324,
+    "G1_STUDENTS": 183,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 34033,
+    "ZIP": 8069,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": 1,
+    "SID": 341284005054,
+    "CITY": "Carneys Point",
+    "G10_STUDENTS": -2,
+    "G9_STUDENTS": -2,
+    "PHONE": "856-299-0170",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "FIELD SAINT",
+    "ENROLLMENT": [
+      {
+        "GRADE": 1,
+        "COUNT": 183
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 182
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 194
+      }
+    ],
+    "LINK": "/school/341284005054/field-saint/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.458076,
+    "DID": 3412840,
+    "HIGHEST_GRADE": 3,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 194
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": "",
+    "NAME": "Saint Paul Elementary School",
+    "STUDENTS": 163,
+    "COUNTY": "New Castle",
+    "ADDRESS": "312 n Van Buren St",
+    "G7_STUDENTS": 19,
+    "ZIP4": 3600,
+    "G2_STUDENTS": 13,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Saint Paul Elementary School",
+    "G12_STUDENTS": 0,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 12,
+    "G6_STUDENTS": 21,
+    "G4_STUDENTS": 19,
+    "G1_STUDENTS": 17,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19805,
+    "G5_STUDENTS": 14,
+    "LOWEST_GRADE": "PK",
+    "SID": 249602,
+    "CITY": "Wilmington",
+    "G10_STUDENTS": 0,
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "SAINT PAUL ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 12
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 17
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 13
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 11
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 19
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 14
+      },
+      {
+        "GRADE": 6,
+        "COUNT": 21
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 19
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 20
+      }
+    ],
+    "LINK": "/school/249602/saint-paul-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.564588,
+    "HIGHEST_GRADE": 8,
+    "G8_STUDENTS": 20,
+    "LAT": 39.740383,
+    "G3_STUDENTS": 11
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": "",
+    "NAME": "Nativity Preparatory School of Wilmington",
+    "STUDENTS": 44,
+    "COUNTY": "New Castle",
+    "ADDRESS": "1515 Linden St",
+    "G7_STUDENTS": 12,
+    "ZIP4": "",
+    "G2_STUDENTS": 0,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Nativity Preparatory School of Wilmington",
+    "G12_STUDENTS": 0,
+    "GRADE": "Middle",
+    "K_STUDENTS": 0,
+    "G6_STUDENTS": 14,
+    "G4_STUDENTS": 0,
+    "G1_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19805,
+    "G5_STUDENTS": 11,
+    "LOWEST_GRADE": 5,
+    "SID": "A0500905",
+    "CITY": "Wilmington",
+    "G10_STUDENTS": 0,
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "NATIVITY PREPARATORY SCHOOL OF WILMINGTON",
+    "ENROLLMENT": [
+      {
+        "GRADE": 5,
+        "COUNT": 11
+      },
+      {
+        "GRADE": 6,
+        "COUNT": 14
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 12
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 7
+      }
+    ],
+    "LINK": "/school/a0500905/nativity-preparatory-school-of-wilmington/",
+    "SCHEMATYPE": "MiddleSchool",
+    "LON": -75.569804,
+    "HIGHEST_GRADE": 8,
+    "G8_STUDENTS": 7,
+    "LAT": 39.743036,
+    "G3_STUDENTS": 0
+  },
+  {
+    "FT_TEACHERS": "",
+    "ADDRESS": "1500 Cedar St",
+    "STUDENTS": 441,
+    "COUNTY": "New Castle",
+    "G4_STUDENTS": 0,
+    "G7_STUDENTS": 0,
+    "ZIP4": "",
+    "G2_STUDENTS": 0,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Saint Elizabeth High School",
+    "G12_STUDENTS": 113,
+    "GRADE": "High",
+    "K_STUDENTS": 0,
+    "G6_STUDENTS": 0,
+    "LAT": 39.738102,
+    "G1_STUDENTS": 0,
+    "G10_STUDENTS": 104,
+    "G11_STUDENTS": 110,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19805,
+    "G5_STUDENTS": 0,
+    "LOWEST_GRADE": 9,
+    "SID": 1604362,
+    "CITY": "Wilmington",
+    "NAME": "Saint Elizabeth High School",
+    "G9_STUDENTS": 114,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "SAINT ELIZABETH HIGH SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": 9,
+        "COUNT": 114
+      },
+      {
+        "GRADE": 10,
+        "COUNT": 104
+      },
+      {
+        "GRADE": 11,
+        "COUNT": 110
+      },
+      {
+        "GRADE": 12,
+        "COUNT": 113
+      }
+    ],
+    "LINK": "/school/1604362/saint-elizabeth-high-school/",
+    "SCHEMATYPE": "HighSchool",
+    "LON": -75.572753,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": 0,
+    "G3_STUDENTS": 0,
+    "STATE": "DE"
+  },
+  {
+    "FT_TEACHERS": "",
+    "STUDENTS": 384,
+    "COUNTY": "New Castle",
+    "ADDRESS": "1500 Cedar St",
+    "G7_STUDENTS": 56,
+    "ZIP4": "",
+    "G2_STUDENTS": 30,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Saint Elizabeth Elementary School",
+    "G12_STUDENTS": 0,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 25,
+    "G6_STUDENTS": 45,
+    "G4_STUDENTS": 50,
+    "G1_STUDENTS": 24,
+    "G10_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19805,
+    "G5_STUDENTS": 41,
+    "LOWEST_GRADE": "PK",
+    "SID": 1604318,
+    "CITY": "Wilmington",
+    "NAME": "Saint Elizabeth Elementary School",
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "SAINT ELIZABETH ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 25
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 24
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 30
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 49
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 50
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 41
+      },
+      {
+        "GRADE": 6,
+        "COUNT": 45
+      },
+      {
+        "GRADE": 7,
+        "COUNT": 56
+      },
+      {
+        "GRADE": 8,
+        "COUNT": 49
+      }
+    ],
+    "LINK": "/school/1604318/saint-elizabeth-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.572753,
+    "HIGHEST_GRADE": 8,
+    "G8_STUDENTS": 49,
+    "LAT": 39.738102,
+    "G3_STUDENTS": 49,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": 31,
+    "NAME": "Pulaski (casimir) Elementary School",
+    "STUDENTS": 400,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "1300 Cedar Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": 4396,
+    "G2_STUDENTS": 66,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Pulaski (casimir) Elementary School",
+    "DISTINCT_NAME": "Christina School District",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 83,
+    "STUDENT_TEACHER_RATIO": 13,
+    "G6_STUDENTS": -2,
+    "LAT": 39.737396,
+    "G1_STUDENTS": 60,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19805,
+    "G5_STUDENTS": 65,
+    "LOWEST_GRADE": "PK",
+    "SID": 100020000220,
+    "CITY": "Wilmington",
+    "G10_STUDENTS": -2,
+    "G9_STUDENTS": -2,
+    "PHONE": "302-429-4136",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": 62,
+    "SEO_NAME": "PULASKI (CASIMIR) ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 83
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 60
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 66
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 62
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 62
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 65
+      }
+    ],
+    "LINK": "/school/100020000220/pulaski-casimir-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.570957,
+    "DID": 1000200,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 62
+  },
+  {
+    "FT_TEACHERS": 65,
+    "NAME": "Howard High School of Technology",
+    "STUDENTS": 848,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "401 East 12th Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": 3400,
+    "G2_STUDENTS": -2,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Howard High School of Technology",
+    "DISTINCT_NAME": "New Castle County Vocational-technical School District",
+    "G12_STUDENTS": 186,
+    "GRADE": "High",
+    "K_STUDENTS": -2,
+    "STUDENT_TEACHER_RATIO": 13,
+    "G6_STUDENTS": -2,
+    "LAT": 39.745729,
+    "G1_STUDENTS": -2,
+    "G11_STUDENTS": 214,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": -2,
+    "LOWEST_GRADE": 8,
+    "SID": 100128000297,
+    "CITY": "Wilmington",
+    "G10_STUDENTS": 217,
+    "G9_STUDENTS": 231,
+    "PHONE": "302-571-5400",
+    "SCHOOL_LEVEL": "High School",
+    "G4_STUDENTS": -2,
+    "SEO_NAME": "HOWARD HIGH SCHOOL OF TECHNOLOGY",
+    "ENROLLMENT": [
+      {
+        "GRADE": 9,
+        "COUNT": 231
+      },
+      {
+        "GRADE": 10,
+        "COUNT": 217
+      },
+      {
+        "GRADE": 11,
+        "COUNT": 214
+      },
+      {
+        "GRADE": 12,
+        "COUNT": 186
+      }
+    ],
+    "LINK": "/school/100128000297/howard-high-school-of-technology/",
+    "SCHEMATYPE": "HighSchool",
+    "LON": -75.542537,
+    "DID": 1001280,
+    "HIGHEST_GRADE": 12,
+    "G8_STUDENTS": 0,
+    "G3_STUDENTS": -2,
+    "STATE": "DE"
+  },
+  {
+    "FT_TEACHERS": "",
+    "NAME": "Bank of America Child Developmental Center Wilmington",
+    "STUDENTS": 193,
+    "COUNTY": "New Castle",
+    "ADDRESS": "1000 French St",
+    "G7_STUDENTS": 0,
+    "ZIP4": 1,
+    "G2_STUDENTS": 0,
+    "SCHOOL_TYPE": "private",
+    "DISPLAY_NAME": "Bank of America Child Developmental Center Wilmington",
+    "G12_STUDENTS": 0,
+    "GRADE": "Other",
+    "K_STUDENTS": 11,
+    "G6_STUDENTS": 0,
+    "G4_STUDENTS": 0,
+    "G1_STUDENTS": 0,
+    "G11_STUDENTS": 0,
+    "COUNTY_FIPS": 3,
+    "ZIP": 19884,
+    "G5_STUDENTS": 0,
+    "LOWEST_GRADE": "PK",
+    "SID": "A0101603",
+    "CITY": "Wilmington",
+    "G10_STUDENTS": 0,
+    "G9_STUDENTS": 0,
+    "STUDENT_TEACHER_RATIO": "--",
+    "SEO_NAME": "BANK OF AMERICA CHILD DEVELOPMENTAL CENTER WILMINGTON",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 11
+      }
+    ],
+    "LINK": "/school/a0101603/bank-of-america-child-developmental-center-wilmington/",
+    "SCHEMATYPE": "School",
+    "LON": -75.545927,
+    "HIGHEST_GRADE": "KG",
+    "G8_STUDENTS": 0,
+    "LAT": 39.744758,
+    "G3_STUDENTS": 0,
+    "STATE": "DE"
+  },
+  {
+    "STATE": "DE",
+    "FT_TEACHERS": 25,
+    "STUDENTS": 321,
+    "COUNTY": "New Castle County",
+    "ADDRESS": "700 North Lombard Street",
+    "G7_STUDENTS": -2,
+    "ZIP4": 4299,
+    "G2_STUDENTS": 60,
+    "SCHOOL_TYPE": "public",
+    "DISPLAY_NAME": "Bancroft Elementary School",
+    "DISTINCT_NAME": "Christina School District",
+    "G12_STUDENTS": -2,
+    "GRADE": "Elementary",
+    "K_STUDENTS": 59,
+    "STUDENT_TEACHER_RATIO": 13,
+    "G6_STUDENTS": -2,
+    "LAT": 39.740803,
+    "G1_STUDENTS": 57,
+    "G10_STUDENTS": -2,
+    "G11_STUDENTS": -2,
+    "COUNTY_FIPS": 10003,
+    "ZIP": 19801,
+    "G5_STUDENTS": 40,
+    "LOWEST_GRADE": "PK",
+    "SID": 100020000233,
+    "CITY": "Wilmington",
+    "NAME": "Bancroft Elementary School",
+    "G9_STUDENTS": -2,
+    "PHONE": "302-429-4102",
+    "SCHOOL_LEVEL": "Primary",
+    "G4_STUDENTS": 45,
+    "SEO_NAME": "BANCROFT ELEMENTARY SCHOOL",
+    "ENROLLMENT": [
+      {
+        "GRADE": "K",
+        "COUNT": 59
+      },
+      {
+        "GRADE": 1,
+        "COUNT": 57
+      },
+      {
+        "GRADE": 2,
+        "COUNT": 60
+      },
+      {
+        "GRADE": 3,
+        "COUNT": 41
+      },
+      {
+        "GRADE": 4,
+        "COUNT": 45
+      },
+      {
+        "GRADE": 5,
+        "COUNT": 40
+      }
+    ],
+    "LINK": "/school/100020000233/bancroft-elementary-school/",
+    "SCHEMATYPE": "ElementarySchool",
+    "LON": -75.544535,
+    "DID": 1000200,
+    "HIGHEST_GRADE": 5,
+    "G8_STUDENTS": -2,
+    "G3_STUDENTS": 41
+  }
+]

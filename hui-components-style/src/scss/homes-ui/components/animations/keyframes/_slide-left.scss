@@ -1,0 +1,14 @@
+// Keyframes for the slide in from right side animations
+@if import-once('keyframes-slide-left.scss') {
+    @include keyframes('slide-left-add') {
+        0% {
+            @include translateX(100%);
+        }
+    }
+
+    @include keyframes('slide-left-remove') {
+        100% {
+            @include translateX(100%);
+        }
+    }
+}

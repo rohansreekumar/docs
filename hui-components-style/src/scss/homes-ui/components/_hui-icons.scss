@@ -1,0 +1,23 @@
+// hui-icons
+@import 'homes-icons/font';
+
+.icon-hui {
+    &::before {
+
+        @include icon-hui();
+    }
+}
+
+i.icon-hui {
+    font-style: normal;
+    @include icon-inline;
+}
+
+// http://viget.com/extend/sass-maps-are-awesome
+@each $name, $unicode in $hui-icons {
+    .icon-hui--#{$name} {
+        &::before {
+            content: map-get($hui-icons, $name);
+        }
+    }
+}

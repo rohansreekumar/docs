@@ -1,0 +1,1089 @@
+@import './details-property-overview';
+@import './details-price-history';
+@import '../modules/next-steps';
+@import './mls-lightbox';
+@import './floorplan-lightbox';
+@import './dfp-get-more-deals';
+@import './breadcrumbs-details';
+@import '../modules/monthly-mortgage-calculator';
+@import '../modules/mortgage-calculator-customize-rates';
+@import '../modules/mortgage-refinance-calculator';
+@import '../modules/rent-additional-properties';
+@import '../modules/talknow';
+
+.page-property-details {
+    .heading {
+        background-color: $lightGrey;
+        color: $darkGrey;
+        padding: $global-padding/2 $global-padding;
+        margin: 0 auto;
+        &.heading--external {
+            font-size: $font-size-medium;
+            font-weight: 600;
+        }
+    }
+
+    .module-subtitle {
+        @include module-spacing-all-sides(10px, $extend:false);
+        @include adjust-font-size-to($to-size: $font-size-medium, $from-size: $font-size-normal);
+        font-weight: 700;
+    }
+
+    .action-module--heading {
+        @include adjust-font-size-to($to-size: $font-size-large, $from-size: $font-size-normal);
+        line-height: rhythm-px();
+        font-weight: 400;
+        margin: 0 0 rhythm-px(.5);
+        padding: 0;
+    }
+
+    .listing-details-page--content {
+        @include module-spacing-vertical();
+        width: $site-content-width;
+        margin: 0 auto;
+        position: relative;
+        font-size: $font-size-normal;
+        padding: rhythm-px(.25) 0;
+
+        .action-module {
+            @include fluid-cols($left: 300px, $right: false, $space: 30px, $extend: false);
+
+            .l {
+                margin-right: grid-space(3);
+
+                .action-module--foreclosure-links {
+                    @include module-spacing-all-sides();
+                    @include border-radius($border-radius);
+                    background-color: $lightGrey;
+
+                    .cta-foreclosure {
+                        @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal);
+
+                        &:after {
+                            @include icon-inline($side: left);
+                            @include icon-hui($icon-name: 'externallink', $extend: false);
+                            font-size: $font-size-small;
+                            margin: 0 0 rhythm-px(.2) grid-space(.5);
+                        }
+                    }
+                }
+
+                .cta-foreclosure-lead {
+                    @include border-radius($border-radius);
+                    margin: rhythm-px(.75) auto 0;
+                    display: block;
+                    width: grid-space(30);
+                    height: image-height('cta/lead_ad_home.jpg')/2;
+                    background-image: url('/images/cta/lead_ad_home.jpg');
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .twin {
+                margin-left: grid-space(-33);
+                display: inline-block;
+
+                .property-overview {
+                    @include module-spacing-vertical();
+                    @include clearfix();
+                    .twin {
+                        margin-left: 0;
+                        width: 58%;
+                    }
+
+                    .property-overview-price {
+                        @include media-box($media:'.property-pricetag', $details:'.property-price-details', $space: grid-space(.2));
+
+                        .price-display {
+                            font-size: $font-size-2xlarge + 4px;
+                            font-weight: 300;
+                            line-height: 0.8;
+                            display: inline-block;
+                            color: $darkBlue;
+
+                            .price-elements {
+                                float: left;
+                            }
+                            .price-currency {
+                                font-size: $font-size-xlarge;
+                            }
+                        }
+
+                        .button--slim {
+                            font-size: $font-size-xsmall;
+                            padding: rhythm-px(.1) grid-space();
+                            height: rhythm-px(.9);
+                            line-height: rhythm-px(.75);
+                            font-weight: 500;
+                        }
+                        .icon-arrow:after {
+                            @include icon-inline($side: right);
+                            @include icon-hui($icon-name: 'arrow-right', $extend: false);
+                        }
+
+                        .line-1 {
+                            font-size: $font-size-xsmall;
+                            font-weight: 700;
+                            color: $mediumDarkGrey;
+
+                            .price-reduction:before {
+                                @include icon-inline($side: left);
+                                @include icon-hui($icon-name: 'price-down', $extend: false);
+                                font-size: $font-size-medium;
+                                color: $red;
+                                padding: 0;
+                                margin-right: grid-space(-.5);
+                            }
+                        }
+
+                        .line-2 {
+                            color: $darkBlue;
+                            font-weight: 700;
+                            font-size: $font-size-xsmall;
+                            padding-left: grid-space(.3);
+
+                            &.line-2--single-line {
+                                padding-top: rhythm-px(.85);
+                            }
+
+                            .nhc-label {
+                                color: $orange;
+                            }
+
+                            .property-price-off-market {
+                                font-weight: 500;
+                                color: $mediumDarkGrey;
+                                font-size: $font-size-normal;
+                            }
+                        }
+                    }
+
+                    .property-overview-information {
+                        .property-overview-information-list{
+                            color: $mediumDarkGrey;
+                            font-weight: 500;
+
+                            .information-list-item {
+                                display: inline-block;
+
+                                &:after {
+                                    content: ' \2022';
+                                }
+                                &:last-child:after {
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+
+                    .r {
+                        float: right;
+
+                        .property-overview-cta {
+                            @include border-radius($border-radius);
+                            background-color: $lightGrey;
+                            padding: rhythm-px() grid-space(2);
+                            display: inline-block;
+                            text-align: left;
+
+                            .property-overview-button {
+                                @include border-radius($border-radius);
+                                padding: rhythm-px(.5) grid-space(2);
+                                background-color: $mediumDarkGrey;
+                                color: $white;
+                                display: block;
+                                font-weight: 400;
+                                margin-bottom: rhythm-px(0.25);
+
+                                span {
+                                    font-weight: 700;
+                                }
+
+                                &:not(.check-availability-cta):after {
+                                    @include icon-inline($side: right);
+                                    @include icon-hui($icon-name: 'arrow-right', $extend: false);
+                                    font-size: $font-size-small;
+                                }
+
+                                &.check-availability-cta {
+                                    cursor: pointer;
+                                }
+                            }
+                            .oas-cta {
+                                max-width: grid-space(23.5);
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Styles for FRC Short Description
+            .action-module-short-description {
+                width: 100%;
+
+                .action-module-short-description--caption {
+                    margin-bottom: rhythm-px(1.5);
+                    min-height: rhythm-px(14);
+                    max-height: rhythm-px(14);
+                    overflow: auto;
+                    color: $mediumDarkGrey;
+                }
+
+                .action-module-short-description--button {
+                    width: 100%;
+
+                    .button--secondary {
+                        display: block;
+                        margin: 0 auto rhythm-px(.5);
+                        font-weight: 300;
+                        height: rhythm-px(2);
+                        line-height: rhythm-px(2);
+                    }
+                }
+            }
+        }
+
+        .main-content {
+            @include fluid-cols($left: false, $right: 300px, $space: 20px, $extend: false);
+            @include clearfix();
+            .twin {
+                min-width: grid-space(68);
+            }
+            .r {
+                float: right;
+                margin-left: grid-space(-33);
+                z-index: 1;
+                .local-resources {
+                    border: 1px solid $mediumLightGrey;
+                    margin-bottom: rhythm-px(0.25);
+                    .module-title {
+                        padding: 0 grid-space();
+                        border-bottom-style: none;
+                    }
+                    .local-resources-ads {
+                        padding-left: grid-space();
+                    }
+                }
+            }
+        }
+    }
+
+    .lead-form {
+        .lead-form--form {
+            padding: 0;
+        }
+
+        .lead-form--basic-fields {
+            font-weight: 300;
+            @include experimental(font-smoothing, antialiased);
+        }
+
+        .lead-form-container {
+            @include border-radius($border-radius);
+            padding: rhythm-px() grid-space(2);
+
+            .lead-form-input {
+                font-weight: 300;
+                @include experimental(font-smoothing, antialiased);
+            }
+
+            .textarea-field {
+                font-size: $font-size-normal;
+            }
+
+            .lead-form--opt-in {
+                margin: rhythm-px(.5) 0 rhythm-px(1.5);
+            }
+
+            .lead-form--submit {
+                margin: rhythm-px() 0 0;
+
+                .button {
+                    font-weight: 300;
+                    padding: 0 grid-space(3);
+                    height: rhythm-px(2);
+                    line-height: rhythm-px(2);
+                    font-size: $font-size-medium;
+                }
+            }
+
+            &.action {
+                background-color: $lightGrey;
+            }
+        }
+
+        .float-label input {
+            font-weight: 300;
+        }
+
+        .offered-by {
+            @include border-radius($border-radius);
+            background-color: $lightGrey;
+            padding: 0 grid-space(2) rhythm-px(1.1);
+            margin-top: rhythm-px();
+        }
+
+        &.request-information {
+            @include module-spacing-vertical();
+        }
+    }
+
+    .estimated-values--module{
+            .estimated-values--sub-header {
+                color: $darkGrey;
+                margin-left: grid-space(1.5);
+                padding-bottom: rhythm-px(.5);
+            }
+    }
+
+    .sticky-header {
+        background: $white;
+        position: fixed;
+        top: rhythm-px(-7.5);
+        left: 0;
+        transition: top 0.25s;
+        z-index: 5;
+        margin: 0;
+        width: 100%;
+        border-bottom: rhythm-px(.1) solid;
+        border-color: $orange;
+        font-weight: 300;
+        @include experimental(font-smoothing, antialiased);
+        &.active {
+            transform: translateY(150px);
+        }
+
+        .close {
+            position: absolute;
+            right: grid-space(.5);
+            top: rhythm-px(.4);
+            line-height: $line-height;
+            text-align: center;
+            width: grid-space(2);
+            height: rhythm-px();
+            background: $blue;
+            color: $white;
+            border-radius: 50%;
+            cursor: pointer;
+            &::before {
+                @include icon-hui($icon-name: 'close', $extend: false);
+                font-size: $font-size-xsmall;
+                font-style: normal;
+            }
+        }
+        .header-content {
+            padding: rhythm-px(.5) 0;
+            z-index: 1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header-summary {
+            width: $site-content-width;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .agent-image-box {
+            float: left;
+            margin-right: grid-space(2);
+            overflow: hidden;
+            width: grid-space(6);
+            height: rhythm-px(3);
+        }
+
+        .details {
+            width: inherit;
+            float: right;
+            display: inline-block;
+            padding-bottom: rhythm-px(.3);
+            sup {
+                vertical-align: inherit;
+                font-size: inherit;
+            }
+        }
+        .details-data {
+            float: left;
+            padding-right: grid-space();
+            &.price-item {
+                font-weight: 500;
+                min-width: grid-space(6);
+                margin-right: grid-space();
+            }
+            .price-display {
+                display: inline-flex;
+            }
+        }
+        .details-item {
+            width: $site-content-width;
+            margin-left: auto;
+            margin-right: auto;
+            padding: rhythm-px(0.15) 0;
+        }
+        .details-content {
+            font-size: $font-size-normal;
+            line-height: $line-height;
+            color: $darkGrey;
+            @include ellipsis;
+            width: grid-space(30);
+            .details-content--title {
+                font-size: $font-size-xlarge;
+                line-height: rhythm-px(1.5);
+            }
+            .details-data-bottom {
+                position: relative;
+                bottom: rhythm-px(-0.25);
+            }
+            .details-label-red {
+                color: $red;
+            }
+        }
+        .details-top-line {
+            line-height: rhythm-px(1.5);
+        }
+        .details-row-bottom {
+            background-color: $lightestGrey;
+            width: 100%;
+            line-height: rhythm-px();
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .header-tools {
+            display: inline-block;
+            vertical-align: middle;
+            float: right;
+            margin-left: grid-space();
+            padding: rhythm-px(.5) 0;
+        }
+        .details-bottom--padding {
+            padding-bottom: rhythm-px(1.5);
+        }
+    }
+    // Floorplans Module -- Desktop
+    .floorplans--module {
+        @include module-spacing-vertical;
+
+        .floorplans--intro {
+            @include module-spacing-horizontal;
+        }
+
+        .floorplans--table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th, td {
+                text-align: left;
+                padding: rhythm-px(.1) grid-space(.5);
+                vertical-align: top;
+
+                &:first-of-type {
+                    padding-left: grid-space(3);
+                }
+                &:last-of-type {
+                    padding-right: grid-space(3);
+                }
+            }
+
+            .floorplans--table-header {
+                th {
+                    padding-top: rhythm-px(.5);
+                    padding-bottom: rhythm-px(.5);
+                }
+            }
+
+            .floorplans--table-content {
+                background: $lightGrey;
+
+                &:first-of-type {
+                    @include border-top-radius($border-radius);
+                }
+
+                th {
+                    padding-top: rhythm-px();
+                }
+
+                .floorplans--table-name {
+                    @include ellipsis();
+                    max-width: grid-space(30); // to force ellipsis on a table cell
+                }
+            }
+
+            .floorplans--table-footer {
+                background: $lightGrey;
+                height: rhythm-px();
+                @include border-bottom-radius($border-radius);
+            }
+
+            .flooplan--table-sqft, .floorplan--table-price {
+                white-space: nowrap;
+            }
+
+            .floorplan--table-price {
+                div {
+                    float: left;
+                    padding-right: grid-space(.7);
+
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            .a {
+                font-weight: 400;
+            }
+        }
+
+        .mls-badge {
+            margin: rhythm-px(.75) 0;
+            background-image: url('/images/property/badge_mls.png');
+            width: image-width('property/badge_mls.png');
+            height: image-height('property/badge_mls.png');
+        }
+    }
+
+    // Home Details/Property Records -- Desktop
+    .property-record {
+        @include module-spacing-vertical();
+        color: $darkGrey;
+
+        .property-record--container {
+            @include border-radius($border-radius);
+            @include clearfix();
+            background-color: $lightGrey;
+            padding: rhythm-px(.75) grid-space(3);
+            margin: rhythm-px(.75) 0;
+
+            .property-record--container-column {
+                float: left;
+                width: 50%;
+
+                dt, dd {
+                    float: left;
+                    margin: rhythm-px(.05) 0;
+                }
+                dt {
+                    clear: left;
+                    width: grid-space(17);
+                }
+                dd {
+                    @include ellipsis();
+                    max-width: grid-space(14);
+                    clear: right;
+                    font-weight: 700;
+                    margin: 0;
+
+                    &.isUser {
+                        &::after {
+                            content: '* ';
+                            color: $blue;
+                        }
+                    }
+                }
+                .title-case {
+                    text-transform: capitalize;
+                }
+            }
+
+            .property-record--more-details {
+                @include clearfix(both);
+                border-top: rhythm-px(.05) solid $mediumDarkGrey;
+                display: inline-block;
+                width: 100%;
+                margin-top: rhythm-px(.75);
+
+                .a {
+                    margin: rhythm-px(.75) 0 0;
+                    font-weight: 700;
+
+                    .icon-hui {
+                        @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal);
+                        color: $darkGrey;
+                        margin-top: rhythm-px(.1);
+                    }
+                }
+            }
+        }
+
+        .property-record--footer {
+            font-weight: 400;
+
+            .property-record--footer-disclaimer {
+                @include adjust-font-size-to($to-size: $font-size-xsmall, $from-size: $font-size-normal);
+                font-style: italic;
+            }
+
+            .property-record--footer-user {
+                font-weight: 500;
+                margin: rhythm-px(.5) 0 0;
+
+                &::before {
+                    content: '*';
+                    color: $blue;
+                }
+            }
+
+            .property-record--footer-foreclosure-cta {
+                font-weight: 400;
+                margin: rhythm-px(.25) 0;
+            }
+        }
+    }
+}
+
+.home-value-disclaimer {
+    font-size: $font-size-small;
+    padding: 0 grid-space(1.5) rhythm-px(.5);
+    color: $mediumGrey;
+
+    strong {
+        color: $darkGrey;
+    }
+}
+
+.listing-info-and-source {
+    @include module-spacing-vertical();
+
+    .listing-information {
+        .listing-information-table {
+            font-size: $font-size-small;
+            @include display-flex;
+            @include module-spacing-horizontal();
+
+            .key, .value {
+                padding: 0;
+                vertical-align: top;
+            }
+            .key {
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 400;
+            }
+
+            .value {
+                color: $darkGrey;
+                font-weight: 700;
+                padding-left: grid-space();
+            }
+        }
+    }
+
+    .listing-source-disclaimer {
+        @include module-spacing-horizontal();
+        font-size: $font-size-small;
+        color: $darkGrey;
+
+        & > p {
+            margin: 0;
+        }
+    }
+}
+
+.additional-properties {
+    margin: 0 grid-space(1.5);
+    background-color: $lightestGrey;
+    padding: rhythm-px(.75) grid-space(1.5);
+
+    .additional-properties--property {
+        @include clearfix();
+        @include display-flex();
+        margin-bottom: rhythm-px(.75);
+
+        .additional-properties--image {
+            @include flex-grow(1);
+            width: grid-space(12);
+            min-width: grid-space(12);
+            margin-right: grid-space(1.5);
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .additional-properties--info {
+            @include flex-grow(2);
+            padding-right: grid-space(1.5);
+
+            .additional-properties--name {
+                @include adjust-font-size-to($to-size: $font-size-medium, $from-size: $font-size-normal);
+                font-weight: 700;
+                line-height: 1em;
+            }
+
+            .additional-properties--address {
+                @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal);
+                color: $mediumGrey
+            }
+        }
+
+        .additional-properties--input {
+            margin: rhythm-px(1.25) 0;
+            position: relative;
+            top: rhythm-px();
+
+            .input-checkbox {
+                position: absolute;
+                opacity: 0;
+                height: 0;
+                width: 0;
+                display: inline;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                line-height: 0;
+                border: 0;
+                padding: 0;
+
+                & + label {
+                    position: relative;
+                    padding-left: grid-space(2.8);
+                    font-size: $font-size-normal;
+                    color: $mediumDarkGrey;
+                }
+            }
+
+            label {
+                display: block;
+            }
+        }
+    }
+
+    .additional-properties--button {
+        text-align: center;
+
+        .button {
+            @include adjust-font-size-to($to-size: $font-size-large+2, $from-size: $font-size-normal);
+            padding: 0 grid-space(2);
+            height: rhythm-px(2);
+        }
+    }
+}
+.mortgage-rates-display {
+    @include border-radius($global-radius);
+    @include module-spacing-vertical();
+
+    .item {
+        @include clearfix();
+        @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal);
+        @include module-spacing-horizontal();
+        margin-bottom: rhythm-px(0.1);
+        padding-bottom: rhythm-px(.25);
+        color: $darkGrey;
+        overflow: hidden;
+
+        .info-item {
+            float: left;
+            width: 49%;
+            .info-label {
+                font-weight: 700;
+                font-size: $font-size-small;
+                color: $darkGrey;
+            }
+        }
+        .info-row {
+            @include display-flex;
+            border-bottom: 1px solid $lightGrey;
+
+            .apr,
+            .phone,
+            .name {
+                font-weight: 700;
+                @include adjust-font-size-to($to-size: $font-size-normal, $from-size: $font-size-small);
+            }
+            .apr {
+                color: $blue;
+                .apr-date {
+                    color: $darkGrey;
+                    font-size: $font-size-small;
+                    font-weight: 400;
+                }
+            }
+            .phone {
+                color: $blue;
+                margin-bottom: rhythm-px(.25);
+                .phone-text {
+                    font-weight: 400;
+                    color: $darkGrey;
+                    font-size: $font-size-small;
+                }
+            }
+            .est-pay {
+                @include adjust-font-size-to($to-size: $font-size-normal, $from-size: $font-size-small);
+                font-weight: 700;
+                color: $blue;
+                .apr-link {
+                    font-weight: 400;
+                    font-size: $font-size-small;
+                }
+                span {
+                    font-weight: 400;
+                    color: $darkGrey;
+                    font-size: $font-size-small;
+                }
+            }
+            .button {
+                padding: 0 grid-space(2);
+                line-height: rhythm-px(1.5);
+                height: rhythm-px(1.5);
+                float: right;
+            }
+            .info-data li {
+                float: left;
+                padding: rhythm-px(.5) grid-space() rhythm-px(.5) 0;
+                width: 33%;
+                &:last-child {
+                    float: right;
+                }
+            }
+
+        }
+
+    }
+
+    .footer {
+        @include adjust-font-size-to($to-size: $font-size-xsmall, $from-size: $font-size-normal);
+        padding: 0 grid-space(1.5);
+        line-height: rhythm-px(2.8);
+        @include clearfix();
+
+        .provided-by {
+            float: left;
+            width: 33%;
+        }
+        .providedby-logo {
+            float: left;
+            height: image-height('mortgage-rates/bankrate-logo.png') + 20;
+            width: image-width('mortgage-rates/bankrate-logo.png');
+            @include background-image(url('/images/mortgage-rates/bankrate-logo.png'));
+            background-repeat: no-repeat;
+            background-position: 0 rhythm-px(.75);
+            font-size: $font-size-xsmall - 2;
+            padding-left: grid-space(.2);
+        }
+        .data-provided-by {
+            padding-right: grid-space();
+            float: left;
+        }
+        .disclaimer-tooltip {
+            float: left;
+            width: 33%;
+            text-align: center;
+            a {
+                color: $darkGrey;
+                font-weight: 400;
+                font-size: $font-size-normal;
+                text-decoration: underline;
+            }
+        }
+
+        .see-additional-rates {
+            float: right;
+            width: 33%;
+            text-align: center;
+        }
+
+        .button {
+            height: rhythm-px(1.5);
+            line-height: rhythm-px(1.5);
+            font-size: $font-size-normal;
+        }
+    }
+
+    iframe {
+        border: 0;
+        height: rhythm-px(23);
+    }
+
+    .tooltip-small {
+        width: grid-space(25);
+    }
+    .tooltip-big {
+        width: grid-space(30);
+    }
+    .tooltip-label {
+        font-weight: 700;
+    }
+    .slider-control {
+        width: 100%;
+        display: inline-block;
+        .creditscore-slider,
+        .downpayment-slider {
+            float: left;
+            width:49%;
+        }
+        .creditscore-slider {
+            padding-left: grid-space(.5);
+        }
+    }
+}
+
+.assigned-nearby-schools {
+    @include module-spacing-vertical();
+
+    .assigned-nearby-schools--item-container {
+        background-color: $lightGrey;
+        position: relative;
+        @include module-spacing-all-sides(rhythm-px(.75),false);
+
+        .content--body {
+            padding-right: grid-space(4);
+        }
+        .top-row--label {
+            color: $blue;
+            font-weight: 700; // prefer numerical weights to keywords
+        }
+        .data-row {
+            @include display-flex; // prefer using flex-box to using inline-block for fluid layouts
+            .data-row--label { // nested for the sake of clarity
+                flex: 1;
+                margin-right: grid-space(7);
+                float: left;
+                padding-right: grid-space(5);
+                color: $mediumGrey;
+                white-space: nowrap;
+                .icon-hui--location-ios{
+                    padding-right: grid-space(.8);
+                }
+            }
+        }
+
+        .school-ranking {
+            position: absolute;
+            right: grid-space(1.5);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .school-score-tooltip--container {
+        @include adjust-font-size-to($font-size-medium);
+        padding-top: rhythm-px(.25);
+        text-align: right;
+        .school-score--tool {
+            display: inline-block;
+            @include module-spacing-horizontal();
+
+            .icon-hui {
+                color: $blue;
+            }
+        }
+    }
+}
+
+.ngdialog-content {
+    .movers--iframe {
+        width: grid-space(50);
+        height: rhythm-px(27.5);
+    }
+}
+
+.mortgage-confirmation-sale {
+    width: grid-space(56);
+    .mortgage-confirmation-sale--main-header {
+        font-size: $font-size-medium;
+        font-weight: 700;
+        line-height: rhythm-px(1.5);
+        border-bottom: 1px solid $lightGrey;
+        padding: 0 grid-space();
+    }
+    .mortgage-confirmation-sale--content {
+        padding: 0 grid-space(3);
+        margin-bottom: rhythm-px(.75);
+        .mortgage-confirmation-sale--secondary-header {
+            font-size: $font-size-normal;
+            margin: rhythm-px(.5) 0 rhythm-px(.25);
+        }
+        .mortgage-confirmation-sale--message {
+            display: block;
+            margin-bottom: rhythm-px(.25);
+        }
+        .mortgage-confirmation-sale--form {
+            background-color: $lightGrey;
+            padding: rhythm-px(.5) grid-space();
+            @include border-radius($border-radius);
+            font-size: $font-size-small;
+            margin-bottom: rhythm-px();
+            .required {
+                color: $red;
+            }
+            .mortgage-confirmation-sale--row {
+                margin-bottom: rhythm-px(0.5);
+                &:first-child {
+                    a {
+                        margin-top: rhythm-px(.25);
+                        text-decoration: underline;
+                        line-height: rhythm-px(1.5);
+                    }
+                }
+                .mortgage-confirmation-sale--column {
+                    display: inline-table;
+                    width: 49%;
+                    padding: 0 grid-space();
+                    .mortgage-confirmation-sale--select,
+                    .mortgage-confirmation-sale--input {
+                        @include border-radius($border-radius);
+                        color: inherit;
+                        height: rhythm-px(1.4);
+                        font-family: Arial,sans-serif;
+                        padding: rhythm-px(.25) grid-space(0.5);
+                        font-weight: 200;
+                        border: 1px solid $mediumLightGrey;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .mortgage-confirmation-sale--checkbox {
+                input[type="checkbox"] {
+                    position: relative;
+                    top: rhythm-px(.1);
+                }
+                .checkbox-text {
+                    display: inline;
+                    margin: 0;
+                }
+                .tooltip-button {
+                    background: transparent;
+                }
+            }
+        }
+        .mortgage-confirmation-sale--button {
+            text-align: center;
+            .mortgage-confirmation-prequalified--button {
+                color: $white;
+                top: rhythm-px(-0.1);
+                background-color: $orange;
+                @include border-radius($border-radius);
+                height: rhythm-px(1.5);
+                line-height: rhythm-px(1.3);
+                display: inline-block;
+                padding: 0 grid-space(1.5);
+                margin-right: grid-space(0.5);
+                border: 0;
+                margin-bottom: rhythm-px(.5);
+            }
+        }
+        .mortgage-confirmation-sale--link {
+            text-align: center;
+            .mortgage-confirmation-no-thanks--link {
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                color: $blue;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .mortgage-confirmation-sale--declaration {
+            font-style: italic;
+            font-size: $font-size-xsmall;
+            line-height: rhythm-px(.5);
+            .links {
+                white-space: normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+// @huidocs component
+// @name Tabs
+// @module navigation
+//
+// @description
+// Navigation that looks like filing tabs.
+//
+// @markup
+// <nav class="tabs {$ state.escaped $}">
+//  	<ul>
+//    		<li><span class="label a">Inactive Tab</span></li>
+//    		<li class="is-target"><span class="label a">Active Tab</span></li>
+//    		<li><span class="label a">Inactive Tab</span></li>
+//	    </ul>
+// </nav>
+//
+// @styleguide 3.3
+
+.tabs {
+    @include tabs;
+    @include tabs-style;
+}
+
+
+// @huidocs component
+// @name Tab Panel
+// @module navigation
+//
+// @description
+// Panel surrounding tabbed content.
+//
+// @markup
+// <nav class="tabs {$ state.escaped $}">
+//  	<ul>
+//    		<li><span class="label a">Inactive Tab</span></li>
+//    		<li class="is-target"><span class="label a">Active Tab</span></li>
+//    		<li><span class="label a">Inactive Tab</span></li>
+//	    </ul>
+// </nav>
+//    <div class="tab-panel is-target">
+//        <p>Targeted Content</p>
+//    </div>
+//    <div class="tab-panel">
+//        <p>Content</p>
+//    </div>
+//    <div class="tab-panel">
+//        <p>Content</p>
+//    </div>
+//
+// @ styleguide 3.3
+
+.tab-panel {
+    @include tab-panel;
+}

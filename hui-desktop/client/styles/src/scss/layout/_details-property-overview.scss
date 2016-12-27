@@ -1,0 +1,43 @@
+// Property Overview
+.property {
+    @include module-spacing-vertical;
+
+    .details-overview {
+        background-color: $lightestGrey;
+
+        .row-container {
+            @include display-flex;
+            @include flex-direction(row);
+            @include flex-wrap(wrap);
+
+            .address-alternate-heading {
+                line-height: $line-height;
+                margin: 0;
+            }
+        }
+
+        .property-details-item {
+            @include module-spacing-all-sides(10px,false);
+            border: 1px solid $white;
+            @include flex-grow(1);
+
+            &.large {
+                width: 100%
+            }
+
+            .item-heading {
+                color: $mediumDarkGrey;
+                font-size: $font-size-small;
+            }
+
+            .item-content {
+                color: $darkGrey;
+                font-size: $font-size-medium;
+            }
+
+            > a {
+                font-size: $font-size-medium;
+            }
+        }
+    }
+}

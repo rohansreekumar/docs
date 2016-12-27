@@ -1,0 +1,39 @@
+{
+  "values": [
+    {
+      "key": "nearby_virginiabeach",
+      "display": "Virginia Beach, VA",
+      "value": "VIRGINIABEACH"
+    },
+    {
+      "key": "nearby_sussex",
+      "display": "Sussex, VA",
+      "value": "SUSSEX"
+    },
+    {
+      "key": "nearby_chesapeake",
+      "display": "Chesapeake, VA",
+      "value": "CHESAPEAKE"
+    },
+    {
+      "key": "nearby_newportnews",
+      "display": "Newport News, VA",
+      "value": "NEWPORTNEWS"
+    },
+    {
+      "key": "nearby_richmond",
+      "display": "Richmond, VA",
+      "value": "RICHMOND"
+    },
+    {
+      "key": "nearby_williamsburg",
+      "display": "Williamsburg, VA",
+      "value": "WILLIAMSBURG"
+    },
+    {
+      "key": "nearby_hampton",
+      "display": "Hampton, VA",
+      "value": "HAMPTON"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+/** Plugin - AlphaList  **/
+@import "Base";
+@import "Mixins";
+
+.alphaList {
+    overflow: hidden;
+}
+
+.alpha {
+    display: block;
+    float: left;
+    @include font-weight(700);
+    color: #0054a0;
+    width: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.alpha::before {
+    content: '|';
+    float: left;
+    color: #484848;
+}
+
+.alpha:first-child {
+    width: 1em;
+    text-align: left;
+}
+
+.alpha:first-child:before {
+    display: none;
+}
+
+.alpha:hover,
+.alpha.is-active,
+.alpha:focus {
+    color: #f7841b;
+    text-decoration: none;
+}
+
+.alpha.is-dead,
+.alpha.is-dead:hover {
+    color: #bbb;
+    cursor: default;
+}

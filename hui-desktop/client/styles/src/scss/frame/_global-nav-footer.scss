@@ -1,0 +1,179 @@
+// Global Nav styles
+
+.global-nav--content {
+    @extend .frame-content;
+}
+.global-nav--footer-push {
+    height: rhythm-px(4);
+}
+.global-nav-footer {
+    @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal);
+
+    .footer-content--text-c,
+    .footer-content--text-d,
+    .connect-section,
+    .legal-apps,
+    .copyright {
+        min-width: grid-space(94);
+        max-width: grid-space(102);
+        margin: 0 auto;
+    }
+
+    .footer-content--text-c,
+    .footer-content--text-d,
+    .legal-apps {
+        padding: rhythm-px(2.5) grid-space(3);
+    }
+
+    .copyright-footer {
+        width: 100%;
+        background-color: $desatDarkBlue;
+        color: $white;
+
+        span[data-deob] {
+            cursor: pointer;
+        }
+
+        .connect-section {
+            @include clearfix();
+            @include vertical-center();
+            padding: rhythm-px(1.5) grid-space(3);
+
+            .connect-with-us {
+                @include adjust-font-size-to($to-size: $font-size-large+2, $from-size: $font-size-small);
+                color: $orange;
+                font-weight: 300;
+                float: left;
+                position: relative;
+
+                .share-facebook {
+                    margin-left: grid-space();
+                }
+
+                .share-google {
+                    position: absolute;
+                    width: grid-space(4);
+                    height: rhythm-px(2);
+                    margin-left: grid-space(0.1);
+                    z-index: 1;
+
+                    // Overridding google share button inline styles
+                    // All !importants are necessary so that Googles styles are overridden...
+                    // START GOOGLE SHARE OVERRIDES
+                    div[id*="plusone"] {
+                        background-image: url('/images/default/share-google.png')!important;
+                        background-size: contain!important;
+                        background-repeat: no-repeat!important;
+                        height: rhythm-px(1.8)!important;
+                        width: grid-space(3.6)!important;
+                        position: absolute;
+                        z-index: 10;
+                        margin-top: rhythm-px(0.2)!important;
+
+                        &:hover {
+                            background-image: url('/images/default/share-google-white.png')!important;
+                        }
+
+                        iframe {
+                            height: rhythm-px(1.8)!important;
+                            width: grid-space(3.6)!important;
+                            opacity: 0;
+                            padding-top: rhythm-px(.4)!important;
+                        }
+                    }
+                    // END GOOGLE SHARE OVERRIDES
+                }
+
+                .share-you-tube {
+                    margin-left: grid-space(4.25);
+                }
+
+                .icon-hui {
+                    @include adjust-font-size-to($to-size: $font-size-2xlarge, $from-size: $font-size-large);
+                    color: $mediumGrey;
+                    padding: 0;
+                    margin: 0;
+
+                    &.icon-hui--google {
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+
+            .contact-links {
+                float: right;
+                line-height: rhythm-px(2.25);
+            }
+        }
+
+        .legal-apps-copyright {
+            background-color: $darkGrey;
+
+            .legal-apps {
+                @include clearfix();
+                padding-bottom: rhythm-px();
+
+                .legal-links {
+                    margin-top: rhythm-px(.75);
+                    float: left;
+
+                    .ad-choices {
+                        background: transparent url('/images/default/ad-choices.png') center center no-repeat;
+                        background-size: contain;
+                        width: grid-space(1.5);
+                        height: rhythm-px(0.8);
+                        display: inline-block;
+                        vertical-align: text-top;
+                    }
+                }
+
+                .mobile-apps {
+                    @include adjust-font-size-to($to-size: $font-size-large+2, $from-size: $font-size-small);
+                    float: right;
+                    color: $orange;
+                    font-weight: 300;
+
+                    .promo--app-button {
+                        @include adjust-font-size-to($to-size: $font-size-medium, $from-size: $font-size-large+2);
+                        font-weight: 300;
+                        padding: 0 grid-space();
+                        line-height: rhythm-px(2);
+                        height: rhythm-px(2);
+                        margin-left: grid-space(2);
+                    }
+                }
+            }
+
+            .copyright {
+                @include clearfix();
+                padding: rhythm-px(.5) grid-space(3) rhythm-px();
+                border-top: 1px solid $lightGrey;
+                margin-top: rhythm-px();
+                position: relative;
+
+                .equal-housing-icon {
+                    position: absolute;
+                    top: rhythm-px(1.5);
+                    left: grid-space(3);
+                    background: transparent url('/images/default/equal_housing_opportunity.png') center center no-repeat;
+                    background-size: contain;
+                    width: grid-space(2.5);
+                    height: rhythm-px(1.25);
+                }
+
+                .copyright-text {
+                    padding-left: grid-space(4);
+                }
+
+                .homes-com-logo {
+                    margin-top: rhythm-px(3);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

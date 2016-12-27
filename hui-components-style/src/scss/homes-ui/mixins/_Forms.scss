@@ -1,0 +1,547 @@
+
+$form-input-shadow                  : inset 1px 1px 5px rgba($mediumGrey, 0.3);
+$form-input-border-radius           : 2px;
+$form-input-border-color            : $mediumLightGrey;
+$form-input-border-width            : 2px;
+$form-input-hover-color             : $border-color-hover;
+$form-input-complete-color          : $border-color-okay;
+$form-input-border                  : $form-input-border-width solid $form-input-border-color;
+
+$form-element-margin                : rhythm(.5) 0 !global !default;
+
+$form-field-padding                 : rhythm-px(.5) grid-space(2) !global !default;
+$form-field-single-height           : rhythm-px(2) !global !default;
+$form-field-single-height-focused   : $form-field-single-height + nth($form-field-padding, 1) * 1.5;
+
+$form-select-height: rhythm-px(2.5) !global !default;
+
+// Fields, text, number, url etc.
+$form-field-font-size               : $font-size-large !global !default;
+$form-field-line-height             : $base-line-height !global !default;
+$form-field-color                   : $darkGrey !global !default;
+$form-field-background              : $white !global !default;
+$form-field-border-radius           : $form-input-border-radius !global !default;
+$form-field-border-color            : $form-input-border-color !global !default;
+$form-field-border                  : $form-input-border !global !default;
+
+// States
+$form-field-hover-border-color      : $form-input-hover-color !default;
+$form-field-complete-border-color   : $form-input-complete-color !default;
+
+$form-checkbox-height               : rhythm-px(1.5) - 2 !global !default;
+$form-checkbox-width                : $form-checkbox-height !global !default;
+
+$form-placeholder-color             : $mediumGrey !global !default;
+$form-placeholder-font-size         : $font-size-medium !global !default;
+
+$form-overlay-color                 : $form-placeholder-color;
+$form-overlay-font-size             : $font-size-normal;
+
+$form-message-border-color          : $body-color !global !default;
+$form-message-background            : $white !global !default;
+$form-message-padding               : rhythm-px() $global-padding !global !default;
+
+@mixin form-input-shadow($extend: false) {
+    @if $extend {
+        @extend %form-input-shadow;
+    } @else {
+        @include box-shadow($form-input-shadow);
+    }
+}
+
+@mixin form-input-state {
+
+}
+
+@mixin form-overlay($extend: true) {
+
+}
+
+// Form Element
+//
+// Groups inputs
+//
+// Markup:
+// <label class="form-element">
+// 	Label
+// 	<input type="number" name="price.min" tabindex="5">
+// </label>
+//
+// Styleguide 6.1
+
+// Form Element (mixin)
+//
+// Mixin to group inputs
+//
+// ## Params
+//
+// > * `$extend` - true {boolean} Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include form-range($space:$map-form-range-space, $fields:'.status-toggle', $extend:false);
+// ```
+//
+// Styleguide 6.0.1
+
+@mixin form-element($extend: true) {
+    @if $extend {
+        @extend %form-element;
+    } @else {
+        margin: $form-element-margin;
+    }
+}
+
+// @huidoc mixin
+// @name Form Field Multi Line
+// @module forms
+//
+// @description
+// Common input field texture with multiple lines
+//
+@mixin form-field-multi-line($extend: true) {
+    overflow: auto;
+    vertical-align: top;
+    padding: {
+        top: rhythm-px(.25);
+        bottom: rhythm-px(.25);
+    }
+    min-height: rhythm-px(3);
+    resize: vertical;
+}
+
+// @huidoc mixin
+// @name Form Field
+// @module forms
+//
+// @description
+// Common input field texture
+//
+//
+// @param {boolean=false} $mulit-line -  Multi-line input, (ex: textarea).
+// @param {boolean=false} $wrap -  If styling a non-input element.
+// @param {boolean=true} $extend - Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include form-field;
+// ```
+//
+// Styleguide 6.0.2
+
+@mixin form-field($multi-line: false, $wrap: false, $extend: true) {
+    @if $extend {
+        @if $multi-line {
+            @extend %form-field-multi-line;
+        } @else {
+            @extend %form-field;
+        }
+    } @else {
+        @include form-element;
+
+        @if ($wrap == false) {
+            @include box-sizing(border-box);
+        }
+
+        width: 100%;
+        border: $form-field-border;
+        border-radius: $form-field-border-radius;
+        padding: $form-field-padding;
+        background: $form-field-background;
+        color: $form-field-color;
+        font-size: $font-size-medium;
+
+        @include form-input-shadow;
+        display: block;
+
+        @if $multi-line {
+            @include form-field-multi-line;
+        } @else {
+            min-height: $form-field-single-height;
+        }
+
+    }
+}
+
+// @huidoc mixin
+// @name Form Field Wrap
+// @module forms
+//
+// @description
+//
+// Clears input styles inside an element wrapping a form input, not the input itself, ex: a search form with a search icon 'inside' the input.
+//
+//
+// @param {boolean=true} $extend - Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include form-field-wrap;
+// ```
+//
+// Styleguide 6.0.2
+
+@mixin form-field-wrap($extend: true) {
+    @if $extend {
+        @extend %form-field-wrap;
+    } @else {
+        @include form-field($wrap: true);
+
+        input,
+        select {
+            width: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background: transparent;
+            font-size: inherit;
+            color: inherit;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        position: relative;
+        margin-bottom: 0;
+        @include transition(.5s linear height);
+
+        &.form-field--optional {
+            &::after {
+                content: '(Optional)';
+                font-size: $form-overlay-font-size;
+                position: absolute;
+                right: grid-space(.5);
+                top: rhythm-px(.1);
+                background-color: $white;
+                padding: $form-field-padding;
+            }
+        }
+
+        &.form-field--error {
+            border-color: $form-input-border-color;
+        }
+
+        &.form-field--complete {
+            &::after {
+                @include icon-hui('checkmark');
+                position: absolute;
+                right: 0;
+                color: $form-field-complete-border-color;
+                // to align the check mark with the input field
+                top: rhythm-px() + 4;
+                background-color: $white;
+                padding: 0 nth($form-field-padding, 1);
+            }
+        }
+
+        &:focus,
+        &:hover,
+        &.form-field--focus {
+            border-color: $form-field-hover-border-color;
+        }
+
+        &.form-field--complete {
+            border-color: $form-field-complete-border-color;
+        }
+
+        &:disabled {
+            @include disabled($extend: false);
+        }
+
+    }
+}
+
+// @huidoc mixin
+// @name Form Field Label
+// @module forms
+//
+// @description
+//
+// Form Field label
+//
+//
+// @param {boolean=true} $extend - Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include form-field-label;
+// ```
+//
+// Styleguide 6.0.2
+
+@mixin form-field-label($extend: false) {
+    @if $extend {
+        @extend %form-field-label;
+
+    } @else {
+        & > .form-label {
+            font-size: $font-size-small;
+            display: block;
+            line-height: rhythm-px(.75);
+            color: $form-field-border-color;
+            position: absolute;
+            opacity: 0;
+            // hides floating label 'behind' the input field to achieve desired animation effect
+            top: rhythm-px() - 6;
+            transition: .5s ease all;
+            @include ellipsis($extend: false);
+        }
+
+        &.form-field--has-value {
+            & > .form-label {
+                position: relative;
+                top: -2px;
+                opacity: 1;
+            }
+        }
+
+        &:focus,
+        &:hover,
+        &:active {
+            & > .form-label {
+                color: $form-field-hover-border-color;
+            }
+        }
+
+        &.form-field--complete {
+            & > .form-label {
+                color: $form-field-complete-border-color;
+            }
+        }
+    }
+}
+
+// Form Label
+//
+// Label that wraps a form input or element that wraps a label and input
+//
+// .label-inline - label is inline with element
+//
+// Markup:
+// <label class="form-label {$modifiers}">
+// 	<input>
+// </label>
+//
+// Styleguide 6.1
+
+// Form Label (mixin)
+//
+// Mixin to group user inputs to indicate a stop and start value
+//
+// ## Params
+//
+// > * `$inline` - false {precentage} Label is inline with element.
+// > * `$extend` - true {boolean} Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include form-label;
+// ```
+//
+// Styleguide 6.2.1
+
+@mixin form-label($inline: false, $extend: true) {
+    @if $extend {
+        @if $inline {
+            @extend %form-label-inline;
+        } @else {
+            @extend %form-label;
+        }
+    } @else {
+        display: block;
+        @if ($inline == false) {
+            & > input {
+                width: 100%;
+                max-width: 100%;
+                @if ($frame-border-box == false) {
+                    @include box-sizing(border-box);
+                }
+            }
+        }
+    }
+}
+
+// Form Alert
+//
+// User Feedback messages
+//
+// .ajax-message - User feedback
+// .ajax-error - Error message
+//
+// Markup:
+// <div class="form-alert {$modifiers}"><div></div></div>
+//
+// Styleguide 6.3
+
+// Form Alert (mixin)
+//
+// User Feedback messages
+//
+// ## Params
+//
+// > * `$extend` - true {boolean} Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include form-range($space:$map-form-range-space, $fields:'.status-toggle', $extend:false);
+// ```
+//
+// Styleguide 6.3.1
+
+@mixin form-alert($extend: true) {
+    @if $extend {
+        @extend %form-alert;
+    } @else {
+        border: 1px solid $form-message-border-color;
+        background: $form-message-background;
+        padding: $form-message-padding;
+        text-align: center;
+    }
+}
+
+// Form Range
+//
+// Grouped user inputs to indicate a stop and start value
+//
+// Markup:
+// <fieldset class="form-element form-range search-price">
+// 	<label for="price.min">Price Min<br>
+// 		<input type="number" name="price.min" tabindex="5">
+// 	</label><span class="label_s">to</span><label for="price.max">Price Max<br>
+// 		<input type="number" name="price.max" tabindex="5">
+// 	</label>
+// </fieldset>
+// <fieldset class="form-element form-range search-sqft">
+// 	<label for="sqft.min">Size</label><br>
+// 	<input type="number" name="sqft.min" tabindex="5"><span class="label_s">to</span><input type="number" name="sqft.max" tabindex="5">
+// </fieldset>
+//
+// Styleguide 6.2
+
+// Form Range (mixin)
+//
+// Mixin to group user inputs to indicate a stop and start value
+//
+// ## Params
+//
+// > * `$space` - 10% {precentage} width of separator between user inputs.
+// > * `$fields` - label, input {selectors} user inputs to separate.
+// > * `@content` - applied to separator between user inputs.
+// > * `$extend` - true {boolean} Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include form-range($space:$map-form-range-space, $fields:'.status-toggle', $extend:false);
+// ```
+//
+// Styleguide 6.2.1
+
+@mixin form-range($space: 10%, $fields: join(label, input), $extend: true) {
+
+    #{prepend-selector($fields,'&>')},
+    & > .label_s {
+        display: inline-block;
+    }
+    #{prepend-selector($fields,'&>')} {
+        width: (100% - $space) / 2;
+    }
+    & > .label_s {
+        width: $space;
+        text-align: center;
+        @content;
+    }
+}
+
+// Form Selectbox
+//
+// Styled Selectbox
+//
+// Markup:
+// <label class="select-wrap"><select><option>Option 1</option></select></label>
+//
+// Styleguide 6.3
+
+// Form Selectbox (mixin)
+//
+// Mixin to create styled selectbox. *This mixin does not extend*
+//
+// ## Params
+//
+// > * `$selector` - .select-wrap {selector} selector for styled selectbox, this is a wraper around a selectbox.
+//
+// ```scss
+// @include form-select();
+//
+//```
+//
+// Styleguide 6.3.1
+
+@mixin form-selectbox($selector: '.select-wrap', $extend: true) {
+
+    #{$selector} {
+            @include form-field-wrap;
+
+            & > select {
+                @include appearance(none);
+                padding-right: $grid-space * 2.5;
+                position: relative;
+                z-index: 3;
+            }
+            @include pseudo-icon($position: both) {
+                position: absolute;
+            }
+
+            &:before {
+                @include border-right-radius(5px);
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 2em;
+            }
+            &:after {
+                @include triangle($darkGrey, 4px, 8px, 180);
+                top: 50%;
+                right: $grid-space;
+                @include transform(translateY(-50%));
+                z-index: 1;
+            }
+
+    }
+    :-moz-any(#{$selector}):before {
+        background-color: $white;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+@import "Forms-checkbox-radio";
+
+@if import-once("Forms.scss") {
+    %form-input-shadow {
+        @include form-input-shadow($extend: false);
+    }
+    %form-element {
+        @include form-element($extend: false);
+    }
+    %form-field {
+        @include form-field($extend: false);
+    }
+    %form-field-label {
+        @include form-field($extend: false);
+    }
+    %form-field-multi-line {
+        @include form-field($multi-line: true, $extend: false);
+    }
+    %form-field-wrap {
+        @include form-field-wrap($extend: false);
+    }
+
+    %form-range {
+        @include form-range($extend: false);
+    }
+    %form-label {
+        @include form-label($extend: false);
+    }
+    %form-label-inline {
+        @include form-label($inline: true, $extend: false);
+    }
+
+    %form-message,
+    %form-alert {
+        @include form-alert($extend: false);
+    }
+
+}

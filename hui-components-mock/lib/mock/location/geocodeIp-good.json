@@ -1,0 +1,14 @@
+{
+    "status":false,
+    "location":
+        {
+          "Country":"USA",
+          "Region":"VA",
+          "City":"Norfolk",
+          "ConnectionSpeed":"broadband",
+          "Latitude":"36.91408",
+          "Longitude":"-76.28824",
+          "TwoLetterCountry":"US"
+        },
+    "responseTime":9
+}

@@ -1,0 +1,22 @@
+<div class="form-input-textarea">
+  <textarea
+          rows="4"
+          class="textarea-field"
+          data-form-input-textarea-auto-focus="formInputTextCtrl.isEdit"
+          data-ng-class="{'is-closed': !formInputTextCtrl.isEdit, 'is-open': formInputTextCtrl.isEdit, 'form-input--focus': formInputTextCtrl.isEdit}"
+          data-ng-model="formInputTextCtrl.formInputModel"
+          data-ng-blur="formInputTextCtrl.toggleTextarea()">
+  </textarea>
+
+    <div
+            class="textarea-preview media-box--right"
+            data-ng-class="{'is-closed': formInputTextCtrl.isEdit, 'is-open': !formInputTextCtrl.isEdit}">
+        <div class="media">
+        <span
+                class="a"
+                data-ng-click="formInputTextCtrl.toggleTextarea()">Edit Details
+        </span>
+        </div>
+        <div class="details">{{formInputTextCtrl.formInputModel}}</div>
+    </div>
+</div>

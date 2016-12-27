@@ -1,0 +1,11 @@
+{
+  "match": {
+    "type": "city",
+    "city": "Norfolk",
+    "state": "VA"
+  },
+  "input": "norfolk va",
+  "context": "default",
+  "listing_count": 1,
+  "link": "/norfolk-virginia/for-sale"
+}

@@ -1,0 +1,323 @@
+/*layout - footer - v2*/
+
+/*icons*/
+.icon.has.s_22 {
+    background: none;
+    width: auto;
+}
+
+.icon.has.s_22:before {
+    content: '';
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background: transparent url(/media/portalimgcache/default/frame-sprite.png) -40px -230px;
+
+    vertical-align: middle;
+    margin-right: .5em;
+}
+
+.icon.has.android.s_22:before {
+}
+
+.icon.has.apple.s_22:before {
+    background-position: -40px -255px;
+}
+
+.icon.has.speech.s_22:before {
+    background-position: -40px -280px;
+}
+
+.icon.has.email.s_22:before {
+    background-position: -40px -305px;
+}
+
+.icon.footer-social.s_38 {
+    background: transparent url(/media/portalimgcache/default/frame-sprite.png) 0 -230px;
+}
+
+.icon.footer-social.s_38.facebook {
+}
+
+.icon.footer-social.s_38.twitter {
+    background-position: 0 -255px;
+}
+
+.icon.footer-social.s_38.youtube {
+    background-position: 0 -280px;
+}
+
+.icon.footer-social.s_38.pintrest {
+    background-position: 0 -305px;
+}
+
+/*
+.icon.s_20.eho{
+	background: transparent url(/media/portalimgcache/default/frame-sprite.png) -40px -330px no-repeat;
+}
+*/
+/************/
+/** Footer **/
+/************/
+
+.footer-blog .summary-section,
+.footer-connect a,
+.footer-copyright {
+    font-size: .85em;
+}
+
+.footer-contentShell {
+    clear: both;
+}
+
+.frame-footer > .frame-content {
+    // margin-top: 50px;
+}
+
+/* Footer links */
+.footer-links {
+    $footer-links-list-height: 5;
+    $footer-links-footer-height: 2;
+    $footer-links-header-height: 2;
+    $footer-links-height: $footer-links-list-height + $footer-links-footer-height + $footer-links-header-height;
+    height: rhythm-px($footer-links-height);
+    .footer-links-list {
+        height: rhythm-px($footer-links-list-height);
+        overflow: hidden;
+    }
+    .link-expand {
+        margin-top: rhythm-px(.25);
+        display: inline-block;
+        @include font-weight(700);
+        &:before {
+            padding-right: .2em;
+        }
+    }
+    &.is-open {
+        height: rhythm-px($footer-links-height + 5);
+        .footer-links-list {
+            height: rhythm-px($footer-links-height + 5) - rhythm-px($footer-links-footer-height) - rhythm-px($footer-links-header-height);
+            overflow: auto;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+}
+
+.footer-links-section,
+.footer-links-wrap {
+    border: 1px solid $mediumLightGrey;
+}
+
+.footer-links-wrap {
+    margin: 10px 0;
+    border-width: 1px 0;
+    clear: both;
+    @extend %background-whiteGrey;
+}
+
+.footer-links-section {
+    border-width: 0 0 0 1px;
+    width: 25%;
+    float: left;
+    @include box-sizing(border-box);
+    padding: 15px 20px;
+    position: relative;
+    height: 100%;
+}
+
+.footer-links-section:first-child {
+    border-width: 0;
+}
+
+.footer-links h3 {
+    color: $darkGrey;
+    margin: 0;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    a {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+    }
+}
+
+.footer-cols.fluidCols {
+    overflow: hidden;
+    line-height: normal;
+}
+
+.footer-cols.fluidCols > .r {
+    width: 30%;
+}
+
+.footer-cols.fluidCols > .twin {
+    margin-right: -30%;
+}
+
+.footer-cols.fluidCols > .twin > .m {
+    margin-right: 33%;
+}
+
+/* Blog Section */
+.footer-blog {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.footer-blog h2 {
+    @include font-weight(300);
+    font-size: 2em;
+    line-height: normal;
+    margin: 0 0 .5em;
+    color: inherit;
+}
+
+.footer-blog .blog-section > a,
+.footer-blog .blog-section > a:hover {
+    text-decoration: none;
+}
+
+.footer-blog .blog-section > .mediaBox {
+    @include MediaBox($extend: false);
+}
+
+.footer-blog .blog-section .media {
+    border: 1px solid $mediumLightGrey;
+    width: 240px;
+    margin-right: 20px;
+}
+
+.footer-blog .blog-section .media,
+.footer-blog .blog-section .details {
+    display: block;
+}
+
+.footer-blog .blog-title,
+.footer-blog .blog-date,
+.footer-blog .blog-desc {
+    display: block;
+}
+
+.footer-blog .blog-title {
+    @include font-weight(700);
+    font-size: 1.4em;
+}
+
+.footer-blog .blog-date {
+    color: $darkGrey;
+    font-size: 1.2em;
+    margin: 0.2em 0 1.2em;
+}
+
+.footer-blog .blog-desc {
+    color: $darkGrey;
+    line-height: 1.5em;
+}
+
+/*connect Section*/
+.footer-connect {
+    @extend %background-stripedLightGrad;
+    border: 1px solid $orange;
+    border-width: 1px 0;
+    padding: 1em 0;
+
+    h3 {
+        color: $blue;
+    }
+}
+
+.footer-connect a,
+.footer-copyright a {
+    white-space: nowrap;
+}
+
+.footer-blog .summary-section {
+    line-height: normal;
+}
+
+// .footer-connect>.shell{
+// 	// margin:0 auto;
+// 	// width:976px;
+// }
+
+.footer-connect-section {
+    width: 50%;
+    @include box-sizing(border-box);
+    float: left;
+}
+
+.footer-connect h3 {
+    margin: 0 0 1em;
+    font-size: 1.25em;
+}
+
+.footer-connect a.has.icon {
+    padding-right: 1.2em;
+}
+
+.footer-connect .footer-social {
+    display: inline-block;
+    margin-right: .5em;
+    height: 24px;
+    width: 38px;
+    vertical-align: middle;
+    @include squish-button();
+}
+
+/* Copyright Sections */
+.footer-subfooter {
+    background: $white;
+    padding: 1px;
+}
+
+.footer-copyright {
+    /*position: relative;*/
+    /*width:78em;*/
+    text-align: center;
+    margin: 1.5em auto 2em;
+    line-height: normal;
+}
+
+.footer-copyright .footer-eho {
+    position: absolute;
+    /*right:100%;*/
+    top: 0;
+    display: inline-block;
+}
+
+.footer-copyright p {
+    margin: 1em 0;
+}
+
+.footer-copyright .footer-eho {
+    margin-left: -30px;
+}
+
+.footer-copyright p {
+    position: relative;
+}
+
+.footer-links-section {
+    @include ie(7) {
+        border-width: 0;
+        width: 20%;
+    }
+}
+
+.footer-connect .footer-social {
+    @include ie(7) {
+        float: left;
+        display: inline;
+    }
+}
+
+.footer-connect span.footer-social {
+    @include ie(7) {
+        display: none;
+    }
+}

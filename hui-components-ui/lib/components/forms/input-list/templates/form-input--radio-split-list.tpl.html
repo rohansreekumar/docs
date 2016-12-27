@@ -1,0 +1,40 @@
+<div>
+    <label class="sort-by">Sort by: </label>
+    <div class="form-select--item" data-ng-repeat="item in listCtrl.formInputData.filteredValues | limitTo: listCtrl.splitSize : 0 ">
+    <input class="input-select"
+           type="radio"
+           name="{{listCtrl.formInputName}}"
+           id="{{listCtrl.id + item.value}}"
+           data-ng-model="listCtrl.formInputModel"
+           data-ng-value="item.value"
+           data-tl-object="{{listCtrl.formInputTracking || item.value}}"/>
+    <label class="sort-items" for="{{listCtrl.id + item.value}}">
+        {{item.label}}
+    </label>
+    </div>
+    <div class="more-options" hui-preview-accordion
+         accordion-lines="0">
+        <a data-ng-click="accordion.isOpen = !accordion.isOpen"
+           data-ng-class="{'isOpen' : accordion.isOpen}"
+           class="a">
+        <span>{{'More'}}
+            <span class="icon-hui icon-hui--arrow-{{accordion.isOpen ? 'up' : 'down'}}"></span>
+        </span>
+        </a>
+    <ul hui-preview-accordion-content class="form-input-list">
+        <li class="form-select--item"
+            data-ng-repeat="item in listCtrl.formInputData.filteredValues | limitTo: 100: listCtrl.splitSize">
+            <input class="input-select"
+                   type="radio"
+                   name="{{listCtrl.formInputName}}"
+                   id="{{$index + listCtrl.id}}"
+                   data-ng-model="listCtrl.formInputModel"
+                   data-ng-value="item.value"
+                   data-tl-object="{{listCtrl.formInputTracking || item.value}}"/>
+             <label class="label ellipsis" for="{{$index + listCtrl.id}}">
+                 {{item.label}}
+             </label>
+        </li>
+    </ul>
+    </div>
+</div>

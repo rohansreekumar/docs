@@ -1,0 +1,122 @@
+/*/ Elements - Default **/
+@import "./../mixins/Type";
+
+// Headers
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+}
+
+h6 {
+    @include h6;
+}
+
+.h1 {
+    @extend h1;
+}
+
+.h2 {
+    @extend h2;
+}
+
+.h3 {
+    @extend h3;
+}
+
+.h4 {
+    @extend h4;
+}
+
+.h5 {
+    @extend h5;
+}
+
+.h6 {
+    @extend h6;
+}
+
+.subheader {
+    @include subheader;
+}
+
+hr {
+    border-width: 0;
+    @include trailing-border($lines: 1, $font-size: $font-size-normal);
+    border-color: $border-color;
+}
+
+//*/ Emphasis */
+em,
+.em {
+    @include font-style(italic);
+}
+
+//*/ Strong */
+b,
+strong {
+    @include font-weight(700);
+}
+
+//*/ Text Blocks */
+blockquote {
+    margin: rhythm() $grid-space * 4;
+}
+
+p,
+pre {
+    @include p;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+//*/ Quotes (do we use these?) */
+q {
+    quotes: none;
+    &:before,
+    &:after {
+        content: '';
+        content: none;
+    }
+}
+
+//* IE 10 is dumb. */
+br {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+//@huidoc sass
+//@name Disclaimer
+//@module type
+//
+//@description
+//    Disclaimer.
+//
+//@markup
+//    <p class="disclaimer">Public County Property Record information is provided by &copy;2011 SmartZip Analytics, Inc. and &copy;2011 Fast Forward, Inc. Information is deemed reliable but not guaranteed.</p>
+//
+//@styleguide 0.0.0
+
+.disclaimer {
+    font-style: italic;
+    @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal);
+}

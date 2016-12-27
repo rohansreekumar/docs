@@ -1,0 +1,127 @@
+.media-gallery {
+    .full-height {
+        height: 100%;
+    }
+    .media-gallery-content {
+        width: grid-space(67);
+        height: rhythm-px(22);
+        background-color: $mediumGrey;
+        .media-gallery--video, .MicrosoftMap {
+            width: grid-space(67);
+            height: rhythm-px(22);
+        }
+        .detail-bing-map {
+            position: relative;
+            width: grid-space(67);
+            height: rhythm-px(22);
+            .view-road, .view-birdseye {
+                position: absolute;
+                bottom: rhythm-px(1.5);
+                border: 3px solid $white;
+                margin-left: grid-space(3);
+                padding: 0;
+                outline: none;
+                width: grid-space(6);
+                height: rhythm-px(3);
+                z-index: 9;
+                @include border-radius($border-radius + 3);
+                @include box-shadow(1px 1px 3px 1px rgba($black, 0.3));
+            }
+            .view-road {
+                background-image: url('/images/bing-maps/road.png');
+            }
+
+            .view-birdseye {
+                background-image: url('/images/bing-maps/satellite.png');
+            }
+
+            .bing-map-control-zoom {
+                position: absolute;
+                top: rhythm-px(1.5);
+                margin-left: grid-space(3);
+                width: grid-space(4);
+                height: rhythm-px(4);
+                z-index: 9;
+                @include border-radius($border-radius);
+                @include box-shadow(1px 1px 3px 1px rgba($black, 0.3));
+
+                button {
+                    display: block;
+                    font-weight: 700;
+                    text-shadow: none;
+                    width: 100%;
+                    height: rhythm-px(2);
+                    line-height: rhythm-px(2);
+                    background-color: $white;
+                    outline: none;
+                    border: none;
+                    @include border-radius($border-radius);
+
+                    &::before {
+                        display: inline-block;
+                        vertical-align: middle;
+                        content: '';
+                        font-size: $font-size-xlarge;
+                        color: $mediumGrey;
+                    }
+
+                    &:hover {
+                        background-color: $lightGrey;
+                    }
+
+                    &:hover::before {
+                        color: $darkGrey;
+                    }
+                }
+
+                .zoom-in {
+                    @include border-bottom-left-radius(0);
+                    @include border-bottom-right-radius(0);
+                }
+
+                .zoom-out {
+                    @include border-top-left-radius(0);
+                    @include border-top-right-radius(0);
+                    border-top: 1px solid $lightGrey;
+                }
+
+                .zoom-out {
+                    top: rhythm-px(4);
+                    &::before {
+                        content: '-';
+                        margin-top: rhythm-px(-0.2);
+                    }
+                }
+
+                .zoom-in {
+                    top: 0;
+                    &::before {
+                        content: '+';
+                        margin-top: rhythm-px(-0.2);
+                    }
+                }
+            }
+        }
+        .foreclosure-listing {
+            position: relative;
+            .foreclosure-img {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+            .foreclosure-cta {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                bottom: 0;
+                .photo-icon {
+                    padding-right: grid-space(0.5);
+                    vertical-align: middle;
+                }
+                .button:hover {
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+}

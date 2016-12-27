@@ -1,0 +1,131 @@
+.share-email-tooltip.tooltip {
+    .share-email-lead-form {
+        &.submitting {
+            position: relative;
+            .opacity-layer {
+                background-color: $lightGrey;
+                opacity: 0.5;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .share-email-form--submit {
+                .button {
+                    background-color: $mediumDarkGrey;
+                }
+            }
+        }
+
+        &.submitted {
+            .success-section {
+                .success-msg {
+                    color: $link-color-hover;
+                    font-size: $font-size-xlarge + 3;
+                    line-height: rhythm-px(1.85);
+                    padding: rhythm-px(6.6) grid-space(3.4);
+                    text-align: center;
+
+                    .email-sent {
+                        &:after {
+                            @include icon-hui('checkmark');
+                            font-size: $font-size-gigantor + 22;
+                            top: rhythm-px(0.2);
+                            position: relative;
+                            color: $form-input-complete-color;
+                        }
+                    }
+                }
+                .success-footer {
+                    text-align: center;
+                    .button {
+                        line-height: rhythm-px(1.7);
+                        height: rhythm-px(2);
+                        background-color: $mediumDarkGrey;
+                        cursor: default;
+
+                        &.email-sent {
+                            &:after {
+                                @include icon-hui('checkmark');
+                                font-size: $font-size-xlarge - 2;
+                                top: rhythm-px(0.2);
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+    .tooltip-arrow {
+        height: rhythm-px(1);
+        width: grid-space(3);
+        left: 47%;
+        margin-bottom: rhythm-px(-0.7);
+        &::after {
+            background-color: $lightGrey;
+            height: rhythm-px(1.5);
+            width: grid-space(3);
+            left: 22%;
+            top: 72%;
+        }
+    }
+    .tooltip-inner {
+        background-color: $lightGrey;
+        width: grid-space(31);
+        margin-top: rhythm-px(0.25);
+        padding: rhythm-px(1) grid-space(2);
+
+        .tooltip-heading {
+            @include clearfix(both);
+            .share-email-heading {
+                color: $blue;
+                float: left;
+                font-size: $font-size-xlarge - 2;
+            }
+            .share-links {
+                float: left;
+                padding-left: grid-space(1);
+                .share-link {
+                    color: $darkGrey;
+                    &.icon-hui--email {
+                        color: $blue;
+                    }
+                    &:hover {
+                        color: $blue;
+                    }
+                    &:before {
+                        font-size: $font-size-xlarge - 2;
+                    }
+                }
+            }
+        }
+        .share-email-form--form {
+            .float-label {
+                .form-label {
+                    text-align: left;
+                }
+            }
+            .recipient-email-addresses-note {
+                font-size: $font-size-small;
+                color: $darkGrey;
+                text-align: center;
+            }
+
+            .share-email-form--submit {
+                text-align: center;
+                .button {
+                    line-height: rhythm-px(2);
+                    height: rhythm-px(2);
+                }
+
+            }
+        }
+        
+    }
+}

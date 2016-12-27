@@ -1,0 +1,23 @@
+.explore-neighbourhood {
+  .explore-neighbourhood--container {
+    padding: 0 grid-space(1.5) rhythm-px();
+
+    .explore-neighbourhood--map {
+      width: 100%;
+      height: rhythm-px(25);
+      position: relative;
+      display: block;
+      background: url('../images/default/map-foreclosure.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .explore-neighbourhood---button-container {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 100%;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+}

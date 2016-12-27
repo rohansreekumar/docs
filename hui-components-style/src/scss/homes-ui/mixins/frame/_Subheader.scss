@@ -1,0 +1,142 @@
+//** Frame Subheader (v3) **/
+$frame-subheader-search-time: 300ms !default !global;
+
+// Layout
+@mixin frame-subheader-style() {
+    @include clearfix(true);
+    @include frame-section;
+    margin-top: -1px;
+    background: $darkGrey;
+
+    color: $white;
+    line-height: $frame-subheader-height;
+
+    .h1 {
+    }
+    h1 {
+        vertical-align: middle;
+        display: inline-block;
+        margin: -2px 0 0;
+        @include adjust-font-size-to($to-size: 18px, $from-size: $font-size-normal);
+        @include font-weight(700);
+    }
+    h1,
+    .h1 small {
+        color: $lightestGrey;
+        display: inline-block;
+    }
+    small {
+        @include font-weight(400);
+        margin-left: 0.3em;
+    }
+    .header-nav {
+        $button-adjust: ($frame-subheader-height - $button-line-height) / 2;
+        position: absolute;
+        top: $button-adjust;
+        right: $frame-subheader-padding;
+        height: $frame-subheader-height - $button-adjust;
+        text-align: right;
+    }
+}
+
+@mixin frame-subheader-item($extend: true) {
+    @if $extend {
+        @extend %frame-subheader-item;
+    } @else {
+        float: right;
+        margin-left: $grid-space;
+    }
+}
+
+@mixin frame-subheader-nav-item($extend: true) {
+    @if $extend {
+        @extend %frame-subheader-nav-item;
+        @content;
+    } @else {
+        @include button;
+        @include button-color('tertiary');
+        @include frame-subheader-item;
+        font-size: $frame-subheader-nav-font-size;
+        padding-left: $frame-subheader-nav-font-size - ($frame-subheader-nav-font-size/2);
+        @include pseudo-icon() {
+            vertical-align: middle;
+            margin-top: -4px;
+            margin-right: $frame-subheader-nav-font-size/2;
+        }
+    ;
+        @content;
+
+        @include enhance-with(cssanimations) {
+            // @mixin transform-button-showHide ($animation:isHidden, $time:350ms, $count:1, $fillMode:forwards) {
+            @include animation-name(isShown);
+            @include animation-duration(350ms);
+            @include animation-iteration-count(1);
+            @include animation-fill-mode(forwards);
+            // }
+            // @include transform-button-showHide(isShown,350ms,1,forwards);
+        }
+    }
+}
+
+@mixin frame-subheader-search($extend: true) {
+    @if $extend {
+        @extend %frame-subheader-search;
+    } @else {
+        @include frame-subheader-item;
+        input,
+        button {
+            display: block;
+        }
+        &.mediaBox > .media {
+            margin-left: 0;
+        }
+        input {
+            border: 0;
+            color: $body-color;
+            @include border-right-radius(0);
+            width: 0;
+            padding: 0;
+            text-indent: .5em;
+            @include transition(width $frame-subheader-search-time);
+        }
+        .button {
+            color: transparent;
+            display: block;
+            padding: 0 $grid-space;
+        }
+        &.is-open {
+            input {
+                width: 240px;
+                font-size: $frame-subheader-nav-font-size;
+            }
+            .button {
+                @include border-left-radius(0);
+            }
+            & + .nav-item {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+@mixin frame-subheader-search-icon() {
+    @include pseudo-icon {
+        @include generate-sprite(header_search);
+        vertical-align: middle;
+        margin-top: -4px;
+    }
+}
+
+@if import-once("Subheader") {
+
+    %frame-subheader-item {
+        @include frame-subheader-item($extend: false);
+    }
+    %frame-subheader-nav-item {
+        @include frame-subheader-nav-item($extend: false);
+    }
+    %frame-subheader-search {
+        @include frame-subheader-search($extend: false);
+    }
+}

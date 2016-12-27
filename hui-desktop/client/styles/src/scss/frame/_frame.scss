@@ -1,0 +1,10 @@
+.frame-content {
+    width: $site-content-width;
+    margin: 0 auto;
+}
+
+@import './grey-separator-bar';
+@import './global-nav-footer';
+@import './copyright-footer';
+@import './my-homes-popover';
+@import './my-homes-lightbox';

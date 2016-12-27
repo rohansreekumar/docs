@@ -1,0 +1,65 @@
+// @huidoc sass
+// @name Lists
+// @module default
+// 
+// @description 
+// Common list styles
+//
+// @markup
+// <ul class="{$modifiers}">
+// 	<li>Item</li>
+// 	<li>Item</li>
+// 	<li>Item</li>
+// 	<li>Item</li>
+// </ul>
+//
+// @state .list-noBullets - No bullets/ numbers
+// @state .list-bordered - border between each item
+//
+// @styleguide 3.2
+
+@mixin list-noBullets($extend: true) {
+    @if $extend {
+        @extend %list-noBullets;
+    } @else {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+@mixin list-effect() {
+    @include list-noBullets();
+    li {
+        // @include text-padding();
+    }
+}
+
+@mixin list-striped($nth: even) {
+    @include list-effect();
+    @include stripe(li, even) {
+        @content;
+    }
+}
+
+@mixin list-bordered($extend: true) {
+    @include list-effect();
+    margin: 0 0 rhythm(1) 0;
+
+    li {
+        @include trailing-border($lines: .125, $width: 1px, $border-style: solid);
+    }
+    li:last-child {
+        @include padding-trailer(.125);
+        border-bottom-width: 0;
+    }
+
+}
+
+@if import-once("Lists.scss") {
+    %list-noBullets {
+        @include list-noBullets($extend: false);
+    }
+    %list-bordered {
+        @include list-bordered($extend: false);
+    }
+}

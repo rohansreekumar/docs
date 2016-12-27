@@ -1,0 +1,64 @@
+<div class="grey-separator-bar">
+    <div class="frame-content">
+        <div itemscope itemtype="http://schema.org/Residence" class="frame-content-column">
+            <div itemprop="name" content="{{greySeparatorBarCtrl.headerText}}">
+                <span class="property-cost">{{greySeparatorBarCtrl.propertyCost}}</span>
+                <h1 class="property-header">
+                    {{greySeparatorBarCtrl.headerText}}
+                    <span class="search-result-count" data-ng-if='greySeparatorBarCtrl.searchResultCount'>
+                        - {{greySeparatorBarCtrl.searchResultCount | number:0}} Real Estate
+                        <ng-pluralize count="greySeparatorBarCtrl.searchResultCount"
+                                      when="{'1': 'Listing',
+                                             'other': 'Listings'}">
+                        </ng-pluralize>
+                    </span>
+                </h1>
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <meta itemprop="streetAddress" content="{{greySeparatorBarCtrl.propertyDetails.address.street_address.label}}" />
+                    <meta itemprop="addressLocality" content="{{greySeparatorBarCtrl.propertyDetails.address.locality.label}}" />
+                    <meta itemprop="addressRegion" content="{{greySeparatorBarCtrl.propertyDetails.address.region.label}}" />
+                    <meta itemprop="postalCode" content="{{greySeparatorBarCtrl.propertyDetails.address.postal_code.label}}" />
+                </div>
+            </div>
+            <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+                <meta itemprop="latitude" content="{{greySeparatorBarCtrl.propertyDetails.address.lat}}" />
+                <meta itemprop="longitude" content="{{greySeparatorBarCtrl.propertyDetails.address.lng}}" />
+            </div>
+            <meta itemprop="description" content="{{greySeparatorBarCtrl.propertyDetails.description}}" />
+            <meta itemprop="image" content="{{greySeparatorBarCtrl.propertyDetails.primary_image.src}}" />
+            <div itemprop="potentialAction" itemscope itemtype="https://schema.org/SellAction" data-ng-if="greySeparatorBarCtrl.propertyDetails.listing_status === 'for_sale'">
+                <div itemprop="PriceSpecification" itemscope="" itemtype="http://schema.org/PriceSpecification">
+                    <meta itemprop="price" content="${{greySeparatorBarCtrl.propertyDetails.price.value}}" />
+                </div>
+                <div itemprop="agent" itemscope itemtype="https://schema.org/RealEstateAgent">
+                    <meta itemprop="image" content="{{greySeparatorBarCtrl.propertyDetails.primary_image.src}}" />
+                    <meta itemprop="url" content="{{greySeparatorBarCtrl.forSaleAgentUrl}}" />
+                    <meta itemprop="name" content="{{greySeparatorBarCtrl.propertyDetails.provider.name}}" />
+                    <meta itemprop="branchOf" content="{{greySeparatorBarCtrl.propertyDetails.provider.secondary.name}}" />
+                    <meta itemprop="telephone" content="{{greySeparatorBarCtrl.propertyDetails.provider.secondary.phone}}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="frame-content-column" on-focus>
+            <button data-ng-if='greySeparatorBarCtrl.pageType!=="searchresults"'
+                    class="grey-separator-bar--email"
+                    tooltip-trigger="click outsideClick"
+                    tooltip-class="share-email-tooltip"
+                    tooltip-placement="bottom"
+                    data-tl-object="Det-Email"
+                    uib-tooltip-template="'/templates/frame/share-email.html'">Email</button>
+            <button data-ng-if='greySeparatorBarCtrl.pageType!=="searchresults"'
+                    class="grey-separator-bar--save"
+                    data-tl-object="Det-Save">Save</button>
+            <div class="toggle-view-button-column">
+                <button toggle-view class="grey-separator-bar--maplist"
+                        data-tl-object="SR-Nav-MapView">
+                </button>
+            </div>
+            <div data-search-form>
+                <listing-search-form data-placeholder-type="short" search-ctrl="$parent.$parent.searchCtrl" page-info="greySeparatorBarCtrl.pageType"></listing-search-form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+{
+    "match": false,
+    "code": "invalidLocation",
+    "input": "Down by the river",
+    "context": "default",
+    "message": "Please enter a valid City, ZIP, or MLS number."
+}

@@ -1,0 +1,423 @@
+{
+    "status": true,
+    "suggestions": [
+        {
+            "title": "NORFOLK, VA",
+            "city": "NORFOLK",
+            "state": "VA",
+            "lcSale": 2023,
+            "lcRent": 2023,
+            "pop": 1,
+            "loc": [
+                -76.2850570678711,
+                36.84682083129883
+            ],
+            "id": "norfolkva",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 7.474567403655291,
+            "score": -6871.118005693157,
+            "label": "NORFOLK, VA",
+            "value": "NORFOLK, VA"
+        },
+        {
+            "title": "NORFOLK CITY COUNTY",
+            "city": "",
+            "state": "VA",
+            "lcSale": 2023,
+            "lcRent": 2023,
+            "pop": 1,
+            "loc": [
+                -78.69794464111328,
+                37.512821197509766
+            ],
+            "id": "norfolk_city_countyva",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 223.54949955298528,
+            "score": -98.24101888829446,
+            "label": "NORFOLK CITY COUNTY, VA",
+            "value": "NORFOLK CITY COUNTY, VA"
+        },
+        {
+            "title": "NORTHUMBERLAND COUNTY",
+            "city": "",
+            "state": "VA",
+            "lcSale": 1043,
+            "lcRent": 1043,
+            "pop": 1,
+            "loc": [
+                -78.69794464111328,
+                37.512821197509766
+            ],
+            "id": "northumberland_countyva",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 223.54949955298528,
+            "score": -52.89189099826686,
+            "label": "NORTHUMBERLAND COUNTY, VA",
+            "value": "NORTHUMBERLAND COUNTY, VA"
+        },
+        {
+            "title": "NORTHAMPTON COUNTY",
+            "city": "",
+            "state": "PA",
+            "lcSale": 2716,
+            "lcRent": 2716,
+            "pop": 1,
+            "loc": [
+                -77.83875274658203,
+                40.89651107788086
+            ],
+            "id": "northampton_countypa",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 462.69555634179534,
+            "score": -52.48962632449173,
+            "label": "NORTHAMPTON COUNTY, PA",
+            "value": "NORTHAMPTON COUNTY, PA"
+        },
+        {
+            "title": "NORTH MYRTLE BEACH, SC",
+            "city": "NORTH MYRTLE BEACH",
+            "state": "SC",
+            "lcSale": 1570,
+            "lcRent": 1570,
+            "pop": 1,
+            "loc": [
+                -78.68489837646484,
+                33.827659606933594
+            ],
+            "id": "north_myrtle_beachsc",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 406.1736502625173,
+            "score": -36.63420573269303,
+            "label": "NORTH MYRTLE BEACH, SC, SC",
+            "value": "NORTH MYRTLE BEACH, SC, SC"
+        },
+        {
+            "title": "NORFOLK COUNTY",
+            "city": "",
+            "state": "MA",
+            "lcSale": 2935,
+            "lcRent": 2935,
+            "pop": 1,
+            "loc": [
+                -71.56590270996094,
+                42.156028747558594
+            ],
+            "id": "norfolk_countyma",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 709.4787122254309,
+            "score": -33.15465212257271,
+            "label": "NORFOLK COUNTY, MA",
+            "value": "NORFOLK COUNTY, MA"
+        },
+        {
+            "title": "NORTH CHESTERFIELD, VA",
+            "city": "NORTH CHESTERFIELD",
+            "state": "VA",
+            "lcSale": 190,
+            "lcRent": 190,
+            "pop": 1,
+            "loc": [
+                -77.50824737548828,
+                37.3768310546875
+            ],
+            "id": "north_chesterfieldva",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 119.77425894884388,
+            "score": -29.275452974315858,
+            "label": "NORTH CHESTERFIELD, VA",
+            "value": "NORTH CHESTERFIELD, VA"
+        },
+        {
+            "title": "NORRISTOWN, PA",
+            "city": "NORRISTOWN",
+            "state": "PA",
+            "lcSale": 632,
+            "lcRent": 632,
+            "pop": 1,
+            "loc": [
+                -75.33930206298828,
+                40.11444854736328
+            ],
+            "id": "norristownpa",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 365.3134581008253,
+            "score": -18.33322981577538,
+            "label": "NORRISTOWN, PA",
+            "value": "NORRISTOWN, PA"
+        },
+        {
+            "title": "NORTH WILDWOOD, NJ",
+            "city": "NORTH WILDWOOD",
+            "state": "NJ",
+            "lcSale": 357,
+            "lcRent": 357,
+            "pop": 1,
+            "loc": [
+                -74.82167053222656,
+                38.986270904541016
+            ],
+            "id": "north_wildwoodnj",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 263.8584274384782,
+            "score": -17.189469715712676,
+            "label": "NORTH WILDWOOD, NJ",
+            "value": "NORTH WILDWOOD, NJ"
+        },
+        {
+            "title": "NORTHAMPTON COUNTY",
+            "city": "",
+            "state": "VA",
+            "lcSale": 198,
+            "lcRent": 198,
+            "pop": 1,
+            "loc": [
+                -78.69794464111328,
+                37.512821197509766
+            ],
+            "id": "northampton_countyva",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 223.54949955298528,
+            "score": -13.78983684819206,
+            "label": "NORTHAMPTON COUNTY, VA",
+            "value": "NORTHAMPTON COUNTY, VA"
+        },
+        {
+            "title": "NORTHAMPTON COUNTY",
+            "city": "",
+            "state": "NC",
+            "lcSale": 270,
+            "lcRent": 270,
+            "pop": 1,
+            "loc": [
+                -79.18541717529297,
+                35.539344787597656
+            ],
+            "id": "northampton_countync",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 301.491573307093,
+            "score": -11.780609022255009,
+            "label": "NORTHAMPTON COUNTY, NC",
+            "value": "NORTHAMPTON COUNTY, NC"
+        },
+        {
+            "title": "NORTH EAST, MD",
+            "city": "NORTH EAST",
+            "state": "MD",
+            "lcSale": 243,
+            "lcRent": 243,
+            "pop": 1,
+            "loc": [
+                -75.94243621826172,
+                39.59891128540039
+            ],
+            "id": "north_eastmd",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 300.0685769045723,
+            "score": -10.985718416939676,
+            "label": "NORTH EAST, MD, MD",
+            "value": "NORTH EAST, MD, MD"
+        },
+        {
+            "title": "NORWALK, CT",
+            "city": "NORWALK",
+            "state": "CT",
+            "lcSale": 583,
+            "lcRent": 583,
+            "pop": 1,
+            "loc": [
+                -73.40765380859375,
+                41.1136589050293
+            ],
+            "id": "norwalkct",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 529.0676719938909,
+            "score": -10.766924392105606,
+            "label": "NORWALK, CT, CT",
+            "value": "NORWALK, CT, CT"
+        },
+        {
+            "title": "NORTH TOPSAIL BEACH, NC",
+            "city": "NORTH TOPSAIL BEACH",
+            "state": "NC",
+            "lcSale": 237,
+            "lcRent": 237,
+            "pop": 1,
+            "loc": [
+                -79.18541717529297,
+                35.539344787597656
+            ],
+            "id": "north_topsail_beachnc",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 301.491573307093,
+            "score": -10.729906055405237,
+            "label": "NORTH TOPSAIL BEACH, NC, NC",
+            "value": "NORTH TOPSAIL BEACH, NC, NC"
+        },
+        {
+            "title": "NORTH BERGEN, NJ",
+            "city": "NORTH BERGEN",
+            "state": "NJ",
+            "lcSale": 375,
+            "lcRent": 375,
+            "pop": 1,
+            "loc": [
+                -74.02037811279297,
+                40.79301071166992
+            ],
+            "id": "north_bergennj",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 473.8719293268508,
+            "score": -8.593644262421295,
+            "label": "NORTH BERGEN, NJ",
+            "value": "NORTH BERGEN, NJ"
+        },
+        {
+            "title": "NORTH AUGUSTA, SC",
+            "city": "NORTH AUGUSTA",
+            "state": "SC",
+            "lcSale": 556,
+            "lcRent": 556,
+            "pop": 1,
+            "loc": [
+                -81.97007751464844,
+                33.49578094482422
+            ],
+            "id": "north_augustasc",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 640.8726363493396,
+            "score": -8.137653052387185,
+            "label": "NORTH AUGUSTA, SC",
+            "value": "NORTH AUGUSTA, SC"
+        },
+        {
+            "title": "NORWICH, CT",
+            "city": "NORWICH",
+            "state": "CT",
+            "lcSale": 501,
+            "lcRent": 501,
+            "pop": 1,
+            "loc": [
+                -72.09529113769531,
+                41.5489387512207
+            ],
+            "id": "norwichct",
+            "type": "city",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 629.1197437218167,
+            "score": -7.629881969804246,
+            "label": "NORWICH, CT",
+            "value": "NORWICH, CT"
+        },
+        {
+            "title": "NORTHUMBERLAND COUNTY",
+            "city": "",
+            "state": "PA",
+            "lcSale": 198,
+            "lcRent": 198,
+            "pop": 1,
+            "loc": [
+                -77.83875274658203,
+                40.89651107788086
+            ],
+            "id": "northumberland_countypa",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 462.69555634179534,
+            "score": -5.554655058486695,
+            "label": "NORTHUMBERLAND COUNTY, PA",
+            "value": "NORTHUMBERLAND COUNTY, PA"
+        },
+        {
+            "title": "NOBLE COUNTY",
+            "city": "",
+            "state": "IN",
+            "lcSale": 446,
+            "lcRent": 446,
+            "pop": 1,
+            "loc": [
+                -86.28179931640625,
+                39.919803619384766
+            ],
+            "id": "noble_countyin",
+            "type": "county",
+            "bounds": {
+                "lat": [],
+                "lon": []
+            },
+            "distance": 931.9624415051334,
+            "score": -4.241354967648935,
+            "label": "NOBLE COUNTY, IN",
+            "value": "NOBLE COUNTY, IN"
+        }
+    ]
+}

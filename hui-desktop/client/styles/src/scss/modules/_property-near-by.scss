@@ -1,0 +1,10 @@
+.properties-near-by {
+    .properties-near-by-body {
+        background: $lightGrey;
+        padding: rhythm-px(.75) grid-space(1.5);
+        @include border-radius($global-radius);
+        .properties-near-by--list {
+            line-height: rhythm-px(2);
+        }
+    }
+}

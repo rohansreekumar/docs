@@ -1,0 +1,53 @@
+$tooltipArrow-height: 15px !default;
+$uiWidget-box-shadow-width: 5px !default;
+$tooltip-background: $white !default;
+$tooltip-color: $body-color !default;
+
+// @param $height the height of a
+
+/* Tooltip
+----------------------------------*/
+.ui-tooltip {
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+    @include uiWidgetOutsideBorder();
+
+}
+
+.ui-tooltip-arrow:after {
+    @include uiWidgetOutsideBorder();
+    background: $tooltip-background;
+}
+
+.ui-tooltip-arrow {
+
+    // left = tooltip is on right, arrow is on left
+    // right = tooltip is on left, arrow is on right
+    // top = tooltip is on bottom, arrow is on top
+    // bottom = tooltip is on top, arrow is on bottom
+    position: absolute;
+    @include TooltipArrow-arrow($offset: $uiWidget-box-shadow-width);
+    &.left,
+    &.right {
+        @include TooltipArrow-position;
+    }
+    &.right {
+        left: 100%;
+        &::after {
+            left: auto;
+            right: 100%;
+        }
+    }
+    &.top,
+    &.bottom {
+        @include TooltipArrow-position('top');
+    }
+    &.bottom {
+        top: 100%;
+        &::after {
+            top: auto;
+            bottom: 100%;
+        }
+    }
+}

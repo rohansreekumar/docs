@@ -1,0 +1,104 @@
+// @huidoc sass
+//
+// @name Buttons
+// @module navigation
+//
+// @description
+// Buttons are used for form submission and other user action we want to draw attention to.
+//
+// @markup
+// <div style="clear:both;" class="clearfix">
+// <div style="text-align:center; float:left;" class="wrap">
+//      <button class="button {$ state.escaped $}">Text</button>
+// </div>
+// <div style="text-align:center; float:left;" class="wrap-dark">
+//      <button class="button {$ state.escaped $}">Text</button>
+// </div>
+// <div style="text-align:center; float:left;" class="wrap-shade">
+//      <button class="button {$ state.escaped $}">Text</button>
+// </div>
+// <div style="text-align:center; float:left;" class="wrap-blue">
+//      <button class="button {$ state.escaped $}">Text</button>
+// </div>
+// </div>
+//
+// @state .button--primary - Primary button
+// @state .button--secondary - Secondary button
+// @state .button--tertiary - Tertiary button
+// @state .button--slim - Smallest button size
+// @state .button--medium - Medium Button size
+//
+// @styleguide 3.1
+
+@include normalize-buttons;
+
+.button {
+    @include button;
+    @include button-color;
+    @include button-size;
+
+    &.prefix {
+        @include border-right-radius(0);
+    }
+    &.postfix {
+        @include border-left-radius(0);
+    }
+}
+
+.button--primary {
+    @include button-color('primary');
+}
+.button--secondary {
+    @include button-color('secondary');
+    .wrap-blue & {
+        @include button-color('secondary-alt');
+    }
+}
+.button--tertiary {
+    @include button-color('tertiary');
+}
+
+.button--normal {
+    @include button-size('normal');
+}
+.button--slim {
+    @include button-size('slim');
+}
+.button--medium {
+    @include button-size('medium');
+}
+
+.button--round {
+    @include border-radius($radius-rounded);
+}
+
+// @huidoc sass
+//
+// @name Icon Only Buttons
+// @module navigation
+//
+// @description
+// Icon Buttons are used for user action we want to draw attention to.
+//
+// @markup
+// <div style="clear:both;" class="clearfix">
+// <div style="text-align:center; float:left;" class="wrap">
+//      <span class="button button--icon icon-hui icon-hui--heart-full {$ state.escaped $}"><span>Text</span></span>
+// </div>
+// <div style="text-align:center; float:left;" class="wrap">
+//      <span class="button button--icon button--medium icon-hui icon-hui--heart-full {$ state.escaped $}"><span>Text</span></span>
+// </div>
+// <div style="text-align:center; float:left;" class="wrap">
+//      <span class="button button--icon button--slim icon-hui icon-hui--heart-full {$ state.escaped $}"><span>Text</span></span>
+// </div>
+// </div>
+//
+// @state .button--primary - Primary Icon button
+// @state .button--secondary - Secondary Icon button
+// @state .button--tertiary - Tertiary Icon button
+//
+// @styleguide 3.1
+
+.button--icon {
+    @include button-icon;
+}

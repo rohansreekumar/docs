@@ -1,0 +1,108 @@
+// /* Dialog ===========================================================*/
+.ui-dialog {
+    @include uiWidgetOutsideBorder();
+    &.ui-corner-all {
+        @include border-radius(0);
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+    outline: 0;
+    .ui-dialog-titlebar {
+        // position: relative;
+        // match .h2.bar
+        font-size: 1.3em;
+        line-height: 1.7;
+    }
+    // Hidden Title
+    &.no-title {
+        .ui-dialog-titlebar {
+            border: 0;
+            padding: 0;
+            height: 0;
+            overflow: visible;
+            .ui-dialog-title {
+                display: none;
+            }
+        }
+    }
+    .ui-dialog-title {
+    }
+    .ui-dialog-titlebar-close {
+        $dialog-close-width: 18px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include box-sizing(content-box);
+        width: $dialog-close-width;
+        height: $dialog-close-width;
+        margin-right: ($dialog-close-width/-2) - 2px;
+        margin-top: ($dialog-close-width/-2) - 4px;
+        z-index: 1001;
+
+        text-align: center;
+        line-height: 0;
+
+        // padding: 0;
+        background-color: $lightGrey;
+        border: 2px solid $white;
+        @include border-radius(100%);
+        @include box-shadow(0 0 8px rgba(#000, .5));
+
+        & > .ui-icon {
+            display: inline-block;
+            vertical-align: middle;
+            // margin:0;
+            // background-image: uiImageUrl('ui-icons_0054a0_256x240.png');
+        }
+        &.ui-state-hover {
+            background-color: $blue;
+            border: 2px solid $white;
+            & > .ui-icon {
+                // background-image: uiImageUrl('ui-icons_ffffff_256x240.png');
+            }
+        }
+        &::before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+    .ui-dialog-content {
+        // background:$white;
+        position: relative;
+        border: 0;
+        padding: .5em 20px;
+        // background: none;
+        overflow: auto;
+    }
+    .ui-dialog-buttonpane {
+        text-align: left;
+        border-color: $lightGrey;
+        border-width: 1px 0 0 0;
+        background-image: none;
+        margin-top: .5em;
+        padding: .3em 1em .5em .4em;
+        .ui-dialog-buttonset {
+            float: right;
+        }
+        button {
+            margin: .5em .4em .5em 0;
+            cursor: pointer;
+        }
+    }
+    .ui-resizable-se {
+        width: 12px;
+        height: 12px;
+        right: -5px;
+        bottom: -5px;
+        background-position: 16px 16px;
+    }
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}

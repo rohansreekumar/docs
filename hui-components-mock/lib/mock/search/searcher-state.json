@@ -1,0 +1,10 @@
+{
+  "match": {
+    "type": "state",
+    "state": "virginia"
+  },
+  "input": "virginia",
+  "context": "default",
+  "listing_count": 1,
+  "link": "/virginia/for-sale"
+}

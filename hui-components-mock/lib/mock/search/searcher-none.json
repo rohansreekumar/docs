@@ -1,0 +1,10 @@
+{
+  "match": {
+    "type": "city",
+    "city": "no hometown",
+    "state": "fl"
+  },
+  "input": "no hometown fl",
+  "context": "default",
+  "listing_count": 0
+}

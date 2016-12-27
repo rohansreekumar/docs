@@ -1,0 +1,38 @@
+.details-flyout--modal-splash {
+    text-align: center;
+    width: grid-space(50);
+    margin-bottom: rhythm-px(1.5);
+    h1 {
+        font-size: $font-size-large;
+        color: $white;
+        font-weight: 100;
+        margin: 0;
+        line-height: rhythm-px(7.5);
+        height: rhythm-px(7.5);
+    }
+
+    p {
+        margin: rhythm-px() grid-space(5);
+    }
+    
+    .button {
+        height: rhythm-px(1.7);
+        line-height: rhythm-px(1.7);
+    }
+}
+
+.mortgage-flyout {
+    h1 {
+        background-image: url('/images/details-flyouts/mortgage-flyout.jpg')
+    }
+}
+
+.foreclosure-flyout {
+    h1 {
+        background-image: url('/images/details-flyouts/foreclosure-flyout.jpg')
+    }
+}
+
+.body-modal--launch-splash-window-open {
+	overflow: hidden;
+}

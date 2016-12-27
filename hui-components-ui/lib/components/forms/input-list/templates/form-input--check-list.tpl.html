@@ -1,0 +1,16 @@
+<ul class="form-multi-select">
+    <li class="form-select--item"
+        data-ng-repeat="item in listCtrl.formInputData.filteredValues">
+        <input
+            class="input-select"
+            type="checkbox"
+            name="{{listCtrl.formInputName}}"
+            id="{{$index + listCtrl.id}}"
+            checklist-model="listCtrl.formInputModel"
+            checklist-value="item.value"
+            data-tl-object="{{listCtrl.formInputTracking || item.value}}"/>
+        <label class="label ellipsis" for="{{$index + listCtrl.id}}">
+            {{item.label}}
+        </label>
+    </li>
+</ul>

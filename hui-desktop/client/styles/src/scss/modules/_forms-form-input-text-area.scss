@@ -1,0 +1,62 @@
+// @huidoc sass
+// @name form-input-textarea
+// @module form
+// @description
+// Makes a text area with preview element
+
+.form-input-textarea {
+    @include form-element;
+    box-sizing: border-box;
+
+    .textarea-preview,
+    .textarea-field {
+        transition: .3s linear all;
+        opacity: 0;
+        &.is-open-add,
+        &.is-open {
+            opacity: 1;
+        }
+    }
+
+    .textarea-preview {
+        overflow: hidden;
+        transition: .5s linear all;
+        .media {
+            margin-left: grid-space(2);
+        }
+        .details {
+            padding-left: grid-space(2.2);
+        }
+        &.is-closed {
+            height: 0;
+        }
+        &.is-open-add-active {
+            overflow: visible;
+        }
+    }
+
+    .textarea-field {
+        @include form-field($multi-line: true, $extend: false);
+        @include form-field-wrap;
+        line-height: $base-line-height;
+        margin: 0;
+        min-height: 0;
+        height: 0;
+        width: 100%;
+
+        &.is-closed {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        &.is-open {
+            height: rhythm-px(5);
+        }
+        &.is-open-add-active {
+            height: rhythm-px(5);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+}

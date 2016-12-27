@@ -1,0 +1,83 @@
+
+.mortgage-refinance-calculator {
+    .tooltip-small {
+        width: grid-space(25);
+    }
+    .tooltip-big {
+        width: grid-space(30);
+    }
+    .tooltip-label {
+        font-weight: 700;
+    }
+    .refinance-dynamic-text {
+        font-weight: 600;
+    }
+    .mortgage-refinance-calculator-description {
+        margin-left: grid-space(1.5);
+    }
+    .slider-control-container {
+        width: 100%;
+        margin-left: grid-space(1.5);
+        @include clearfix();
+        .slider-control-container-column {
+            width: 47%;
+            float: left;
+            margin-right: grid-space(2);
+            .slider-column-heading {
+                color: $darkGrey;
+            }
+            .slider-control-column {
+                background: $lightestGrey;
+                padding: rhythm-px(.5) grid-space();
+                @include border-radius($border-radius);
+            }
+            .slider {
+                background: $lightGrey;
+            }
+            .calculated-amount {
+                text-align: center;
+                p {
+                    display: block;
+                    margin-top: 0;
+                }
+                p:first-child {
+                    font-size: $font-size-small;
+                    margin-bottom: rhythm-px(.35);
+                }
+                p:last-child {
+                    font-size: $font-size-2xlarge;
+                    margin-bottom: rhythm-px(.7);
+                }
+            }
+        }
+        .new-refinance-calculator {
+            .calculated-amount {
+                p:last-child {
+                    color: $blue;
+                    font-weight: 600;
+                }
+                .star-icon::before  {
+                    @include icon-hui('star-full');
+                    position: absolute;
+                    left: grid-space(40.2);
+                    display: inline-block;
+                    font-size: 100%;
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    .calculator-grandTotal {
+        text-align: center;
+        font-size: $font-size-large;
+        .monthly-savings {
+            font-size: $font-size-xlarge;
+            color: $blue;
+            font-weight: 700;
+        }
+    }
+    .refinance-now-dfp-button {
+        padding-left: grid-space(13.6);
+    }
+}

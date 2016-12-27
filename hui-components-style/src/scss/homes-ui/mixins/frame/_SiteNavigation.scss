@@ -1,0 +1,392 @@
+//* Site Nav - v3 */
+
+$site-nav-item-border-width: 2px !default;
+$site-nav-item-font-size: 14px !default;
+$site-nav-box-shadow: 0 1px 5px rgba(0, 0, 0, .3) !default;
+$site-nav-border-width: 1px !default;
+$site-nav-border-style: solid !default;
+$site-nav-border-color: $mediumGrey !default;
+
+$site-nav-fullscreen: $frame-fullscreen !default;
+$site-nav-responsive: false !default;
+
+// Force responsive nav styles in fullscreen
+@if $site-nav-fullscreen {
+    $site-nav-responsive: true !global;
+}
+
+// legacy Support
+$site-drop-class: '.nav-drop' !default;
+$site-nav-class: '.nav-item' !default;
+$site-top-nav-class: $site-nav-class !default;
+$site-nav-selected-class: '.item-selected' !default;
+$site-nav-break-class: '.item-break' !default;
+
+@mixin site-nav($legacy: false) {
+    // line-height: $frame-header-height - $site-nav-item-border-width;
+    line-height: $frame-header-height;
+    .nav-site,
+    .nav-user {
+        float: right;
+    }
+    #logo,
+    .nav-site {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .nav-user {
+        margin-left: $grid-space;
+    }
+
+    @if ($legacy) {
+        .mainMenu {
+            float: right;
+        }
+        .mainMenu {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+@mixin site-nav-dropdown-arrow($length: 24px, $height: 5px, $side: right, $side-length: $grid-space) {
+    @if not ($length % 2 == 0) and (relative-unit($length)) {
+        @warn "Fractional PX value for margin-left. Use relative units or an even $length.";
+    }
+    // Structure
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        #{$side}: #{$side-length};
+        margin-#{$side}: $length / -2;
+        width: $length;
+        height: $length;
+        @include transform(rotate(45deg) skew(12deg, 12deg));
+        margin-top: $height;
+        top: 0;
+        z-index: -1;
+    }
+    &:after {
+        z-index: 0;
+        margin-#{$side}: $length / -2 + 1;
+    }
+    // Style
+    &:before {
+        @extend %site-nav-drop-style;
+    }
+    &:after {
+        background: $white;
+    }
+    @include degrade-from(csstransforms) {
+        // $ie-arrow-before: 'default/sitenav_dropdown_arrow_before_ie.png';
+        // $ie-arrow-after: 'default/sitenav_dropdown_arrow_after_ie.png';
+        &:before,
+        &:after {
+            // height: image-height($ie-arrow-before);
+            // width: image-width($ie-arrow-before);
+            margin-top: -1 * $height;
+            // margin-left: floor(image-width($ie-arrow-before) / -2);
+            // background: transparent url(/media/portalimgcache/#{$ie-arrow-before}) center center;
+        }
+        &:before {
+            border: 0;
+            @include box-shadow(none);
+        }
+        &:after {
+            // background-image: url(/media/portalimgcache/#{$ie-arrow-after});
+            background-position: 2px center;
+        }
+    }
+
+    @content;
+}
+
+@mixin nav-site($extend: true) {
+    @if $extend {
+        @extend %site-nav;
+    } @else {
+        @include clearfix;
+        @include list-noBullets;
+        margin: 0;
+
+        & > #{$site-top-nav-class} {
+            @include top-nav-item;
+        }
+        #{$site-drop-class} {
+            @extend %site-nav-drop-style;
+            @include border-bottom-radius($global-radius);
+        }
+    }
+}
+
+@mixin nav-item($extend: true) {
+    @if $extend {
+        @extend %site-nav-item;
+    } @else {
+        & > a {
+            display: block;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@mixin nav-drop($extend: true) {
+    @if $extend {
+        @extend %site-nav-drop;
+    } @else {
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 100%;
+
+        :hover > &,
+        .is-hover > & {
+            display: block;
+            z-index: 0;
+        }
+
+    }
+}
+
+@mixin nav-drop-style($extend: true) {
+    @if $extend {
+        @extend %site-nav-drop-style;
+    } @else {
+        @include box-shadow($site-nav-box-shadow);
+        border: $site-nav-border-width $site-nav-border-style $site-nav-border-color;
+        background: $white;
+    }
+}
+
+@mixin nav-menu($item: true, $extend: true) {
+    @if $extend {
+        @extend %site-nav-menu;
+    } @else {
+        min-width: 180px;
+        @include list-noBullets;
+        // type
+        @include adjust-font-size-to($to-size: 14px, $lines: 1.25);
+
+        @if $item {
+            #{$site-nav-class} {
+                @include sub-nav-item;
+            }
+        }
+    }
+}
+
+@mixin top-nav-item($selected: $site-nav-selected-class, $extend: true) {
+    @if $extend {
+        @extend %site-top-nav-item;
+    } @else {
+        position: relative;
+        z-index: 0;
+        float: left;
+        // margin:0;
+        padding: 0 ($grid-space/2 + 2);
+
+        border: {
+            style: $site-nav-border-style;
+            color: transparent;
+            width: 0 $site-nav-border-width;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            // height: 100%;
+            bottom: -1px;
+            z-index: 1;
+        }
+
+        & > a {
+            position: relative;
+            @include font-weight(700);
+            font-size: $site-nav-item-font-size;
+
+            z-index: 2;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: $site-nav-item-border-width;
+                z-index: 10;
+            }
+        }
+
+        // Drop position
+        & > #{$site-drop-class} {
+            left: $site-nav-border-width * -1;
+        }
+        &:last-child > #{$site-drop-class} {
+            @include breakpoint($frame-min-width 1120px) {
+                right: $site-nav-border-width * -1;
+                left: auto;
+            }
+        }
+
+        // states
+        &:hover,
+        &.is-hover,
+        &#{$selected} {
+            & > a {
+                border-color: $orange;
+                &:after {
+                    background-color: $orange;
+                }
+            }
+        }
+        &:hover,
+        &.is-hover {
+            border-color: $site-nav-border-color;
+            & > a {
+                background: $white;
+                color: $body-color;
+                border-color: $orange;
+            }
+            @include box-shadow($site-nav-box-shadow);
+            &:before {
+                background: $white;
+                // bottom: -1px;
+            }
+        }
+
+        @if $site-nav-responsive {
+            @include breakpoint($breakpoint-site-nav-top) {
+                & > a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@mixin sub-nav-item($break: $site-nav-break-class, $extend: true) {
+    @if $extend {
+        @extend %site-sub-nav-item;
+    } @else {
+        display: block;
+        &,
+        & > a {
+            color: $body-color;
+        }
+        & > a {
+            padding: 0 $grid-space;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .title {
+            color: $mediumGrey;
+        }
+
+        &:last-child {
+            @include border-bottom-radius($global-radius - 1);
+        }
+        &#{$break} {
+            border-top: 1px solid #d3d3d3;
+        }
+        &:hover {
+            background: $lightGrey;
+        }
+    }
+}
+
+@mixin nav-user-link($extend: true) {
+    @if $extend {
+        @extend %site-nav-user-link;
+    } @else {
+        font-size: 12px;
+        // Lazy because expecting icon font soon. :3 - AH
+        &:after {
+            content: '';
+            @include triangle($white, 5px, 10px, 180);
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: $grid-space;
+            margin-top: -2px;
+        }
+
+        @if $site-nav-responsive {
+            @include breakpoint($breakpoint-site-nav-top) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@mixin nav-user-drop($extend: true) {
+    @if $extend {
+        @extend %site-nav-user-drop;
+    } @else {
+        // to space arrow
+        right: 0;
+        padding-top: $grid-space * 1.5;
+
+        // content
+        & > .wrap-content {
+            @extend %site-nav-drop-style;
+            @include border-radius($global-radius);
+
+            // arrow
+            @include site-nav-dropdown-arrow($side-length: $grid-space * 7);
+
+            & > .drop-content {
+                background: $white;
+                @include border-radius($global-radius - 1);
+
+                &.nav-menu {
+                    padding: 0;
+                    li:first-child {
+                        @include font-weight(700);
+                        @include border-top-radius($global-radius);
+                    }
+                }
+                position: relative;
+                z-index: 1;
+            }
+            .nav-form {
+                padding: rhythm(.5) $grid-space;
+                @include adjust-leading-to($lines: 1);
+            }
+        }
+    }
+}
+
+@if import-once("SiteNavigation.scss") {
+    %site-nav {
+        @include nav-site(false);
+    }
+    %site-nav-drop-style {
+        @include nav-drop-style(false);
+    }
+    %site-nav-item {
+        @include nav-item(false);
+    }
+    %site-nav-drop {
+        @include nav-drop(false);
+    }
+    %site-nav-menu {
+        @include nav-menu($extend: false);
+    }
+    %site-top-nav-item {
+        @include top-nav-item($extend: false);
+    }
+    %site-sub-nav-item {
+        @include sub-nav-item($extend: false);
+    }
+    %site-nav-user-link {
+        @include nav-user-link($extend: false);
+    }
+    %site-nav-user-drop {
+        @include nav-user-drop($extend: false);
+    }
+}

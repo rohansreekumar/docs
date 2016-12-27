@@ -1,0 +1,60 @@
+@import './../../mixins/Icons';
+
+// @huidoc sass
+// @name Anchors
+// @module navigation
+//
+// @description
+// Anchor elements, commonly referred to as links, are used for navigation.
+//
+// Links that have a different than expect result upon clicked should have an icon displayed after the link. Ex, if a link leads offisite.
+//
+// @markup
+// <a class="{$ state.escaped $}">Link Text</a>
+//
+// @state :hover - Links (and their paired icons) turn dark blue on hover.
+// @state .link-offsite - Navigates off of Homes.com.
+// @state .link-lightbox - Opens a lightbox.
+// @state .link-sort - Sorts a column of a table (asc).
+// @state .link-sort.sort--desc - Sorts a column of a table (desc).
+//
+// @styleguide 0.0.0
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+
+    &:hover,
+    &:active {
+        color: $link-color-hover;
+    }
+}
+
+.a {
+    @extend a;
+    cursor: pointer;
+}
+
+.link-offsite {
+    @include offsite;
+}
+
+.link-lightbox {
+    &::after {
+        @include icon-hui('lightbox');
+        @include icon-inline;
+    }
+}
+
+.link-sort {
+    &::after {
+        @include icon-hui('arrow-down');
+        @include icon-inline;
+        padding-left: $grid-space * .5;
+    }
+    &.sort--desc::after {
+        content: map-get($hui-icons, 'arrow-up');
+    }
+}

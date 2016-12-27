@@ -1,0 +1,335 @@
+// @huidoc module
+// @name hui-animation
+// @module animation
+// @description
+// A module to house all animations used within HDC apps
+
+// credit: http://robots.thoughtbot.com/animating-modals-in-angular-js
+$app-default-timing-function: ease-in-out !default !global;
+$default-animation-duration: .5s !default !global;
+$backface-visibility: 'hidden';
+$action: 'ng-enter';
+$animation-ng-actions: (
+    'ng-leave': 'data-change',
+    'ng-enter': 'data-change',
+    'ng-move': 'ux',
+    'ng-hide': 'class-add',
+    'ng-show': 'class-remove'
+);
+
+/**
+Utilities used to make animation mixins
+**/
+// used to set some default variables for some animations
+@mixin animation--duration-timing-backface ($duration:$default-animation-duration, $timing-function:$app-default-timing-function, $backface-visibility:'hidden') {
+    @include animation-duration($duration);
+    @include animation-timing-function($timing-function);
+    @include backface-visibility($backface-visibility);
+}
+
+// Used for the flip animation for when the content is hidden
+@mixin transition-flip-hidden($rotation: '190deg', $scale: 1, $extend: true) {
+    @if ($extend) {
+        @extend %transition-flip-hidden;
+    } @else {
+        @include transform(rotateY($rotation) scale($scale));
+    }
+
+}
+
+
+// @huidoc mixin
+// @name animateEnterOrLeave
+// @module transition
+// @description
+// this is a utility that always makes the page leaving seem to be above the one entering
+//
+// @param {string=enter|leave} $direction enter or leave
+
+
+@mixin animate--enter-or-leave ($action:'enter') {
+    @if($action: 'enter') {
+        visibility: hidden;
+        z-index: 8888;
+    }@else {
+        visibility: visible;
+        z-index: 9999;
+    }
+}
+
+
+// @huidoc mixin
+// @name animateDataChange
+// @module transition
+// @description
+// this is a utility that adds a class and direction to an element and animates
+// it based on that.
+//
+// @param {string = ng-enter|ng-leave|ng-move} $animation actions from $animate-ng-actions above
+// @param {string = add|remove} $direction - this adds or removes the class according to angular naming conventions
+// @param {string = time} $duration - this should be set to the time or length of the animation
+// @param {string = ease-in-out|ease-in|linear} - this is the css easing string to modify the easing of the animation
+// @param {string = hidden} backface visibility to determine how elements behave when not visible. Will usually always be hidden
+// @param {string=enter|leave} $direction enter or leave
+//
+//
+// ng-enter, ng-leave, ng-move when these classes are present, animate
+@mixin animate--data-change($action,
+$animate-class,
+$animation-name,
+$direction,
+$duration: $default-animation-duration,
+$timing-function: $app-default-timing-function,
+$backface-visibility:'hidden') {
+
+    &.#{$action} {
+        // layering
+        @include animate--enter-or-leave($action);
+        @include animation--duration-timing-backface($duration: $duration, $timing-function: $timing-function, $backface-visibility:$backface-visibility);
+        @include animation-name($animation-name + '-' + $direction);
+        // here's a content block just in case you need to add more things
+        @content;
+    }
+};
+
+
+// @huidoc mixin
+// @name animateClass
+// @module transition
+// @description
+// this is a utility that adds a custom class and direction to an element and animates
+// it based on that.
+//
+// @param {string = ng-enter|ng-leave} $animation actions from $animate-ng-actions above
+// @param {string = add|remove} $direction - this adds or removes the class according to angular naming conventions
+// @param {string = time} $duration - this should be set to the time or length of the animation
+// @param {string = ease-in-out|ease-in|ease-out|linear} - this is the css easing string to modify the easing of the animation
+// @param {string = hidden} backface visibility to determine how elements behave when not visible. Usually always hidden
+// @param {string=name} animation name based on key frames slide-right, slide-bottom, slide-top
+//
+// @styleguide 0.0.0
+//
+// ng-hide, custom class when these classes are being added / removed animate
+
+@mixin animate--class($animate-class,
+$animation-name,
+$direction,
+$duration: $default-animation-duration,
+$timing-function: $app-default-timing-function,
+$backface-visibility:$backface-visibility) {
+
+    // example would be .my-class-add or .my-class-remove
+    &.#{$animate-class}-#{$direction} {
+        @include animation--duration-timing-backface($duration: $duration, $timing-function: $timing-function, $backface-visibility:$backface-visibility);
+        @include animation-name($animation-name + '-' + $direction);
+        // here's a content block just in case you need to add more things
+        @content;
+    }
+};
+
+// @huidoc mixin
+// @name transtionSlideUp
+// @module transition
+// @description
+// This is a mixin for hiding and showing elements with a transition from point A to B and does not reverse. An example
+// is the hero modal that animates on the home page on page load.
+//
+// @param {string = custom class} use this if you have a custom class you need to add ng-hide actions to
+// @param {integer = numeric position} use x1, x2, y1 & y2 to set beginning and end points for the animation
+// @param {string = time} $duration - this should be set to the time or length of the animation
+// @param {string = ease-in-out} - this is the css easing string to modify the easing of the animation
+// @param {string = property} use this to specify which css property should be animated. Using -all- does have
+// performance consequences so use it sparingly
+//
+// @styleguide 0.0.0
+//
+// ng-enter, ng-leave, ng-move when these classes are present, animate
+@mixin transition-slide-up($animate-class:null,
+    $x1:null,
+    $x2:null,
+    $y1:null,
+    $y2:null,
+    $easing:null,
+    $animate-property:'transform',
+    $duration: $default-animation-duration){
+    @content;
+    @include transform(translate($x1, $y1));
+    @include transition($duration $easing #{$animate-property});
+    @if ($animate-class){
+        &.#{$animate-class}.ng-hide-add, .#{$animate-class}.ng-hide-remove{
+            display: block !important;
+        }
+        &.#{$animate-class}.ng-hide-add{
+            @include transform(translate($x1, $y1));
+        }
+        &.#{$animate-class}.ng-hide-add-active {
+            @include transform(translate($x1, $y2));
+        }
+        &.#{$animate-class}.ng-hide-remove {
+            @include transform(translate($x1, $y2));
+        }
+        &.#{$animate-class}.ng-hide-remove-active {
+            @include transform(translate($x1, $y1));
+        }
+    } @else {
+    &.ng-hide-add,
+        &.ng-hide-remove {
+            display: block !important;
+        }
+        &.ng-hide-add {
+            @include transform(translate($x1, $y1));
+        }
+        &.ng-hide-add-active {
+            @include transform(translate($x1, $y2));
+        }
+        &.ng-hide-remove {
+            @include transform(translate($x1, $y2));
+        }
+        &.ng-hide-remove-active {
+            @include transform(translate($x1, $y1));
+        }
+    }
+}
+
+
+// @huidoc mixin
+// @name fadeAnimation
+// @module transition
+// @description
+// Fade transition for an element, on enter, leave, add or remove class
+// for ng-show/hide use '.ng-hide'
+//
+// @param {string = ng-enter|ng-leave|ng-move} $animation actions from $animate-ng-actions above
+// @param {string = add|remove} $direction - this adds or removes the class according to angular naming conventions
+//
+
+
+@mixin animation-fade($action:'ng-enter', $direction: 'add') {
+    $action-type: map-get($animation-ng-actions, $action);
+    @if ($action-type == 'data-change') {
+        @include animate--data-change($animate--class: $action, $animation-name:'fade', $direction: $direction);
+    } @else {
+        @include animate--class($animate--class: $action, $animation-name:'fade', $direction: $direction);
+    }
+}
+
+// @huidoc mixin
+// @name animationSlideTop
+// @module transition
+// @description
+// Used to animate an element from being hidden to sliding from the top of the view.
+//
+// @param {string = ng-enter|ng-leave} $action used for when the element enters the view
+// @param {string = add|remove} $direction - this adds or removes the class according to angular naming conventions
+
+// @styleguide 0.0.0
+//
+
+@mixin animation-slide-top($action:'ng-enter', $direction: 'add', $opacity:100%) {
+    $action-type: map-get($animation-ng-actions, $action);
+    @if ($action-type == 'data-change') {
+        @include animate--data-change($animate-class: $action, $animation-name:'slide-top', $direction: $direction);
+    } @else {
+        @include animate--class($animate-class: $action, $animation-name:'slide-top', $direction: $direction);
+    }
+}
+
+// @huidoc mixin
+// @name animationSlideBottom
+// @module transition
+// @description
+// Used to animate an element from being hidden to sliding from the bottom of the view.
+// an example is the advanced filter module
+//
+// @param {string = ng-enter|ng-leave} used for when the element enters the view
+// @param {string = add|remove} $direction - this adds or removes the class according to angular naming conventions
+
+// @styleguide 0.0.0
+//
+
+@mixin animation-slide-bottom($action:'ng-enter', $direction: 'add', $opacity:100%) {
+    $action-type: map-get($animation-ng-actions, $action);
+    @if ($action-type == 'data-change') {
+        @include animate--data-change($animate-class: $action, $animation-name:'slide-bottom', $direction: $direction);
+    } @else {
+        @include animate--class($animate-class: $action, $animation-name:'slide-bottom', $direction: $direction);
+    }
+}
+
+// @huidoc mixin
+// @name animationSlideRight
+// @module transition
+// @description
+// Used to animate an element from being hidden to sliding from the right of the view.
+// An example of this is the property type modal dialog window that slides out while in the
+// advanced filter module
+//
+// @param {string = ng-enter|ng-leave} used for when the element enters the view
+// @param {string = add|remove} $direction - this adds or removes the class according to angular naming conventions
+// @styleguide 0.0.0
+//
+@mixin animation-slide-right($action:'ng-enter', $direction: 'add', $opacity:100%) {
+    $action-type: map-get($animation-ng-actions, $action);
+    @if ($action-type == 'data-change') {
+        @include animate--data-change($action: 'ng-enter', $animate-class: $action, $animation-name:'slide-right', $direction: $direction);
+    } @else {
+        @include animate--class($animate-class: $action, $animation-name:'slide-right', $direction: $direction);
+    }
+}
+
+// @huidoc mixin
+// @name backgdropFadeTransition
+// @module animation
+// @description
+// reduces the opacity of an element or darkens it to make it appear inactive
+
+// @styleguide 0.0.0
+//
+@mixin transition-backdrop-fade($opacity, $duration:null, $easing:'linear', $animated-property:'opacity') {
+    opacity: $opacity;
+    @include transition($duration $easing $animated-property);
+}
+// @huidoc mixin
+// @name simpleSlideTransition
+// @module animation
+// @description
+// Slide animation for an element
+//
+// @param {integer} $x and $y are used to set the x and y coordinates
+// @styleguide 0.0.0
+//
+@mixin transition-simple-slide($x:null, $y:null,  $duration:null, $easing:'ease-out', $animated-property:'transform') {
+    @include transform(translate($x, $y));
+    @include transition($animated-property $duration $easing);
+
+}
+
+// @huidoc mixin
+// @name flipAnimation
+// @module animation
+// @description
+// Animation for elements that flip over to show another side and can also flip back
+// @param {string = time} $duration - this should be set to the time or length of the animation
+//
+// @styleguide
+//
+@mixin animation--enter-leave-flip($animation-duration, $extend: true) {
+    @if ($extend) {
+        @extend %animation--enter-leave-flip;
+    } @else {
+        @include backface-visibility(hidden);
+
+        &.ng-enter {
+            @include animation($animation-duration 'flip-add');
+            @include transition-flip-hidden;
+        }
+
+        &.ng-leave {
+            @include animation($animation-duration 'flip-remove');
+
+            &.ng-leave-active {
+                @include transition-flip-hidden;
+            }
+        }
+    }
+}

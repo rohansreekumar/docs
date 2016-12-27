@@ -1,0 +1,161 @@
+$close-button-icon: 'closethin' !default !global;
+$close-button-top: $grid-space/2 !default !global;
+$close-button-right: $grid-space/2 !default !global;
+$close-button-diameter: 17px !default !global;
+$close-button-border: 2px solid $white !default !global;
+$close-button-icon-font-size: $font-size-normal !default !global;
+
+// @huidoc sass
+// @name Close Button
+//  @module default
+// @description
+// 'X' button, closes a dialog, modal, alert, etc.
+//
+// @markup
+// <div class="bd" style="position: relative; height: 50px;" >
+// 	<span class="close-button {$modifiers}" title="Close"><span class="label">Close</span>
+// </div>
+//
+// @state .close-invert - transparent on a dark background , white x goes blue.
+// @state .close-transparent - invisible on white background, white circle, blue x.
+//
+// @Styleguide 8.1
+
+// @huidoc mixin
+// @name Close Button (mixin)
+//
+// @module
+// Mixin to style an 'X' button
+//
+// ## Params
+//
+// @param {length} width` - 17px {length} Diameter of close button.
+// @param {boolean=true} $shadow` - true {boolean} Include box shadow.
+// @param {boolean=true} $extend` Extends the default styles instead of inserting the mixin output. Set to false if you are customizing the component.
+//
+// ```scss
+// @include close-button;
+// ```
+//
+// @Styleguide 8.1
+
+@mixin close-button($width: $close-button-diameter,
+$top: $close-button-top,
+$right: $close-button-right,
+$border: $close-button-border,
+$icon-font-size: $close-button-icon-font-size,
+$extend: true,
+$colors...) {
+    @if $extend {
+        @extend %close-button;
+    } @else {
+        position: absolute;
+        top: $top;
+        right: $right;
+        @include dim-square($width);
+        line-height: $width;
+        padding: 0;
+        @include border-radius(100%);
+        @include box-sizing(content-box);
+
+        border: $border;
+
+
+        z-index: 10;
+        text-align: center;
+        cursor: pointer;
+        font-size: $icon-font-size;
+        &:focus,
+        &:active,
+        &:hover {
+            outline: none;
+            color: white;
+            background-color: $blue;
+        }
+        &::before {
+            @include icon-hui('close');
+        }
+        & > .label {
+            @include squish-text;
+        }
+    }
+
+    @if length($colors) > 0 {
+        @each $i in $colors {
+            @include button-color($color: $i, $extend: true);
+        }
+    }
+}
+
+@mixin close-button-color($color: 'blue', $extend: true) {
+    @if $extend {
+        @extend %close-button-#{$color};
+    } @else {
+        $shadow: false;
+        @if $color == 'blue' {
+            $shadow: true;
+            color: $white;
+            background-color: $blue;
+            &:hover {
+                color: $blue;
+                background-color: $white;
+            }
+        } @else if $color == 'grey' {
+            $shadow: true;
+            color: $blue;
+            background-color: $lightGrey;
+        } @else if $color == 'transparent' {
+            color: $blue;
+            background-color: transparent;
+            border-color: transparent;
+
+        } @else if $color == 'invert' {
+            color: $white;
+            background-color: transparent;
+            border-color: $white;
+            &:hover {
+                color: $blue;
+                background-color: $white;
+            }
+        } @else if $color == 'mobile' {
+            background: $white;
+            color: $blue;
+            &:hover {
+                background: $white;
+                color: $darkBlue;
+            }
+            &:focus,
+            &:active {
+                outline: none;
+                border-color: $border-color-hover;
+            }
+        }
+        @if $shadow {
+            @include box-shadow(0 0 8px rgba($black, 0.5));
+        } @else {
+            @include box-shadow(none);
+        }
+
+    }
+}
+
+@if import-once('Close-Button.scss') {
+    %close-button {
+        @include close-button($extend: false);
+    }
+    %close-button-blue {
+        @include close-button-color($color: 'blue', $extend: false);
+    }
+    %close-button-grey {
+        @include close-button-color($color: 'grey', $extend: false);
+    }
+    %close-button-transparent {
+        @include close-button-color($color: 'transparent', $extend: false);
+    }
+    %close-button-invert {
+        @include close-button-color($color: 'invert', $extend: false);
+    }
+    %close-button-mobile {
+        @include close-button-color($color: 'mobile', $extend: false);
+    }
+}

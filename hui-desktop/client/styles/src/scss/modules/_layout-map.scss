@@ -1,0 +1,59 @@
+.pin-home-value {
+    position: absolute;
+    overflow: hidden;
+    @include border-radius($border-radius - 3);
+
+    .label-home-value {
+        @include transition(color 0.1s ease, all 0.3s ease);
+        height: rhythm-px(1.4);
+        width: 100%;
+        background: $mediumDarkGrey;
+        font-size: $font-size-small;
+        font-weight: 600;
+        color: $white;
+        text-align: center;
+        padding: rhythm-px(.25) grid-space();
+        @include box-shadow(1px 1.75px 1.75px 0.4px rgba(0, 0, 0, 0.2));
+    }
+
+    .address-label-home-value {
+        display: none;
+
+        .address-label-link {
+            color: $white;
+            font-size: $font-size-small;
+        }
+    }
+
+    &:hover {
+        z-index: 2;
+        @include box-shadow(4px 7px 4px 1px rgba(0, 0, 0, 0.3));
+
+        .label-home-value {
+            height: rhythm-px(1.75);
+            background: $darkGrey;
+            font-size: $font-size-medium;
+            font-weight: 600;
+            padding: rhythm-px(0.4) grid-space();
+        }
+    }
+
+    &.is-selected {
+        position: absolute;
+        z-index: 1;
+        @include box-shadow(7.5px 13px 4px 1px rgba(0, 0, 0, 0.3));
+
+        .address-label-home-value {
+            display: block;
+        }
+
+        .label-home-value {
+            @include transition(color 0.1s ease, all 0.4s ease);
+            height: rhythm-px(2.5);
+            background: $orange;
+            font-size: $font-size-medium;
+            font-weight: 600;
+            padding: rhythm-px(.25) grid-space(1.5);
+        }
+    }
+}

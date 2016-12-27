@@ -1,0 +1,12 @@
+.lozenge {
+    @include border-radius($border-radius);
+    @include adjust-font-size-to($from-size: $font-size-normal, $to-size: $font-size-small);
+    display: inline-block;
+    margin: rhythm-px(.1) grid-space(.2);
+
+    a {
+        color: $white;
+        padding: rhythm-px(.25) grid-space(2);
+        display: inline-block;
+    }
+}

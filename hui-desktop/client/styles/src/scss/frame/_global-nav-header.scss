@@ -1,0 +1,76 @@
+$main-nav-height: rhythm-px(2.5);
+
+.global-nav-header {
+    width: 100%;
+    height: $main-nav-height;
+    background-color: $white;
+    padding: 0 grid-space(2);
+    @include frame-header;
+    @include clearfix();
+
+    .logo {
+        @extend #logo;
+        display: inline-block;
+        vertical-align: middle;
+
+        & > a {
+            background-repeat: no-repeat;
+        }
+    }
+
+    .nav-site .nav-item{
+        padding: 0 grid-space(0.6);
+        & > a {
+            font-size: $font-size-normal - 1;
+        }
+    }
+
+    .my-homes {
+        .nav-item{
+            .account {
+                width: grid-space(13);
+                height: rhythm-px(1.5);
+                font-size: $font-size-normal;
+                text-align: left;
+                line-height: rhythm-px(1.5);
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.main-nav {
+    width: 100%;
+    height: rhythm-px(2.5);
+    background-color: $white;
+    padding: 0 grid-space(2);
+    border-bottom: 1px solid #aaa;
+    z-index: 10000;
+    position: relative;
+
+    &.main-nav--hidden {
+        @include transform(translate(0, rhythm-px(-2.5)));
+    }
+
+    &.main-nav--visible {
+        @include transform(translate(0,0));
+    }
+
+    &.main-nav--fixed {
+        @include transition(transform 0.3s ease-in-out);
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+    }
+
+    .sub-items-list {
+        .sub-item {
+            .a {
+                font-weight: 400;
+            }
+        }
+    }
+}

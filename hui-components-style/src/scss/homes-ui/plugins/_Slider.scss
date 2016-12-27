@@ -1,0 +1,106 @@
+@import './../Base';
+
+// Photo Slider
+//
+// Flexslider Gallery Plugin
+//
+// * jQuery FlexSlider v2.2.2
+// * Copyright 2012 WooThemes
+// * Contributing Author: Tyler Smith
+//
+// <pre><code class="_loadPlugin _demoPlugin js" data-plugin="flexslider" data-path="/Resources/Javascript/development/plugins/jquery.flexslider.js">
+// $('#slider').flexslider({
+// 	el: "#slider",
+// 	animation: "slide",
+//     controlNav: false,
+//     animationLoop: false,
+//     slideshow: false,
+//     easing: "easeOutCirc",
+//     allowOneSlide: false,
+//     selector: '._slides li'
+// });
+// </code></pre>
+//
+// Markup:
+// <div id="slider" class="media-frame-content flexslider">
+// 	<ul class="flex-slides _slides">
+// 		<li data-src="/media/portalimgcache/missing.gif"><img src="/media/portalimgcache/missing.gif"></li>
+// 		<li data-src="/media/portalimgcache/missing.gif"><img src="/media/portalimgcache/missing.gif"></li>
+// 		<li data-src="/media/portalimgcache/missing.gif"><img src="/media/portalimgcache/missing.gif"></li>
+// 		<li data-src="/media/portalimgcache/missing.gif"><img src="/media/portalimgcache/missing.gif"></li>
+// 		<li data-src="/media/portalimgcache/missing.gif"><img src="/media/portalimgcache/missing.gif"></li>
+// 		<li data-src="/media/portalimgcache/missing.gif"><img src="/media/portalimgcache/missing.gif"></li>
+// 	</ul>
+// </div>
+//
+// Styleguide 10.2
+
+@mixin slider-arrow-size($height: 65px, $font-size: 60px, $left-arrow-class: '.slider-arrow--left', $right-arrow-class: '.slider-arrow--right') {
+
+    @if (unit($height) == 'px') {
+        $height: if($height % 2 == 0, $height, $height + 1);
+    }
+    height: $height;
+    line-height: $height;
+    width: $height;
+    margin-top: $height * -0.5;
+    &:before {
+        font-size: $font-size;
+    }
+    &#{$left-arrow-class} {
+        left: $height * -1;
+    }
+    &#{$right-arrow-class} {
+        right: $height * -1;
+    }
+}
+
+@if (include-once('Slider.scss')) {
+    %slider-arrow {
+        @include box-sizing(content-box);
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+
+        font-size: 0;
+        text-align: center;
+
+        // transition: color, border-color 0.1s ease-out;
+        @include transition(all 0.1s ease-out);
+
+        // Default Color
+        color: $white;
+        background: rgba(77, 77, 79, .7);
+
+        &:before {
+            content: '\2039';
+            vertical-align: middle;
+            display: inline-block;
+            line-height: 0;
+            margin-top: -.25em;
+        }
+        &.slider-arrow--right,
+        &.flex-next:before {
+            content: '\203A';
+        }
+        &.slider-arrow--hidden,
+        &.flex-disabled {
+            opacity: 0 !important;
+            filter: alpha(opacity=0);
+            cursor: default;
+        }
+        // &.background--light {
+        // 	color: $darkGrey;
+        // 	background: rgba($white, .7)
+        // }
+
+        // &.background--dark {
+        // 	color: $white;
+        // 	background: rgba(77, 77, 79, .7)
+        // }
+        // &.background--complex {
+        // 	color: $blue;
+        // 	background: rgba($white, .7);
+        // }
+    }
+}

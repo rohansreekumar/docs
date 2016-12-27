@@ -1,0 +1,6 @@
+{
+    "context": "property",
+    "input": "Invalid Search",
+    "message": "We couldn't find any locations called ___.",
+    "code": "invalid_search"
+}

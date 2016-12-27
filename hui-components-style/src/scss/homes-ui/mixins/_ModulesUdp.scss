@@ -1,0 +1,139 @@
+//@huidoc module
+//@name modulesUdp
+//@description
+//Mixin for standardizing the layout/spacing/etc of the UDP Modules.
+//
+//@styleguide
+
+$module-udp-spacing-horizontal: grid-space(1.5) !default !global;
+$module-udp-spacing-vertical: rhythm-px(.75) !default !global;
+$module-udp-title-spacing-vertical: rhythm-px(.5) !default !global;
+$module-udp-title-color: $orange !default !global;
+$module-udp-title-font-size: $font-size-large !default !global;
+$module-udp-title-font-weight: 400 !default !global;
+$module-udp-title-reset-line-height: true !default !global;
+
+//@huidoc mixin
+//@name module-spacing-vertical
+//@description
+//Mixin that sets the vertical padding for modules (default is 15px)
+//
+//@param {boolean=true} $extend extend global placeholder, set to false to boost specificty
+//
+//@styleguide
+
+@mixin module-spacing-vertical($extend: true) {
+    @if ($extend) {
+        @extend %module-spacing-vertical;
+    } @else {
+        padding: $module-udp-spacing-vertical 0;
+    }
+}
+
+//@huidoc mixin
+//@name module-spacing-horizontal
+//@description
+//Mixin that sets the horizontal padding for modules (default is 15px)
+//
+//@param {boolean=true} $extend extend global placeholder, set to false to boost specificty
+//
+//@styleguide
+
+@mixin module-spacing-horizontal($extend: true) {
+    @if ($extend) {
+        @extend %module-spacing-horizontal;
+    } @else {
+        padding: 0 $module-udp-spacing-horizontal;
+    }
+}
+
+//@huidoc mixin
+//@name module-spacing-all-sides
+//@description
+//Mixin that sets the all round padding for items on the  page (default is 15px vertically and horizontally)
+//Allows for an override to the vertical if required to be something other than 15px
+//ie:
+//@include module-spacing-all-sides(10px,false) - set $extand to false to allow override
+//
+//@param {boolean=true} $extend extend global placeholder, set to false to boost specificty
+//
+//@styleguide
+
+@mixin module-spacing-all-sides($vertical: $module-udp-spacing-vertical, $extend: true) {
+    @if ($extend) {
+        @extend %module-spacing-all-sides;
+    } @else {
+        padding: unquote($vertical) $module-udp-spacing-horizontal;
+    }
+}
+
+//@huidoc mixin
+//@name module-title
+//@description
+//Mixin that sets the moduel titles to a standard size, color and padding/margin
+//Allows for an override to the color if required to be something other than orange.
+//
+//@param {boolean=true} $extend extend global placeholder, set to false to boost specificty
+//
+//@styleguide
+
+@mixin module-title($color: $module-udp-title-color, $reset-line-height: $module-udp-title-reset-line-height, $extend: true) {
+    @if ($extend) {
+        @extend %module-title;
+    } @else {
+        @include adjust-font-size-to($to-size: $module-udp-title-font-size, $from-size: $font-size-normal);
+        @include module-spacing-horizontal;
+        @if ($reset-line-height) {
+            line-height: 1em;
+        }
+        font-weight: $module-udp-title-font-weight;
+        color: $color;
+        // collapse default margin/padding to allow module spacing to take precedance and remain 30px
+        margin: 0 0 $module-udp-title-spacing-vertical;
+
+    }
+}
+
+//@huidoc mixin
+//@name module-title
+//@description
+//Mixin that sets the moduel titles to a standard size, color and padding/margin
+//Allows for an override to the color if required to be something other than orange.
+//
+//@param {boolean=true} $extend extend global placeholder, set to false to boost specificty
+//
+//@styleguide
+
+@mixin module-subtitle($color: $orange, $extend: true) {
+    @if ($extend) {
+        @extend %module-subtitle;
+    } @else {
+        @include adjust-font-size-to($to-size: $font-size-medium, $from-size: $font-size-normal);
+        @include module-spacing-horizontal;
+        color: $color;
+        // collapse default margin/padding to allow module spacing to take precedance and remain 30px
+        margin: $module-udp-title-spacing-vertical 0;
+    }
+}
+
+@if import-once('ModulesUdp.scss') {
+    %module-spacing-vertical {
+        @include module-spacing-vertical($extend: false);
+    }
+
+    %module-spacing-horizontal {
+        @include module-spacing-horizontal($extend: false);
+    }
+
+    %module-title {
+        @include module-title($extend: false);
+    }
+
+    %module-subtitle {
+        @include module-subtitle($extend: false);
+    }
+
+    %module-spacing-all-sides {
+        @include module-spacing-all-sides($extend: false);
+    }
+}

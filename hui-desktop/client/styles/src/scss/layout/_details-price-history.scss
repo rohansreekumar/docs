@@ -1,0 +1,23 @@
+// price history table on details pages
+.price-history {
+    // source
+    table {
+        table-layout: fixed;
+    }
+    td {
+        width: 20%; // 100/5 (number of columns)
+    }
+    .price-history-source {
+        display: block;
+        width: 100%;
+    }
+    // price delta
+    .price-history-delta {
+        &.delta--positive {
+            color: $green;
+        }
+        &.delta--negative {
+            color: $red;
+        }
+    }
+}

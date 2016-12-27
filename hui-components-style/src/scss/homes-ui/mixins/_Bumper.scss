@@ -1,0 +1,25 @@
+//@name results-bumper
+//@module build bumper
+//
+//@use results-bumper(string, num, num);
+//sring: bumper version
+//num: number of bumpers
+//num: adjustment amounts to width and height
+
+@mixin results-bumper($version: $version, $versionNumber: 1, $adjustment: 0, $width: 320px) {
+
+    $versionNumber: $versionNumber - 1;
+    @if ($version) {
+
+        @for $i from 0 through $versionNumber {
+            $url: '/bumpers/results-bumper--#{$version}-#{$i}.png';
+            $path: '/images/bumpers/results-bumper--#{$version}-#{$i}.png';
+
+            .results-bumper--#{$version}-#{$i} .bumper {
+                width: $width;
+                height: image-height($url)/$adjustment;
+                background-image: url($path);
+            }
+        }
+    }
+}

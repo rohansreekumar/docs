@@ -1,0 +1,21 @@
+// hui-components-style/src/scss/components/keyframes/_fade.scss
+
+@if import-once('keyframes-fade.scss') {
+    // use add or remove not in and out because angular and reasons
+    @include keyframes('fade-add') {
+        0% {
+            @include opacity(0);
+        }
+        100% {
+            @include opacity(1);
+        }
+    }
+    @include keyframes('fade-remove') {
+        0% {
+            @include opacity(1);
+        }
+        100% {
+            @include opacity(0);
+        }
+    }
+}

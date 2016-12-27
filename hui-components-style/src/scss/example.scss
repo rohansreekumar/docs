@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+// This will be the "default" shared stylesheet for HDC.
+
+
+$frame-subheader: true;
+@import 'homes-ui--desktop';
+.frame-header {
+    @include frame-header;
+    @include site-nav;
+}
+
+// Dynamic Nav
+.nav-global {
+    nav > div > ul {
+        @include nav-site;
+
+    }
+}
+
+.nav-item {
+    @include nav-item;
+}
+
+.nav-drop {
+    @include nav-drop;
+}
+
+.nav-menu {
+    @include nav-menu;
+}
+
+@if $frame-subheader {
+    .frame-subheader {
+        @include frame-subheader;
+        .nav-item {
+            @include frame-subheader-nav-item;
+        }
+        .nav-search {
+            @include frame-subheader-search;
+        }
+    }
+}
+
+// Side Nav
+//
+.side-nav {
+
+    .nav-drop {
+        position: static;
+        display: block;
+    }
+    .nav-menu {
+        margin-bottom: rhythm();
+    }
+    .nav-item.item-break {
+        border: 0;
+        margin-top: rhythm(.5);
+    }
+    .nav-item.item-break > a {
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+    ul > li > a {
+        font-weight: 700;
+        @include adjust-font-size-to($to-size: 16px, $from-size: $font-size-normal, $lines: 1.5);
+        border-bottom: 1px solid $mediumGrey;
+        padding: 0 $grid-space;
+    }
+    ul > li ul > li > a {
+        font-weight: 400;
+        @debug $font-size-normal;
+        @include adjust-leading-to($lines: 1);
+        font-size: $font-size-normal;
+        // @include adjust-font-size-to($to-size:$font-size-normal, $from-size:16px);
+
+        border-bottom: 0;
+    }
+}
+
+.breadcrumbs {
+    @include clearfix;
+    margin: rhythm-px(.5) 0;
+    padding: 0 $grid-space;
+    @include adjust-font-size-to($to-size: $font-size-small, $from-size: $font-size-normal);
+
+    li {
+        display: block;
+        float: left;
+    }
+    li > a {
+        display: inline-block;
+    }
+    li:after {
+        content: '>';
+        padding: 0 $grid-space;
+        display: inline-block;
+    }
+    li:last-child:after {
+        display: none;
+    }
+}
+
+body > section {
+    height: 100%;
+}
+
+#main {
+    min-height: 100%;
+    margin-top: -1 * rhythm(2.5);
+    margin-bottom: -1 * rhythm(3);
+    @include pseudo-icon($position: both, $blank: true) {
+        display: block;
+    }
+    &::before {
+        height: rhythm(2.5);
+    }
+    &::after {
+        height: rhythm(2);
+    }
+}
+
+.frame-footer {
+    min-height: rhythm(2);
+    text-align: center;
+}
+
+article h1 {
+    @include h2;
+}
+
+article h2 {
+    @include h3;
+}
+
+article h3 {
+    @include h4;
+}

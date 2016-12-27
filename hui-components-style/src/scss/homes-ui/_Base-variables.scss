@@ -1,0 +1,306 @@
+
+// @huidoc sass
+// @area style
+// @module base
+// @name Utility
+// @description
+//
+// Global 'helper' variables. These values are the building block of the site.
+//
+// <table>
+//    <tr>
+//      <th scope="row">$grid-space </th>
+//      <td>10px</td>
+//    </tr>
+//    <tr>
+//      <th scope="row">$base-line-height</th>
+//      <td>2 * $grid-space</td>
+//    </tr>
+//    <tr>
+//      <th scope="row">$global-radius</th>
+//      <td>5px</td>
+//    </tr>
+//    <tr>
+//      <th scope="row">$global-padding</th>
+//      <td>2 * $grid-space</td>
+//    </tr>
+// </table>
+//
+// @styleguide 0.0.1
+
+$grid-space: 10px !default !global;
+$base-line-height: 2 * $grid-space !default !global;
+$base-font-size: 14px !default !global;
+$global-radius: 5px !default !global;
+$global-padding: 2 * $grid-space !default !global;
+
+$radius-rounded: 1000px;
+$disabled-opacity: 0.7 !default !global;
+$modal-backdrop-opacity: 0.8 !default !global;
+
+
+// Compass Rhythm Settings
+$round-to-nearest-half-line: true !global !default;
+$default-rhythm-border-style: solid !global !default;
+
+// Compass Transition Settings
+$default-transition-property: all !global !default;
+$default-transition-duration: .1s !global !default;
+$default-transition-function: ease-in-out !global !default;
+$default-transition-delay: false !global !default;
+
+// For import-once function.
+$imported-once-files: () !default !global;
+
+// Compass Sprite Settings
+//
+// root level
+//
+// No styleguide
+
+$normal-states: hover, target, active !global !default;
+
+// $generate-clean-up: true !default !global !default;
+$generate-sprite-dimensions: true !global !default;
+$generate-sprite-base-class: "%generate-sprite" !global !default;
+$generate-layout: smart !global !default;
+$generate-sprite-selectors: $normal-states !default;
+
+// Base Font settings
+//
+// > Font stack: 'Open Sans', Arial, sans-serif;
+//
+// No Styleguide
+
+$font-family: 'Open Sans', Arial, sans-serif !global !default;
+$font-size: $base-font-size !global !default;
+$line-height: $base-line-height !global !default;
+
+// @huidoc sass
+// @name Font Family, Weight, and Style
+// @module base
+// @area style
+//
+// @description
+//
+// There are 6 variations of Open Sans available for use.
+//
+// <p style="font-weight: 300;">Open Sans Light (300)</p>
+// <p>Open Sans Normal (400)</p>
+// <p style="font-style: italic;">Open Sans Normal (400) Italic</p>
+// <p style="font-weight: 600;"> Open Sans Semibold (600)</p>
+// <p style="font-weight: 700;"> Open Sans Bold (700)</p>
+// <p style="font-weight: 700; font-style: italic;"> Open Sans Bold (700) Italic</p>
+//
+// @styleguide 0.0.2
+
+// @huidoc sass
+// @name Font Sizes
+// @module base
+// @area style
+//
+// @description
+//
+// There are 8 standard font sizes in use.
+//
+// <p style="font-size: 10px; line-height 20px;"> $font-size-xsmall</p>
+// <p style="font-size: 12px; line-height 20px;"> $font-size-small</p>
+// <p style="font-size: 14px; line-height 20px;"> $font-size-normal</p>
+// <p style="font-size: 16px; line-height 20px;"> $font-size-medium</p>
+// <p style="font-size: 18px; line-height 20px;"> $font-size-large</p>
+// <p style="font-size: 24px; line-height 30px;"> $font-size-xlarge</p>
+// <p style="font-size: 36px; line-height 40px;"> $font-size-2xlarge</p>
+// <p style="font-size: 48px; line-height 60px;"> $font-size-gigantor</p>
+//
+//
+// @styleguide 5.0.1
+
+$font-size-xsmall: 10px !default !global;
+// _disclaimer text_
+$font-size-small: 12px !default !global;
+// _labels, most components_
+$font-size-normal: 14px !default !global;
+// _paragraph copy_
+$font-size-medium: 16px !default !global;
+$font-size-large: 18px !default !global;
+// _Subheader_
+$font-size-xlarge: 24px !default !global;
+// _Bar h2's_
+$font-size-2xlarge: 36px !default !global;
+$font-size-gigantor: 48px !default !global;
+
+$font-size-button: 16px !default !global;
+
+// @huidoc sass
+// @name Colors
+// @module base
+//
+// @description
+// ## Primary Brand colors
+// <div class="swatch" style="background-color:#0054a0">$blue #0054a0</div>
+//
+// Our blue is used for most all links primary action/editable color, in the main nav and body copy, and is also used for button backgrounds and is the hover state for clickable orange and light gray elements
+//
+// <div class="swatch" style="background-color:#f7841b">$orange #f7841b</div>
+//
+// Our primary orange is used for all primary actions that cannot be blue, and for visual callouts and layout contrast such as slider progress, nav section highlights, and misc. focal point use. This is also the hover color for blue action elements.
+//
+// ### Primary Brand Color Variations
+// <div class="swatch" style="background-color:#f44e0f">$redOrange #f44e0f</div>
+// <div class="swatch" style="background-color:#fbc18d">$lightOrange #fbc18d</div>
+//
+// <div class="swatch" style="background-color:#000056">$darkBlue #000056</div>
+// <div class="swatch" style="background-color:#7fa9cf">$mediumBlue #7fa9cf</div>
+// <div class="swatch" style="background-color:#dde9f3">$lightBlue #dde9f3</div>
+// <div class="swatch" style="background-color:#aec3d7">$desatBlue #aec3d7</div>
+// <div class="swatch" style="background-color:#092e4f">$desatDarkBlue #092e4f</div>
+//
+// ## Shades of Grey
+// <div class="swatch" style="background-color:#484848">$darkGrey #484848</div>
+// <div class="swatch" style="background-color:#888">$mediumDarkGrey #888</div>
+// <div class="swatch" style="background-color:#aaa">$mediumGrey #aaa</div>
+// <div class="swatch" style="background-color:#ccc">$mediumLightGrey #ccc</div>
+// <div class="swatch" style="background-color:#e9eaee">$lightGrey #e9eaee</div>
+// <div class="swatch" style="background-color:#e9eaee">$lightestGrey #f4f5f7</div>
+// <div class="swatch" style="background-color:#f2e9e1">$warmGrey #f2e9e1</div>
+//
+// ## Specific/Limited Use
+// <div class="swatch" style="background-color:#ed1c24">$red #ed1c24</div>
+// <div class="swatch" style="background-color:#060">$green #060</div>
+// <div class="swatch" style="background-color:#fff">$white #fff</div>
+// <div class="swatch" style="background-color:#000">$black #000</div>
+//
+// @styleguide 1.1.1
+
+// Color Variables
+//
+// Standard Colors.
+//
+// ```scss
+//
+// $body-color   : $darkGrey;
+// $link-color   : $blue;
+// $button-color : $white;
+// $border-color : $lightGrey;
+// ```
+//
+// Styleguide 1.1.1
+
+$blue: #0054a0 !global !default;
+$orange: #f7841b !global !default;
+$redOrange: #f44e0f !global !default;
+$lightOrange: #fbc18d !global !default;
+$darkBlue: #000056 !global !default;
+$mediumBlue: #7fa9cf !global !default;
+$lightBlue: #dde9f3 !global !default;
+$desatBlue: #aec3d7 !global !default;
+$desatDarkBlue: #092e4f !global !default;
+$darkGrey: #484848 !global !default;
+$mediumDarkGrey: #888 !global !default;
+$mediumGrey: #aaa !global !default;
+$mediumLightGrey: #ccc !global !default;
+$lightGrey: #e9eaee !global !default;
+$lightestGrey: #f4f5f7 !global !default;
+$warmGrey: #f2e9e1 !global !default;
+$white: #fff !global !default;
+$black: #000 !global !default;
+$red: #ed1c24 !global !default;
+$green: #38a927 !global !default;
+
+$body-color: $darkGrey !global !default;
+$link-color: $blue !global !default;
+$link-color-hover: $darkBlue !global !default;
+
+// Border Variables
+//
+// Standard Borders
+//
+//
+// Styleguide 1.1.2
+
+$border-color: $mediumGrey !global !default;
+$border-color-hover: $orange !global !default;
+$border-radius: $global-radius !global !default;
+$border-color-hover: $orange !global !default;
+$border-color-okay: $desatBlue !global !default;
+
+// Misc Variables
+//
+// Modify the base mixins for this system
+//
+// > `$font-family-button` - $font-family
+// > `$font-weight-button` - 700
+// > `$line-height-button` - 30px
+// > `$border-radius-button` - $global-radius
+// >
+// > `$tooltipArrow-height` - 15px
+// >
+// > `$input-color` - $body-color
+// > `$form-element-margin`- .3em 0
+// > `$form-field-border` - 1px solid $mediumLightGrey
+// > `$form-field-background` - $white
+// > `$form-field-padding` - .25em .5em
+// > `$form-field-font-size` - $font-size-normal
+// > `$form-field-border-radius` - 5px
+// > `$form-field-single-height` - 26px
+// > `$form-placeholder-color` - #888
+// > `$form-message-border-color` - $body-color
+// > `$form-message-background` - $white
+// > `$form-message-padding` - .5em
+// > `$form-checkbox-width` - 2em
+// >
+//
+// Styleguide 1.1.3
+
+
+$font-family-button: $font-family !global !default;
+$font-weight-button: 700 !global !default;
+$line-height-button: 30px !global !default;
+$border-radius-button: $global-radius !global !default;
+
+
+// Layout Variables (global)
+//
+// Used to configure site frame
+//
+// ```scss
+// $homes-legacy-layout: false !default; // switches on style overrides for older pages
+//
+// $grid-space : 10px;
+//
+// $site-content-width  : 1000px !default;
+//
+// $site-max-width: 1280px !default;
+// $site-min-width  : $site-content-width !default;
+//
+// $site-max-content-width: $site-max-width - 40px !default; //40 = $grid-space * 4, but $grid-space is not set yet.
+// $site-min-content-width: $site-min-width - 40px !default; //40 = $grid-space * 4, but $grid-space is not set yet.
+//
+// // Frame Variables
+// $frame-border-box: true !global !default;
+// $frame-header-height : 50px !global !default;
+//
+// // Breakpoint
+// $breakpoint-site-nav-top: 1090px !default;
+// ```
+//
+// Styleguide 9.0.1
+
+$homes-legacy-layout: false !global !default;
+// switches on style overrides for older pages
+$frame-responsive: false !global !default;
+
+$site-content-width: 100 * $grid-space !global !default;
+
+$site-max-width: 128 * $grid-space !global !default;
+$site-min-width: $site-content-width !global !default;
+
+$site-max-content-width: $site-max-width - $grid-space * 4 !global !default;
+
+// Frame Variables
+$frame-border-box: true !global !default;
+$frame-header-height: $base-line-height * 2.5 !global !default;
+// rhythm is not set yet
+
+// Breakpoint
+$breakpoint-site-nav-top: 109 * $grid-space !default;

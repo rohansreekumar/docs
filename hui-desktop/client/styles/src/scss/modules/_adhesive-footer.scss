@@ -1,0 +1,66 @@
+.footer-button {
+
+    /* HDC-386 - Noticed that button text font wasn't set to Open Sans.
+       Fixing here for now. */
+
+    font-family: 'Open Sans';
+    font-size: $font-size-normal;
+
+    @include flex(1 1 auto);
+    @include align-items(center);
+    @include justify-content(center);
+    @include display-flex();
+
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    height: rhythm-px(2.5);
+    border-right: 1px solid #2a79c1;
+    @include box-shadow(inset -1px 0 0 $black);
+    z-index: 10;
+    margin: 0;
+
+    &:last-child {
+        border-right: none;
+    }
+
+    .label--container {
+        @include display-flex();
+        @include flex(1 1 auto);
+        @include justify-content(center);
+    }
+
+     .icon-hui, .label {
+        @include flex(0 1 auto);
+     }
+
+    .icon-hui {
+        padding-right: 6px;
+        @include display-flex();
+        @include align-items(center);
+
+        &:before {
+            @include flex(0 1 0);
+        }
+    }
+
+    .label--two-line {
+
+        text-align: left;
+
+        & > span {
+            @include adjust-font-size-to($from-size: $font-size-normal, $to-size:$font-size-small, $lines: .75);
+            display: block;
+        }
+
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $orange;
+        color: white;
+        outline: none;
+    }
+}

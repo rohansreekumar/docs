@@ -1,0 +1,315 @@
+// Base
+$button-color: $white;
+$button-font-weight: 600;
+$button-padding: $global-padding;
+$button-font-family: $font-family;
+$button-radius: $global-radius;
+
+// Colors
+$button-primary-background: $orange;
+$button-primary-background-hover: $redOrange;
+
+$button-secondary-background: $blue;
+$button-secondary-background-hover: $link-color-hover;
+
+$button-secondary-background-alt: $mediumBlue;
+$button-secondary-background-alt-hover: $button-secondary-background-hover;
+
+$button-tertiary-background: $mediumGrey;
+$button-tertiary-background-hover: $mediumLightGrey;
+
+$button-quatenary-background: $white;
+$button-quatenary-background-hover: $button-quatenary-background;
+$button-quatenary-border-color: $border-color;
+$button-quatenary-border-color-hover: $border-color-hover;
+$button-quatenary-color: $link-color;
+$button-quatenary-color-hover: $link-color-hover;
+
+$button-quinary-background: $button-quatenary-background;
+$button-quinary-background-hover: $button-quatenary-background-hover;
+$button-quinary-color: $darkGrey;
+$button-quinary-color-hover: $button-quatenary-color-hover;
+
+
+// Sizes
+$button-height: $base-line-height * 2.5;
+$button-font-size: $font-size-medium;
+$button-line-height: $button-height;
+
+$button-height-slim: $base-line-height * 1.5;
+$button-font-size-slim: $font-size-normal;
+$button-line-height-slim: $button-height-slim;
+
+$button-height-medium: $base-line-height * 2;
+$button-font-size-medium: $button-font-size;
+$button-line-height-medium: $button-height-medium;
+
+
+
+
+// @huidoc mixin
+// @name Normalize Buttons
+// @module navigation
+// @description
+// Clear button styles
+//
+// @param {[1,2,3,4]=1} $aggression How thorough to be.
+//
+// @styleguide 0.0.0
+
+@mixin normalize-buttons($aggression: 1) {
+    @if ($aggression == 1) {
+        button,
+        input[type="submit"] {
+            @extend %normalize-button;
+        }
+    } @else if ($aggression == 2) {
+        button,
+        html input[type="button"],
+        input[type="submit"] {
+            @extend %normalize-button;
+        }
+    } @else if ($aggression == 3) {
+        button,
+        html input[type="button"],
+        input[type="submit"] {
+            @extend %normalize-button;
+        }
+    } @else if ($aggression == 4) {
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            @extend %normalize-button;
+        }
+    }
+}
+
+
+// @huidoc mixin
+// @name Button Color
+// @module navigation
+//
+// @description
+// Colors for a button
+//
+//
+// @styleguide 0.0.0
+
+@mixin button-color($color: 'primary', $extend: true) {
+    @if $extend {
+        @extend %button-#{$color};
+    } @else {
+        @if $color == 'primary' {
+            background: $button-primary-background;
+            &:hover {
+                background: $button-primary-background-hover;
+            }
+        }
+        @if $color == 'secondary' {
+            background: $button-secondary-background;
+            &:hover {
+                background: $button-secondary-background-hover;
+            }
+        }
+        @if $color == 'secondary-alt' {
+            background: $button-secondary-background-alt;
+            &:hover {
+                background: $button-secondary-background-alt-hover;
+            }
+        }
+        @if $color == 'tertiary' {
+            background: $button-tertiary-background;
+            &:hover {
+                background: $button-tertiary-background-hover;
+            }
+        }
+        @if $color == 'quatenary' {
+            background: $button-quatenary-background;
+            color: $button-quatenary-color;
+            border-color: $button-quatenary-border-color;
+            &:hover {
+                background: $button-quatenary-background-hover;
+                color: $button-quatenary-color-hover;
+                border-color: $button-quatenary-border-color-hover;
+            }
+        }
+        @if $color == 'quinary' {
+            background: $button-quinary-background;
+            color: $button-quinary-color;
+            border-color: $button-quatenary-border-color;
+            &:hover {
+                background: $button-quinary-background-hover;
+                color: $button-quinary-color-hover;
+                border-color: $button-quatenary-border-color-hover;
+            }
+        }
+    }
+}
+
+// @huidoc mixin
+// @name Button Size
+// @module navigation
+//
+// @description
+// Sizes of buttons
+//
+//
+// @styleguide 0.0.0
+
+@mixin button-size($size: 'normal', $extend: true) {
+    @if $extend {
+        @extend %button-size-#{$size};
+    }
+    @if $size == 'normal' {
+        height: $button-height;
+        line-height: $button-line-height;
+        font-size: $button-font-size;
+    }
+    @if $size == 'slim' {
+        height: $button-height-slim;
+        line-height: $button-line-height-slim;
+        font-size: $button-font-size-slim;
+    }
+    @if $size == 'medium' {
+        height: $button-height-medium;
+        line-height: $button-line-height-medium;
+        font-size: $button-font-size-medium;
+    }
+}
+
+
+// @huidoc mixin
+// @name Button
+// @module navigation
+//
+// @description
+// Base button style
+//
+//
+// @styleguide 0.0.0
+
+@mixin button($extend: true, $colors...) {
+    @if $extend {
+        @extend %button;
+    } @else {
+        display: inline-block;
+        white-space: nowrap;
+
+        @include border-radius($button-radius);
+        border: 0;
+        color: $button-color;
+
+        // default-size
+        width: auto;
+        padding: 0 $button-padding;
+
+
+        font: {
+            style: normal;
+            weight: $button-font-weight;
+            size: $button-font-size;
+            family: $button-font-family;
+        }
+
+        text-indent: 0;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+            color: $white;
+        }
+
+        // states
+        &[disabled],
+        &.is-disabled {
+            cursor: default;
+            @include disabled;
+        }
+    }
+    @if length($colors) > 0 {
+        @each $i in $colors {
+            @include button-color($color: $i, $extend: true);
+        }
+    }
+}
+
+// @huidoc mixin
+// @name Button Icon
+// @module navigation
+//
+// @description
+// Icon only button
+//
+// @styleguide 0.0.0
+
+@mixin button-icon ($extend: true) {
+    @if $extend {
+        @extend %button-icon;
+    } @else {
+
+        &>span {
+            //            @include squish-text; this is still leaving some space?
+            display: none;
+        }
+    }
+}
+
+@if import-once('Buttons.scss') {
+
+    %normalize-button {
+        /*! normalize.css 2012-08-07T21:27 UTC | MIT License | git.io/normalize */
+        vertical-align: baseline;
+        -webkit-appearance: button;
+        line-height: normal;
+    }
+
+    // Base
+    %button {
+        @include button($extend: false);
+    }
+    // Icon
+    %button-icon {
+        @include button-icon($extend: false);
+    }
+
+    // primary
+    %button-primary {
+        @include button-color($color: 'primary', $extend: false);
+    }
+    // secondary
+    %button-secondary {
+        @include button-color($color: 'secondary', $extend: false);
+    }
+    // secondary-alt ($blue background)
+    %button-secondary-alt {
+        @include button-color($color: 'secondary-alt', $extend: false);
+    }
+    // tertiary
+    %button-tertiary {
+        @include button-color($color: 'tertiary', $extend: false);
+    }
+    // quatenary
+    %button-quatenary {
+        @include button-color($color: 'quatenary', $extend: false);
+    }
+    // quinary
+    %button-quinary {
+        @include button-color($color: 'quinary', $extend: false);
+    }
+
+    // normal
+    %button-size-normal {
+        @include button-size($size: 'normal', $extend: false);
+    }
+    // slim
+    %button-size-slim {
+        @include button-size($size: 'slim', $extend: false);
+    }
+    // medium
+    %button-size-medium {
+        @include button-size($size: 'medium', $extend: false);
+    }
+
+}

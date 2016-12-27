@@ -1,0 +1,62 @@
+.ngdialog.search-flyout {
+    position: fixed;
+    top: auto;
+    right: grid-space(-6);
+    bottom: rhythm-px(-3);
+    left: auto;
+    box-shadow: inset 0 0 grid-space() rgba($black,0.5),0 0 grid-space(1.5) rgba($black,0.5);
+    border-radius: 50%;
+    background: rgba($white, .8);
+    border: 5px solid $white;
+    width: grid-space(34);
+
+    & > .ngdialog-content {
+        position: relative;
+        top: rhythm-px(4);
+        left: grid-space(6);
+        font-size: $font-size-medium;
+        line-height: rhythm-px(1.4);
+        text-align: center;
+        margin-right: grid-space(14);
+        color: $darkGrey;
+
+        & > div {
+            height: rhythm-px(16);
+
+            p {
+                margin: 0 0 rhythm-px(0.8);
+            }
+
+            .search-flyout--save-search-button {
+                font-weight: 700;
+                font-size: $font-size-normal;
+                padding: 0 grid-space(1.6);
+            }
+        }
+
+        .search-flyout--close-dialog {
+            position: absolute;
+            right: grid-space(-2);
+            top: rhythm-px(-1.5);
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: $lightGrey;
+            color: $blue;
+            font-weight: 600;
+            width: grid-space(1.8);
+            height: rhythm-px(0.9);
+
+            &:before {
+                position: relative;
+                top: rhythm-px(-0.25);
+                content: '\00D7';
+                font-size: $font-size-xlarge;
+            }
+
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+}

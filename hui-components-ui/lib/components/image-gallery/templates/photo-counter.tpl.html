@@ -1,0 +1,9 @@
+<div class="photo-counter">
+  <div class="photo-counter--image-count">
+    <span class="image-count--value photo-counter--current-image" data-ng-bind="imgGalleryCtrl.imageIndex + 1"></span>
+    <span class="image-count--value photo-counter--total-images" data-ng-bind="imgGalleryCtrl.$count"></span>
+  </div>
+  <div class="photo-counter--current-category" data-ng-if="imgGalleryCtrl.$currentCategory">
+    <span data-ng-bind="imgGalleryCtrl.$currentCategory"></span>
+  </div>
+</div>

@@ -1,0 +1,219 @@
+{
+    "success": true,
+    "result": [
+        {
+            "property_id": "190682294",
+            "listing_id": "190682294",
+            "primary_image": {
+                "src": "http://cdn.homes.com/cgi-bin/readimage/4196389852"
+            },
+            "property_type": {
+                "value": "APARTMENT",
+                "label": "Apartment"
+            },
+            "address": {
+                "street_address": {
+                    "label": "2610 Fourth Ave"
+                },
+                "locality": {
+                    "county": "Ketchikan Gateway",
+                    "label": "Ketchikan",
+                    "value": "Ketchikan"
+                },
+                "region": {
+                    "code": "AK",
+                    "label": "AK",
+                    "value": "AK"
+                },
+                "postal_code": {
+                    "label": "99901",
+                    "value": "99901"
+                },
+                "country_name": {
+                    "code": "US",
+                    "label": "United States of America",
+                    "value": "US"
+                },
+                "lat": 55.3527,
+                "lng": -131.678
+            },
+            "listing_status": "for_rent",
+            "main_uri": "http://www.forrent.com/apartment-community-profile/1000010783.php?cmp=CAC-Homes"
+        },
+        {
+            "property_id": "190647583",
+            "listing_id": "190647583",
+            "primary_image": {
+                "src": "http://cdn.homes.com/cgi-bin/readimage/4196128678"
+            },
+            "address": {
+                "street_address": {
+                    "label": "910 Nordstrom Dr"
+                },
+                "locality": {
+                    "county": "KETCHIKAN GATEWAY",
+                    "label": "Ketchikan",
+                    "value": "KETCHIKAN"
+                },
+                "region": {
+                    "code": "AK",
+                    "label": "AK",
+                    "value": "AK"
+                },
+                "postal_code": {
+                    "label": "99901",
+                    "value": "99901"
+                },
+                "country_name": {
+                    "code": "US",
+                    "label": "United States of America",
+                    "value": "US"
+                },
+                "lat": 55.3412,
+                "lng": -131.625
+            },
+            "listing_status": "for_rent",
+            "main_uri": "http://www.forrent.com/apartment-community-profile/1000062791.php?cmp=CAC-Homes"
+        },
+        {
+            "property_id": "226126585",
+            "listing_id": "226126585",
+            "primary_image": {
+                "src": "http://cdn.homes.com/cgi-bin/readimage/4105851057"
+            },
+            "address": {
+                "street_address": {
+                    "label": "3221 7th St Sw"
+                },
+                "locality": {
+                    "county": "WARD",
+                    "label": "Minot",
+                    "value": "MINOT"
+                },
+                "region": {
+                    "code": "ND",
+                    "label": "ND",
+                    "value": "ND"
+                },
+                "postal_code": {
+                    "label": "58701",
+                    "value": "58701"
+                },
+                "country_name": {
+                    "code": "US",
+                    "label": "United States of America",
+                    "value": "US"
+                },
+                "lat": 48.2007,
+                "lng": -101.303
+            },
+            "listing_status": "for_rent",
+            "main_uri": "http://www.forrent.com/apartment-community-profile/1000010812.php?cmp=CAC-Homes"
+        },
+        {
+            "property_id": "157056404",
+            "listing_id": "157056404",
+            "primary_image": {
+                "src": "http://cdn.homes.com/cgi-bin/readimage/4206803185"
+            },
+            "address": {
+                "street_address": {
+                    "label": "2600 Fourth Ave"
+                },
+                "locality": {
+                    "county": "KETCHIKAN GATEWAY",
+                    "label": "Ketchikan",
+                    "value": "KETCHIKAN"
+                },
+                "region": {
+                    "code": "AK",
+                    "label": "AK",
+                    "value": "AK"
+                },
+                "postal_code": {
+                    "label": "99901",
+                    "value": "99901"
+                },
+                "country_name": {
+                    "code": "US",
+                    "label": "United States of America",
+                    "value": "US"
+                },
+                "lat": 55.3527,
+                "lng": -131.677
+            },
+            "listing_status": "for_rent",
+            "main_uri": "http://www.forrent.com/apartment-community-profile/1000055925.php?cmp=CAC-Homes"
+        },
+        {
+            "property_id": "200012971556",
+            "listing_id": "208414443",
+            "primary_image": {
+                "src": "http://cdn.homes.com/cgi-bin/readimage/4105507345"
+            },
+            "address": {
+                "street_address": {
+                    "label": "1951 Nw South River Drive"
+                },
+                "locality": {
+                    "county": "MIAMI-DADE",
+                    "label": "Miami",
+                    "value": "MIAMI"
+                },
+                "region": {
+                    "code": "FL",
+                    "label": "FL",
+                    "value": "FL"
+                },
+                "postal_code": {
+                    "label": "33125",
+                    "value": "33125"
+                },
+                "country_name": {
+                    "code": "US",
+                    "label": "United States of America",
+                    "value": "US"
+                },
+                "lat": 25.7845,
+                "lng": -80.2259
+            },
+            "listing_status": "for_rent",
+            "main_uri": "http://www.forrent.com/apartment-community-profile/1000064968.php?cmp=CAC-Homes"
+        },
+        {
+            "property_id": "190715721",
+            "listing_id": "190715721",
+            "primary_image": {
+                "src": "http://cdn.homes.com/cgi-bin/readimage/4196940128"
+            },
+            "address": {
+                "street_address": {
+                    "label": "5175 ne 2nd Court # 2"
+                },
+                "locality": {
+                    "county": "MIAMI-DADE",
+                    "label": "Miami",
+                    "value": "MIAMI"
+                },
+                "region": {
+                    "code": "FL",
+                    "label": "FL",
+                    "value": "FL"
+                },
+                "postal_code": {
+                    "label": "33137",
+                    "value": "33137"
+                },
+                "country_name": {
+                    "code": "US",
+                    "label": "United States of America",
+                    "value": "US"
+                },
+                "lat": 25.8237,
+                "lng": -80.1905
+            },
+            "listing_status": "for_rent",
+            "main_uri": "http://www.forrent.com/apartment-community-profile/999912207.php?cmp=CAC-Homes"
+        }
+    ]
+}

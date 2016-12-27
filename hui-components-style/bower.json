@@ -1,0 +1,28 @@
+{
+    "name": "hui-components-style",
+    "version": "0.2.1",
+    "main": [
+        "src/scss/main.scss"
+    ],
+    "ignore": [
+        "config",
+        ".jshintrc",
+        ".editorconfig",
+        ".gitattributes",
+        ".gitignore",
+        "Gemfile",
+        "Gemfile.lock",
+        "Gruntfile",
+        "*.sublime-project"
+    ],
+    "huiDocs": {
+        "sourceFiles": [
+            {
+                "include": "src/scss/**/*.scss",
+                "basePath": "src"
+            }
+        ]
+    },
+    "dependencies": {},
+    "private": true
+}

@@ -1,0 +1,21 @@
+// hui-components-style/src/scss/components/keyframes/_fade.scss
+
+@if import-once('keyframes-slide-top.scss') {
+    // use add or remove not in and out because angular and reasons
+    @include keyframes('slide-top-add') {
+        0% {
+            @include transform(translate3d(0, -100%, 0));
+        }
+        100% {
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+    @include keyframes('slide-top-remove') {
+        0% {
+            @include transform(translate3d(0, 0, 0));
+        }
+        100% {
+            @include transform(translate3d(0, -100%, 0));
+        }
+    }
+}

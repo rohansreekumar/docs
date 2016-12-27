@@ -1,0 +1,23 @@
+.form-multi-select {
+    display: inline-flex;
+    padding: 0;
+    background-color: transparent;
+    // display values are wrapped with .select-item, controls are wrapped with .input-select + label
+    .input-select {
+        @include hide-checkbox();
+    }
+    .select-item.is-selected,
+    .input-select:checked + label {
+        color: $darkGrey;
+        font-weight: 700;
+        &::after {
+            bottom: 0;
+            font-size: 125%;
+            font-family: $font-family;
+            color: inherit;
+        }
+    }
+    .input-select:disabled + label {
+        color: $blue;
+    }
+}
