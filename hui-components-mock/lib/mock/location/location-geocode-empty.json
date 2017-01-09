@@ -1,8 +1,0 @@
-{
-  "status": false,
-  "error": {
-    "message": "Invalid or missing location",
-    "name": "Bad Request Error",
-    "status_code": 400
-  }
-}

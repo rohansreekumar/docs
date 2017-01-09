@@ -1,5 +1,0 @@
-{
-    "title": "{{search_query.label}} Homes for Sale | Homes.com",
-    "desc": "{{search_query.label}} homes for sale by County, for sale listings, rentals, foreclosures. Find your dream home on Homes.com",
-    "h1": "Search Homes {{listing_status}} in {{search_query.label}}"
-}
